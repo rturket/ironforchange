@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iron For Change | Incubadora de Lideranças Regenerativas</title>
-    <meta name="description" content="O Iron For Change é uma incubadora de lideranças regenerativas que desenvolve adolescentes para que se tornem protagonistas de soluções inovadoras.">
+    <meta name="description" content="O Iron For Change é uma incubadora de lideranças regenerativas que desenvolve jovens ao longo de uma jornada de 44 semanas da consciência individual à transformação do território.">
+    
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ironforchange.com/">
+    <meta property="og:title" content="Iron For Change | Incubadora de Lideranças Regenerativas">
+    <meta property="og:description" content="Uma jornada de 44 semanas formando jovens protagonistas que se conhecem, pertencem, imaginam, constroem e regeneram realidades.">
+    <meta property="og:image" content="assets/jornada-do-change-44-semanas.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230a0a0a'/><path d='M50 20 C65 20 75 35 75 50 C75 68 60 80 50 82 C40 80 25 68 25 50 C25 35 35 20 50 20 Z' fill='%23997BAE'/><circle cx='50' cy='50' r='18' fill='%2310B981'/></svg>">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -14,51 +27,147 @@
                     colors: {
                         brand: {
                             purple: '#997BAE',
+                            purpleDark: '#7f5f94',
                             dark: '#0a0a0a',
                             light: '#F5F3F7',
-                            gray: '#2C2C2C'
+                            gray: '#1c1c1c',
+                            grayBorder: '#2e2e2e'
+                        },
+                        stage: {
+                            despertar: '#15803d',
+                            pertencer: '#1d4ed8',
+                            imaginar: '#d97706',
+                            construir: '#7c3aed',
+                            regenerar: '#047857'
                         }
                     }
                 }
             }
         }
     </script>
+    <style>
+        .stage-tab.active {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-brand-purple selection:text-white">
+
     <!-- Navbar -->
-    <nav class="bg-brand-dark text-white fixed w-full z-50 top-0 shadow-lg border-b border-gray-800">
+    <nav class="bg-brand-dark/95 backdrop-blur-md text-white fixed w-full z-50 top-0 shadow-lg border-b border-gray-800 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-full bg-brand-purple/20 border border-brand-purple flex items-center justify-center text-brand-purple group-hover:scale-105 transition-transform">
+                        <i class="fas fa-seedling text-lg"></i>
+                    </div>
                     <span class="font-black text-2xl tracking-widest uppercase">Iron<span class="text-brand-purple">For</span>Change</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-7 items-center">
+                    <a href="#quem-somos" class="hover:text-brand-purple transition-colors text-sm font-medium">Quem Somos</a>
+                    <a href="#videos" class="hover:text-brand-purple transition-colors text-sm font-medium">O Projeto</a>
+                    <a href="#jornada" class="hover:text-brand-purple transition-colors text-sm font-medium flex items-center">
+                        A Jornada <span class="ml-1.5 px-2 py-0.5 text-[11px] font-bold bg-brand-purple/30 text-brand-purple rounded-full border border-brand-purple/40">44 Semanas</span>
+                    </a>
+                    <a href="#principios" class="hover:text-brand-purple transition-colors text-sm font-medium">Princípios</a>
+                    <a href="#como-apoiar" class="hover:text-brand-purple transition-colors text-sm font-medium">Como Apoiar</a>
+                    
+                    <a href="Iron_For_Change_Apresentacao_Institucional.pdf" download class="inline-flex items-center text-xs font-semibold text-gray-300 hover:text-white border border-gray-700 hover:border-gray-500 px-3.5 py-2 rounded-lg transition-colors">
+                        <i class="fas fa-file-pdf text-brand-purple mr-2"></i> PDF Apresentação
+                    </a>
+
+                    <a href="#contato" class="bg-brand-purple hover:bg-opacity-80 px-5 py-2.5 rounded-full font-bold transition-all text-white text-sm shadow-md hover:shadow-brand-purple/20">
+                        Fale Conosco
+                    </a>
                 </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#quem-somos" class="hover:text-brand-purple transition-colors font-medium">Quem Somos</a>
-                    <a href="#videos" class="hover:text-brand-purple transition-colors font-medium">O Projeto</a>
-                    <a href="#jornada" class="hover:text-brand-purple transition-colors font-medium">A Jornada</a>
-                    <a href="#como-apoiar" class="hover:text-brand-purple transition-colors font-medium">Como Apoiar</a>
-                    <a href="#contato" class="bg-brand-purple hover:bg-opacity-80 px-6 py-2 rounded-full font-bold transition-colors text-white shadow-md">Contato</a>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center lg:hidden">
+                    <button id="mobileMenuButton" type="button" aria-label="Abrir menu" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl" id="menuIcon"></i>
+                    </button>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-brand-dark border-b border-gray-800 px-6 pt-2 pb-6 space-y-4">
+            <a href="#quem-somos" class="block py-2 text-gray-300 hover:text-brand-purple font-medium mobile-link">Quem Somos</a>
+            <a href="#videos" class="block py-2 text-gray-300 hover:text-brand-purple font-medium mobile-link">O Projeto</a>
+            <a href="#jornada" class="block py-2 text-gray-300 hover:text-brand-purple font-medium mobile-link">A Jornada (44 Semanas)</a>
+            <a href="#principios" class="block py-2 text-gray-300 hover:text-brand-purple font-medium mobile-link">Princípios Orientadores</a>
+            <a href="#como-apoiar" class="block py-2 text-gray-300 hover:text-brand-purple font-medium mobile-link">Como Apoiar</a>
+            <a href="Iron_For_Change_Apresentacao_Institucional.pdf" download class="block py-2 text-brand-purple font-medium mobile-link">
+                <i class="fas fa-file-pdf mr-2"></i> Baixar Apresentação (PDF)
+            </a>
+            <a href="#contato" class="block text-center bg-brand-purple text-white font-bold py-3 rounded-full mobile-link shadow-md">
+                Fale Conosco
+            </a>
+        </div>
     </nav>
 
-    <!-- Hero Section (Clean Typographic Style - Inspired by PDF Cover) -->
-    <section class="relative bg-brand-dark text-white pt-32 pb-20 lg:pt-48 lg:pb-40 flex items-center min-h-[80vh]">
+    <!-- Hero Section -->
+    <section class="relative bg-brand-dark text-white pt-36 pb-24 lg:pt-48 lg:pb-36 flex items-center min-h-[85vh] overflow-hidden">
+        <!-- Subtle Glow Effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-purple/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
-                Transformação Humana que Gera <br><span class="text-brand-purple">Impacto Coletivo.</span>
+            <!-- Badge -->
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-brand-purple/20 text-brand-purple border border-brand-purple/30 mb-8 backdrop-blur-sm">
+                <i class="fas fa-sparkles"></i>
+                <span>Incubadora de Lideranças Regenerativas</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.15]">
+                Transformação Humana que Gera <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple via-purple-300 to-white">
+                    Impacto Coletivo.
+                </span>
             </h1>
-            <p class="mt-4 text-xl md:text-3xl max-w-4xl mx-auto text-gray-400 mb-12 font-light leading-relaxed">
-                Uma incubadora de lideranças regenerativas para transformar desafios locais em soluções criadas pelos próprios jovens.
+
+            <p class="text-lg sm:text-2xl md:text-2xl max-w-3xl mx-auto text-gray-400 mb-12 font-light leading-relaxed">
+                Uma metodologia viva de <strong class="text-white font-semibold">44 semanas</strong> que desenvolve jovens da consciência individual à transformação real do território.
             </p>
-            <div class="flex justify-center space-x-4">
-                <a href="#como-apoiar" class="inline-block bg-brand-purple hover:bg-opacity-80 text-white font-bold py-4 px-10 rounded-full text-lg transition-transform transform hover:scale-105 shadow-xl">
-                    Seja um Parceiro
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:space-x-4">
+                <a href="#jornada" class="w-full sm:w-auto inline-flex items-center justify-center bg-brand-purple hover:bg-opacity-90 text-white font-bold py-4 px-8 rounded-full text-base transition-all transform hover:scale-105 shadow-xl shadow-brand-purple/20">
+                    <i class="fas fa-compass mr-2.5"></i> Conhecer a Jornada (44 Sem.)
                 </a>
-                <a href="#videos" class="inline-block bg-transparent border-2 border-gray-500 hover:border-white text-white font-bold py-4 px-10 rounded-full text-lg transition-colors">
-                    Ver o Projeto <i class="fas fa-play ml-2"></i>
+                <a href="#como-apoiar" class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-4 px-8 rounded-full text-base transition-colors">
+                    <i class="fas fa-hands-helping mr-2.5"></i> Seja um Parceiro
                 </a>
+                <a href="Iron_For_Change_Apresentacao_Institucional.pdf" download class="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-medium py-4 px-6 rounded-full text-base transition-colors">
+                    <i class="fas fa-download mr-2 text-brand-purple"></i> Apresentação (PDF)
+                </a>
+            </div>
+
+            <!-- Quick Metrics Highlights -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-20 pt-10 border-t border-gray-800 text-left">
+                <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <div class="text-3xl font-extrabold text-brand-purple mb-1">44</div>
+                    <div class="text-xs font-semibold text-white uppercase tracking-wider">Semanas de Jornada</div>
+                    <div class="text-xs text-gray-400 mt-1">Formação contínua e imersiva</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <div class="text-3xl font-extrabold text-blue-400 mb-1">5</div>
+                    <div class="text-xs font-semibold text-white uppercase tracking-wider">Macro-Etapas</div>
+                    <div class="text-xs text-gray-400 mt-1">Do autoconhecimento ao território</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <div class="text-3xl font-extrabold text-amber-400 mb-1">100%</div>
+                    <div class="text-xs font-semibold text-white uppercase tracking-wider">Protagonismo Juvenil</div>
+                    <div class="text-xs text-gray-400 mt-1">Projetos criados pelos próprios jovens</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <div class="text-3xl font-extrabold text-emerald-400 mb-1">Impacto</div>
+                    <div class="text-xs font-semibold text-white uppercase tracking-wider">Regenerativo</div>
+                    <div class="text-xs text-gray-400 mt-1">Saúde integral e soluções locais</div>
+                </div>
             </div>
         </div>
     </section>
@@ -66,36 +175,61 @@
     <!-- Quem Somos & O Desafio -->
     <section id="quem-somos" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-4xl font-bold text-brand-dark mb-6 leading-tight">O potencial existe.<br>As oportunidades precisam chegar.</h2>
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-100 text-brand-purple mb-4">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Nossa Causa</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark mb-6 leading-tight">
+                        O potencial existe.<br>
+                        <span class="text-brand-purple">As oportunidades precisam chegar.</span>
+                    </h2>
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Adolescentes enfrentam desafios cada vez mais complexos que comprometem seu desenvolvimento e o futuro das comunidades: sofrimento psíquico, bullying, falta de propósito e baixa participação.
+                        Adolescentes enfrentam desafios cada vez mais complexos que comprometem seu desenvolvimento e o futuro das comunidades: sofrimento psíquico, bullying, falta de perspectiva e baixa participação cidadã.
                     </p>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        O <strong class="text-brand-purple">Iron For Change</strong> oferece uma jornada estruturada que desenvolve competências socioemocionais, fortalece o pertencimento e impulsiona os jovens a criar e implementar projetos reais que transformam seus territórios.
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        O <strong class="text-brand-purple font-semibold">Iron For Change</strong> atua como uma incubadora viva. Conectamos esporte, saúde mental, autoconhecimento e cidadania para que os jovens criem soluções sustentáveis e regenerativas para os desafios do seu próprio território.
                     </p>
+
+                    <div class="flex items-center space-x-4">
+                        <a href="Iron_For_Change_Apresentacao_Institucional.pdf" download class="inline-flex items-center text-sm font-bold text-brand-purple hover:text-brand-purpleDark transition-colors">
+                            <i class="fas fa-file-pdf mr-2 text-lg"></i> Ler apresentação institucional completa &rarr;
+                        </a>
+                    </div>
                 </div>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="bg-brand-light p-8 rounded-2xl text-center border-t-4 border-brand-purple hover:shadow-lg transition-shadow">
-                        <i class="fas fa-heartbeat text-4xl text-brand-purple mb-4"></i>
+
+                <div class="grid grid-cols-2 gap-5">
+                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-emerald-600 hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-4">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
                         <h3 class="font-bold text-brand-dark text-lg mb-2">Saúde Integral</h3>
-                        <p class="text-sm text-gray-600">Desenvolvimento humano e saúde mental</p>
+                        <p class="text-sm text-gray-600">Autocuidado, saúde mental, alimentação consciente e conexão com o corpo.</p>
                     </div>
-                    <div class="bg-brand-light p-8 rounded-2xl text-center border-t-4 border-brand-purple hover:shadow-lg transition-shadow">
-                        <i class="fas fa-users text-4xl text-brand-purple mb-4"></i>
+
+                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-blue-600 hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-4">
+                            <i class="fas fa-users-gear"></i>
+                        </div>
                         <h3 class="font-bold text-brand-dark text-lg mb-2">Protagonismo</h3>
-                        <p class="text-sm text-gray-600">Liderança e cidadania ativa juvenil</p>
+                        <p class="text-sm text-gray-600">Liderança autêntica, cidadania ativa e voz ativa para liderar transformações.</p>
                     </div>
-                    <div class="bg-brand-light p-8 rounded-2xl text-center border-t-4 border-brand-purple hover:shadow-lg transition-shadow">
-                        <i class="fas fa-globe-americas text-4xl text-brand-purple mb-4"></i>
-                        <h3 class="font-bold text-brand-dark text-lg mb-2">Impacto Real</h3>
-                        <p class="text-sm text-gray-600">Projetos reais para desafios do território</p>
+
+                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-amber-600 hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-2">Inovação Social</h3>
+                        <p class="text-sm text-gray-600">Metodologias participativas, ideação criativa e prototipagem de projetos.</p>
                     </div>
-                    <div class="bg-brand-light p-8 rounded-2xl text-center border-t-4 border-brand-purple hover:shadow-lg transition-shadow">
-                        <i class="fas fa-seedling text-4xl text-brand-purple mb-4"></i>
+
+                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-brand-purple hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-purple flex items-center justify-center text-2xl mb-4">
+                            <i class="fas fa-seedling"></i>
+                        </div>
                         <h3 class="font-bold text-brand-dark text-lg mb-2">Regeneração</h3>
-                        <p class="text-sm text-gray-600">Impacto social, ambiental e comunitário</p>
+                        <p class="text-sm text-gray-600">Soluções concretas que deixam legados sociais, comunitários e ecológicos duradouros.</p>
                     </div>
                 </div>
             </div>
@@ -106,120 +240,818 @@
     <section id="videos" class="py-24 bg-brand-light border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-6">O Projeto em Ação</h2>
-                <p class="text-xl text-gray-600 font-light max-w-3xl mx-auto">Conheça um pouco da nossa história, do nosso impacto no Ironman Brasil e entenda por que acreditamos que a mudança começa em cada um de nós.</p>
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-200 text-brand-purpleDark mb-4">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Em Ação</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark mb-4">O Projeto em Movimento</h2>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Conheça nossa história, a raiz médica e socioemocional com a Dra. Maisa Hortal e o impacto no Ironman Brasil.
+                </p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Video 1 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow flex flex-col">
-                    <iframe src="https://www.youtube.com/embed/4yFXuGCbT4g" title="A mudança começa em você" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-56 sm:h-64 lg:h-56"></iframe>
-                    <div class="p-6">
-                        <h3 class="font-bold text-lg mb-2 text-brand-dark">A mudança começa em você</h3>
-                        <p class="text-gray-600 text-sm">Entenda a essência e a visão por trás da incubadora de líderes.</p>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col group border border-gray-100">
+                    <div class="relative w-full aspect-video bg-black">
+                        <iframe src="https://www.youtube.com/embed/4yFXuGCbT4g" title="A mudança começa em você" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-brand-purple uppercase tracking-wider">Manifesto</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2 text-brand-dark group-hover:text-brand-purple transition-colors">A mudança começa em você</h3>
+                            <p class="text-gray-600 text-sm">Entenda a essência e a visão por trás da incubadora de líderes e transformação de vidas.</p>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Video 2 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow flex flex-col">
-                    <iframe src="https://www.youtube.com/embed/pSkiuGan5lY" title="Projeto Iron For Change - Dra Maisa Hortal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-56 sm:h-64 lg:h-56"></iframe>
-                    <div class="p-6">
-                        <h3 class="font-bold text-lg mb-2 text-brand-dark">Nosso Propósito</h3>
-                        <p class="text-gray-600 text-sm">Dra. Maisa Hortal apresenta a visão de saúde e impacto do projeto.</p>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col group border border-gray-100">
+                    <div class="relative w-full aspect-video bg-black">
+                        <iframe src="https://www.youtube.com/embed/pSkiuGan5lY" title="Projeto Iron For Change - Dra Maisa Hortal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-brand-purple uppercase tracking-wider">Propósito & Saúde</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2 text-brand-dark group-hover:text-brand-purple transition-colors">Visão Médica e Propósito</h3>
+                            <p class="text-gray-600 text-sm">Dra. Maisa Hortal apresenta a fundamentação em saúde integral, pertencimento e impacto social.</p>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Video 3 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow flex flex-col">
-                    <iframe src="https://www.youtube.com/embed/cMJtS3FfCKs" title="IronMan 2023 Florianópolis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-56 sm:h-64 lg:h-56"></iframe>
-                    <div class="p-6">
-                        <h3 class="font-bold text-lg mb-2 text-brand-dark">Ação no Ironman 2023</h3>
-                        <p class="text-gray-600 text-sm">Como conectamos a força do esporte à transformação social.</p>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col group border border-gray-100">
+                    <div class="relative w-full aspect-video bg-black">
+                        <iframe src="https://www.youtube.com/embed/cMJtS3FfCKs" title="IronMan 2023 Florianópolis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-brand-purple uppercase tracking-wider">Território & Esporte</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2 text-brand-dark group-hover:text-brand-purple transition-colors">Ação no Ironman 2023</h3>
+                            <p class="text-gray-600 text-sm">Como conectamos a energia e resiliência do esporte de alta intensidade à transformação comunitária.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Jornada do Change -->
-    <section id="jornada" class="py-24 bg-brand-dark text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6">A Jornada do Change</h2>
-                <p class="text-xl text-gray-400 font-light max-w-2xl mx-auto">Cinco etapas para transformar: do autoconhecimento à ação no território.</p>
-            </div>
+    <!-- Jornada do Change - 44 Semanas (Full Curriculum & Interactive Stage Navigator) -->
+    <section id="jornada" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Background subtle elements -->
+        <div class="absolute -right-20 top-40 w-96 h-96 bg-brand-purple/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-20 bottom-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
-                <!-- Step 1 -->
-                <div class="bg-brand-gray p-8 rounded-2xl relative text-center border-b-4 border-brand-purple">
-                    <div class="w-14 h-14 bg-brand-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto -mt-16 mb-6 shadow-xl border-4 border-brand-dark">1</div>
-                    <h3 class="text-xl font-bold text-brand-purple mb-3">DESPERTAR</h3>
-                    <p class="font-semibold text-white mb-3">Quem sou eu?</p>
-                    <p class="text-sm text-gray-400">Autoconhecimento, identidade, propósito e saúde integral.</p>
+            <!-- Section Header -->
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-brand-purple/20 text-brand-purple border border-brand-purple/30 mb-4">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Metodologia Pedagógica • 44 Semanas de Atividades</span>
                 </div>
-                <!-- Step 2 -->
-                <div class="bg-brand-gray p-8 rounded-2xl relative text-center border-b-4 border-brand-purple">
-                    <div class="w-14 h-14 bg-brand-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto -mt-16 mb-6 shadow-xl border-4 border-brand-dark">2</div>
-                    <h3 class="text-xl font-bold text-brand-purple mb-3">PERTENCER</h3>
-                    <p class="font-semibold text-white mb-3">Onde estou?</p>
-                    <p class="text-sm text-gray-400">Território, vínculos, comunidade, empatia e cidadania.</p>
+                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6">
+                    A Jornada do Change
+                </h2>
+                <p class="text-lg sm:text-2xl text-gray-300 font-light leading-relaxed mb-4">
+                    <span class="text-brand-purple font-normal">Da consciência individual à transformação do território:</span><br class="hidden sm:inline">
+                    jovens que se conhecem, pertencem, imaginam, constroem e regeneram realidades.
+                </p>
+                <p class="text-sm sm:text-base text-gray-400">
+                    Ciclo anual contínuo com 44 semanas letivas e recesso de 2 semanas planejado.
+                </p>
+            </div>
+
+            <!-- Infographic Card & Teaser Banner -->
+            <div class="mb-14 bg-gradient-to-r from-gray-900 via-brand-gray to-gray-900 border border-gray-800 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center space-x-5">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-purple/20 border border-brand-purple/40 flex items-center justify-center text-brand-purple text-2xl flex-shrink-0">
+                        <i class="fas fa-map-location-dot"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-1">Mapa Completo da Metodologia</h4>
+                        <p class="text-sm text-gray-400 max-w-xl">
+                            Consulte a grade curricular detalhada com os 44 encontros temáticos, perguntas norteadoras e entregáveis de cada etapa.
+                        </p>
+                    </div>
                 </div>
-                <!-- Step 3 -->
-                <div class="bg-brand-gray p-8 rounded-2xl relative text-center border-b-4 border-brand-purple">
-                    <div class="w-14 h-14 bg-brand-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto -mt-16 mb-6 shadow-xl border-4 border-brand-dark">3</div>
-                    <h3 class="text-xl font-bold text-brand-purple mb-3">IMAGINAR</h3>
-                    <p class="font-semibold text-white mb-3">O que mudar?</p>
-                    <p class="text-sm text-gray-400">Criatividade, diagnóstico local e inovação social.</p>
+                <div class="flex flex-wrap gap-3 w-full md:w-auto">
+                    <button onclick="openInfographicModal()" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl bg-brand-purple hover:bg-brand-purpleDark text-white font-bold text-sm transition-all shadow-lg hover:shadow-brand-purple/30">
+                        <i class="fas fa-eye mr-2"></i> Ver Infográfico Oficial
+                    </button>
+                    <a href="assets/jornada-do-change-44-semanas.jpg" download="Jornada_do_Change_44_Semanas_IronForChange.jpg" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-gray-200 font-semibold text-sm transition-colors">
+                        <i class="fas fa-download mr-2"></i> Baixar Imagem
+                    </a>
                 </div>
-                <!-- Step 4 -->
-                <div class="bg-brand-gray p-8 rounded-2xl relative text-center border-b-4 border-brand-purple">
-                    <div class="w-14 h-14 bg-brand-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto -mt-16 mb-6 shadow-xl border-4 border-brand-dark">4</div>
-                    <h3 class="text-xl font-bold text-brand-purple mb-3">CONSTRUIR</h3>
-                    <p class="font-semibold text-white mb-3">Como faço?</p>
-                    <p class="text-sm text-gray-400">Planejamento, prototipagem, colaboração e liderança.</p>
+            </div>
+
+            <!-- Interactive Stage Tabs (5 Etapas) -->
+            <div class="mb-10">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold tracking-widest text-gray-400 uppercase">Selecione uma etapa para navegar pelos módulos:</span>
+                    <span class="text-xs text-brand-purple font-medium hidden sm:inline"><i class="fas fa-hand-pointer mr-1"></i> Clique para alternar</span>
                 </div>
-                <!-- Step 5 -->
-                <div class="bg-brand-gray p-8 rounded-2xl relative text-center border-b-4 border-brand-purple">
-                    <div class="w-14 h-14 bg-brand-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto -mt-16 mb-6 shadow-xl border-4 border-brand-dark">5</div>
-                    <h3 class="text-xl font-bold text-brand-purple mb-3">REGENERAR</h3>
-                    <p class="font-semibold text-white mb-3">Qual o impacto?</p>
-                    <p class="text-sm text-gray-400">Implementação, avaliação e multiplicação para o território.</p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3" id="stageTabsContainer">
+                    <!-- Tab 1: Despertar -->
+                    <button onclick="switchStage(1)" id="tab-btn-1" class="stage-tab active text-left p-4 rounded-2xl bg-brand-gray border-2 border-emerald-600 transition-all flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="w-7 h-7 rounded-full bg-emerald-600 text-white font-black text-xs flex items-center justify-center">1</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400">10 Semanas</span>
+                        </div>
+                        <h4 class="font-extrabold text-lg text-white">DESPERTAR</h4>
+                        <p class="text-xs text-gray-400 mt-1">Consciência individual</p>
+                    </button>
+
+                    <!-- Tab 2: Pertencer -->
+                    <button onclick="switchStage(2)" id="tab-btn-2" class="stage-tab text-left p-4 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-blue-600/50 transition-all flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="w-7 h-7 rounded-full bg-blue-600 text-white font-black text-xs flex items-center justify-center">2</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-blue-400">8 Semanas</span>
+                        </div>
+                        <h4 class="font-extrabold text-lg text-white">PERTENCER</h4>
+                        <p class="text-xs text-gray-400 mt-1">Vínculo com o território</p>
+                    </button>
+
+                    <!-- Tab 3: Imaginar -->
+                    <button onclick="switchStage(3)" id="tab-btn-3" class="stage-tab text-left p-4 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-amber-500/50 transition-all flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="w-7 h-7 rounded-full bg-amber-500 text-white font-black text-xs flex items-center justify-center">3</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">6 Semanas</span>
+                        </div>
+                        <h4 class="font-extrabold text-lg text-white">IMAGINAR</h4>
+                        <p class="text-xs text-gray-400 mt-1">Criatividade & Ideação</p>
+                    </button>
+
+                    <!-- Tab 4: Construir -->
+                    <button onclick="switchStage(4)" id="tab-btn-4" class="stage-tab text-left p-4 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-purple-500/50 transition-all flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="w-7 h-7 rounded-full bg-purple-600 text-white font-black text-xs flex items-center justify-center">4</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-purple-400">13 Semanas</span>
+                        </div>
+                        <h4 class="font-extrabold text-lg text-white">CONSTRUIR</h4>
+                        <p class="text-xs text-gray-400 mt-1">Prototipagem & Ação</p>
+                    </button>
+
+                    <!-- Tab 5: Regenerar -->
+                    <button onclick="switchStage(5)" id="tab-btn-5" class="stage-tab text-left p-4 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-emerald-700/50 transition-all flex flex-col justify-between col-span-2 sm:col-span-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="w-7 h-7 rounded-full bg-emerald-700 text-white font-black text-xs flex items-center justify-center">5</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400">7 Semanas</span>
+                        </div>
+                        <h4 class="font-extrabold text-lg text-white">REGENERAR</h4>
+                        <p class="text-xs text-gray-400 mt-1">Showcase & Legado</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic Stage Detail Container -->
+            <div id="stageDetailBox" class="bg-brand-gray rounded-3xl p-6 sm:p-10 border border-gray-800 shadow-2xl transition-all">
+                
+                <!-- Stage 1 Content -->
+                <div id="stage-panel-1" class="stage-panel">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 mb-8 border-b border-gray-800 gap-4">
+                        <div>
+                            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-950 text-emerald-400 border border-emerald-800 mb-3">
+                                <i class="fas fa-seedling"></i>
+                                <span>Etapa 01 • 10 Semanas</span>
+                            </div>
+                            <h3 class="text-3xl font-black text-white">1. DESPERTAR</h3>
+                            <p class="text-lg text-emerald-300 font-medium italic mt-2">
+                                "Quem sou eu e qual é a minha capacidade de transformar a realidade?"
+                            </p>
+                        </div>
+                        <div class="bg-gray-900/90 border border-emerald-800/40 rounded-2xl p-4 md:max-w-xs flex-shrink-0">
+                            <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 block mb-1">
+                                <i class="fas fa-check-circle mr-1"></i> Produto da Etapa
+                            </span>
+                            <span class="text-base font-bold text-white block">Mapa do Meu Change</span>
+                            <p class="text-xs text-gray-400 mt-1">Síntese de autoconhecimento, valores, saúde integral e projeto de vida.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-6 flex items-center">
+                        <i class="fas fa-list-check mr-2 text-emerald-400"></i> Encontros e Módulos Semanais:
+                    </h4>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-600/30">1</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Boas-vindas: o início da Jornada</h5>
+                                <p class="text-xs text-gray-400 mt-1">Acolhimento, pactos de convivência e apresentação da proposta regenerativa.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-600/30">2</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Reconhecimento do grupo</h5>
+                                <p class="text-xs text-gray-400 mt-1">Dinâmicas de integração, escuta empática e fortalecimento de vínculos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-600/30">3</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Ikigai, propósito e projeto de vida</h5>
+                                <p class="text-xs text-gray-400 mt-1">Identificação de paixões, talentos, missão e vocação pessoal.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-600/30">4</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Nós e o Todo – Cosmovisão sistêmica</h5>
+                                <p class="text-xs text-gray-400 mt-1">Compreensão de interdependência ecológica, social e comunitária.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-600/30">5</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Saúde integral e autocuidado</h5>
+                                <p class="text-xs text-gray-400 mt-1">Fundamentos da saúde física, emocional e manejo de estresse.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-600/30">6</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Alimentação e escolhas</h5>
+                                <p class="text-xs text-gray-400 mt-1">Nutrição consciente e impacto dos hábitos na energia vital.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-600/30">7</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Meditação e atenção plena</h5>
+                                <p class="text-xs text-gray-400 mt-1">Foco, presença, respiração e autorregulação emocional.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-600/30">8</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Movimento – O corpo em movimento</h5>
+                                <p class="text-xs text-gray-400 mt-1">Práticas corporais, esportivas e expressão física de vitalidade.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-600/30">9</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Comunicação – Como me expresso e como escuto</h5>
+                                <p class="text-xs text-gray-400 mt-1">Comunicação Não-Violenta (CNV), oratória e escuta ativa.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-600/30">10</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Meu Change começa em mim – Integração</h5>
+                                <p class="text-xs text-gray-400 mt-1">Consolidação do autodiagnóstico individual e celebração da 1ª etapa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2 Content -->
+                <div id="stage-panel-2" class="stage-panel hidden">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 mb-8 border-b border-gray-800 gap-4">
+                        <div>
+                            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-950 text-blue-400 border border-blue-800 mb-3">
+                                <i class="fas fa-users"></i>
+                                <span>Etapa 02 • 8 Semanas</span>
+                            </div>
+                            <h3 class="text-3xl font-black text-white">2. PERTENCER</h3>
+                            <p class="text-lg text-blue-300 font-medium italic mt-2">
+                                "A que lugar pertenço e como posso participar da transformação dele?"
+                            </p>
+                        </div>
+                        <div class="bg-gray-900/90 border border-blue-800/40 rounded-2xl p-4 md:max-w-xs flex-shrink-0">
+                            <span class="text-[11px] font-bold uppercase tracking-widest text-blue-400 block mb-1">
+                                <i class="fas fa-check-circle mr-1"></i> Produto da Etapa
+                            </span>
+                            <span class="text-base font-bold text-white block">Mapa de Desafios, Ativos e Oportunidades</span>
+                            <p class="text-xs text-gray-400 mt-1">Diagnóstico participativo detalhado do território e suas potencialidades.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-6 flex items-center">
+                        <i class="fas fa-list-check mr-2 text-blue-400"></i> Encontros e Módulos Semanais:
+                    </h4>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-blue-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-blue-600/30">1</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">O que é território?</h5>
+                                <p class="text-xs text-gray-400 mt-1">Conceito de território vivo, memória histórica e identidade cultural.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-blue-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-blue-600/30">2</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Caminhada pelo território (expedição)</h5>
+                                <p class="text-xs text-gray-400 mt-1">Trabalho de campo, olhar atento e registro de realidades locais.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-blue-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-blue-600/30">3</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Participação social</h5>
+                                <p class="text-xs text-gray-400 mt-1">Espaços comunitários, associações de moradores, coletivos e conselhos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-blue-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-blue-600/30">4</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Como posso pertencer ao território?</h5>
+                                <p class="text-xs text-gray-400 mt-1">Fortalecimento do sentimento de pertença, afeto e responsabilidade cívica.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-blue-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-blue-600/30">5</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Como é a realidade do meu bairro e da minha cidade?</h5>
+                                <p class="text-xs text-gray-400 mt-1">Análise de dados socioeconômicos, ambientais e contrastes urbanos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-blue-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-blue-600/30">6</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Gestão participativa (simulação)</h5>
+                                <p class="text-xs text-gray-400 mt-1">Roleplay e tomada de decisão democrática sobre dilemas comunitários.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-blue-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-blue-600/30">7</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">O que é política? – Para além da política partidária</h5>
+                                <p class="text-xs text-gray-400 mt-1">Política como arte da convivência humana, polis e direitos fundamentais.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-blue-700/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-blue-600/30">8</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Diagnóstico participativo – O que queremos transformar?</h5>
+                                <p class="text-xs text-gray-400 mt-1">Priorização de desafios locais e fechamento do mapa de oportunidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 3 Content -->
+                <div id="stage-panel-3" class="stage-panel hidden">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 mb-8 border-b border-gray-800 gap-4">
+                        <div>
+                            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-950 text-amber-400 border border-amber-800 mb-3">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Etapa 03 • 6 Semanas</span>
+                            </div>
+                            <h3 class="text-3xl font-black text-white">3. IMAGINAR</h3>
+                            <p class="text-lg text-amber-300 font-medium italic mt-2">
+                                "E se as coisas pudessem ser diferentes?"
+                            </p>
+                        </div>
+                        <div class="bg-gray-900/90 border border-amber-800/40 rounded-2xl p-4 md:max-w-xs flex-shrink-0">
+                            <span class="text-[11px] font-bold uppercase tracking-widest text-amber-400 block mb-1">
+                                <i class="fas fa-check-circle mr-1"></i> Produto da Etapa
+                            </span>
+                            <span class="text-base font-bold text-white block">Desafio Escolhido + Ideia do Change Project</span>
+                            <p class="text-xs text-gray-400 mt-1">Definição do problema real a solucionar e escopo preliminar da inovação.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-6 flex items-center">
+                        <i class="fas fa-list-check mr-2 text-amber-400"></i> Encontros e Módulos Semanais:
+                    </h4>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-amber-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-amber-500/30">1</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">O processo imaginativo e criativo</h5>
+                                <p class="text-xs text-gray-400 mt-1">Desbloqueio de criatividade, pensamento divergente e imaginação cívica.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-amber-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-amber-500/30">2</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Como boas ideias surgem?</h5>
+                                <p class="text-xs text-gray-400 mt-1">Casos inspiradores, serendipidade, combinação de conceitos e observação.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-amber-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-amber-500/30">3</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Bons exemplos e como eles aconteceram</h5>
+                                <p class="text-xs text-gray-400 mt-1">Estudo de cases reais de impacto juvenil no Brasil e no mundo.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-amber-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-amber-500/30">4</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Metodologias participativas e criativas – Regathon</h5>
+                                <p class="text-xs text-gray-400 mt-1">Maratona imersiva de cocriação com ferramentas de Design Thinking.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-amber-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-amber-500/30">5</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Brainstorm – Que ideias temos?</h5>
+                                <p class="text-xs text-gray-400 mt-1">Geração volumosa de alternativas, clusterização e seleção de hipóteses.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-amber-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-amber-500/30">6</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Estado da arte + definição do desafio</h5>
+                                <p class="text-xs text-gray-400 mt-1">Pesquisa de campo: "Alguém já tentou resolver isso? O que podemos inovar?"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 4 Content -->
+                <div id="stage-panel-4" class="stage-panel hidden">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 mb-8 border-b border-gray-800 gap-4">
+                        <div>
+                            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-950 text-purple-400 border border-purple-800 mb-3">
+                                <i class="fas fa-screwdriver-wrench"></i>
+                                <span>Etapa 04 • 13 Semanas (A Mais Extensa)</span>
+                            </div>
+                            <h3 class="text-3xl font-black text-white">4. CONSTRUIR</h3>
+                            <p class="text-lg text-purple-300 font-medium italic mt-2">
+                                "Como transformamos uma ideia em realidade?"
+                            </p>
+                        </div>
+                        <div class="bg-gray-900/90 border border-purple-800/40 rounded-2xl p-4 md:max-w-xs flex-shrink-0">
+                            <span class="text-[11px] font-bold uppercase tracking-widest text-purple-400 block mb-1">
+                                <i class="fas fa-check-circle mr-1"></i> Produto da Etapa
+                            </span>
+                            <span class="text-base font-bold text-white block">Projeto em Execução com Resultados</span>
+                            <p class="text-xs text-gray-400 mt-1">Protótipo testado no território, rede de mentores e evidências de impacto.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-6 flex items-center">
+                        <i class="fas fa-list-check mr-2 text-purple-400"></i> Encontros e Módulos Semanais:
+                    </h4>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">1</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">O que é um projeto?</h5>
+                                <p class="text-xs text-gray-400 mt-1">Estrutura básica: objetivos, justificativa, escopo e público-alvo.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">2</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Diferentes linguagens de projetos</h5>
+                                <p class="text-xs text-gray-400 mt-1">Modelos de projetos em pesquisa, terceiro setor e iniciativa privada.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">3</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Definindo nosso Change Project</h5>
+                                <p class="text-xs text-gray-400 mt-1">Formação dos times, divisão de papéis e fechamento do plano de trabalho.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">4</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Teoria da Mudança simplificada</h5>
+                                <p class="text-xs text-gray-400 mt-1">Atividades &rarr; Resultados diretos &rarr; Impacto sistêmico de longo prazo.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">5</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Rede de parceiros</h5>
+                                <p class="text-xs text-gray-400 mt-1">Mapeamento de stakeholders e aliados comunitários estratégicos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">6</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Quem pode ser meu tutor, orientador ou inspirador?</h5>
+                                <p class="text-xs text-gray-400 mt-1">Conexão direta com mentores especialistas e referências profissionais.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">7</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Recursos e captação</h5>
+                                <p class="text-xs text-gray-400 mt-1">Orçamento enxuto, financiamento coletivo, editais e doações.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">8</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Prototipagem – Vamos testar!</h5>
+                                <p class="text-xs text-gray-400 mt-1">Criação do MVP (produto mínimo viável) em pequena escala para validação rápida.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">9</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Execução I</h5>
+                                <p class="text-xs text-gray-400 mt-1">Entrada em campo com as atividades planejadas no território.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">10</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Avaliação e mentoria</h5>
+                                <p class="text-xs text-gray-400 mt-1">Rodada de feedback: "O que funcionou? O que precisamos mudar e ajustar?"</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">11</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Execução II</h5>
+                                <p class="text-xs text-gray-400 mt-1">Iteração e ampliação do projeto com melhorias incorporadas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">12</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Troca de experiências – Change Exchange</h5>
+                                <p class="text-xs text-gray-400 mt-1">Apresentação cruzada entre grupos de jovens para intercâmbio de soluções.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-purple-600/60 transition-colors md:col-span-2">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-purple-600/30">13</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Preparação para Regenerar – Resultados e comunicação</h5>
+                                <p class="text-xs text-gray-400 mt-1">Consolidação de métricas, fotos, depoimentos e preparação para a etapa final.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 5 Content -->
+                <div id="stage-panel-5" class="stage-panel hidden">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 mb-8 border-b border-gray-800 gap-4">
+                        <div>
+                            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-950 text-emerald-400 border border-emerald-800 mb-3">
+                                <i class="fas fa-tree"></i>
+                                <span>Etapa 05 • 7 Semanas</span>
+                            </div>
+                            <h3 class="text-3xl font-black text-white">5. REGENERAR</h3>
+                            <p class="text-lg text-emerald-300 font-medium italic mt-2">
+                                "O que aprendemos e que transformação deixamos?"
+                            </p>
+                        </div>
+                        <div class="bg-gray-900/90 border border-emerald-800/40 rounded-2xl p-4 md:max-w-xs flex-shrink-0">
+                            <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 block mb-1">
+                                <i class="fas fa-check-circle mr-1"></i> Produto da Etapa
+                            </span>
+                            <span class="text-base font-bold text-white block">Legado da Jornada e Plano de Continuidade</span>
+                            <p class="text-xs text-gray-400 mt-1">Sustentabilidade dos projetos, formação da rede Alumni e novos ciclos.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-6 flex items-center">
+                        <i class="fas fa-list-check mr-2 text-emerald-400"></i> Encontros e Módulos Semanais:
+                    </h4>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-700/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-700/30">1</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Execução final dos projetos</h5>
+                                <p class="text-xs text-gray-400 mt-1">Última rodada de intervenção prática, ajustes finais e fechamento das entregas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-700/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-700/30">2</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Avaliação dos projetos – O que fizemos e o que mudou?</h5>
+                                <p class="text-xs text-gray-400 mt-1">Balanço quantitativo e qualitativo das transformações geradas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-700/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-700/30">3</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Minha transformação – Quem eu era e quem sou agora?</h5>
+                                <p class="text-xs text-gray-400 mt-1">Reflexão socioemocional profunda sobre o crescimento individual do jovem.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-700/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-700/30">4</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Comunicação do impacto – Como contar nossa transformação?</h5>
+                                <p class="text-xs text-gray-400 mt-1">Storytelling, produção de materiais visuais, relatórios e depoimentos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-700/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-700/30">5</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Preparação do Showcase</h5>
+                                <p class="text-xs text-gray-400 mt-1">Ensaios de pitch, stands de demonstração e organização do evento comunitário.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-600/60 transition-colors">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-700/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-700/30">6</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Showcase IronForChange</h5>
+                                <p class="text-xs text-gray-400 mt-1">Grande celebração pública: apresentação dos projetos para a comunidade e parceiros.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-emerald-600/60 transition-colors md:col-span-2">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-700/20 text-emerald-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-emerald-700/30">7</span>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Próximos passos e legado</h5>
+                                <p class="text-xs text-gray-400 mt-1">Continuidade dos projetos, entrada na Rede Alumni IFC e pontes com oportunidades de mercado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Princípios Orientadores (Extraídos da Metodologia Oficial) -->
+    <section id="principios" class="py-24 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-100 text-brand-purple mb-4">
+                    <i class="fas fa-compass"></i>
+                    <span>Diretrizes Pedagógicas</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark mb-4">Princípios que Orientam</h2>
+                <p class="text-lg text-gray-600 font-light">
+                    Os seis pilares éticos e metodológicos que sustentam cada encontro, atividade e decisão pedagógica do Iron For Change.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Principio 1 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-100 text-brand-purple flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Protagonismo Juvenil</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Os adolescentes não são meros beneficiários passivos. Eles são os autores, formuladores e executores diretos das mudanças que desejam ver no mundo.
+                    </p>
+                </div>
+
+                <!-- Principio 2 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-book-open-reader"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Aprendizagem Viva e Significativa</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        A teoria só existe para servir à prática. O aprendizado ocorre a partir de vivências reais, resolução de problemas concretos e reflexão contínua.
+                    </p>
+                </div>
+
+                <!-- Principio 3 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-people-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Colaboração e Diversidade</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Valorização das diferentes histórias, talentos e origens. O poder transformador surge da cooperação generosa e do trabalho em equipe.
+                    </p>
+                </div>
+
+                <!-- Principio 4 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-map-pin"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Território como Professor</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        A comunidade, o bairro e o meio ambiente local são a principal sala de aula. É no contato com o território que o jovem desenvolve empatia e senso de pertencimento.
+                    </p>
+                </div>
+
+                <!-- Principio 5 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Ação com Propósito</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Toda ação deve estar alinhada a valores éticos, integridade humana e saúde integral. Agir com clareza de intenção e foco no bem comum.
+                    </p>
+                </div>
+
+                <!-- Principio 6 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Regeneração e Legado</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Não basta apenas não causar danos; é preciso regenerar as relações humanas, a saúde dos jovens e a vitalidade socioecológica dos territórios.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Como Apoiar -->
+    <!-- Como Apoiar (Estratégias de Captação & Parcerias) -->
     <section id="como-apoiar" class="py-24 bg-brand-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-6">Sua organização pode fazer parte</h2>
-                <p class="text-xl text-gray-600 font-light max-w-2xl mx-auto">Diferentes formas de contribuir para viabilizar o primeiro ciclo e ampliar as oportunidades dos jovens.</p>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-200 text-brand-purpleDark mb-4">
+                    <i class="fas fa-handshake"></i>
+                    <span>Parcerias e Captação</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark mb-6">Sua organização pode fazer parte</h2>
+                <p class="text-lg text-gray-600 font-light leading-relaxed">
+                    Formatamos categorias de apoio para dialogar com diferentes realidades: investidores institucionais, editais, bolsas de apoio e doadores individuais.
+                </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-white rounded-2xl p-10 hover:shadow-2xl transition-all border border-gray-100">
-                    <i class="fas fa-hand-holding-usd text-5xl text-brand-purple mb-6"></i>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-4">Investimento Financeiro</h3>
-                    <p class="text-gray-600">Recursos vitais para a implementação estrutural e a realização do primeiro ciclo da nossa incubadora.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Categoria 1 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-purple flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3">Investimento Financeiro</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Aporte direto para a estrutura operacional, equipe técnica e viabilização das 44 semanas de atividades formativas da turma.
+                        </p>
+                    </div>
+                    <span class="text-xs font-bold text-brand-purple uppercase tracking-wider">Grandes & Médios Investidores</span>
                 </div>
-                <div class="bg-white rounded-2xl p-10 hover:shadow-2xl transition-all border border-gray-100">
-                    <i class="fas fa-building text-5xl text-brand-purple mb-6"></i>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-4">Patrocínio Institucional</h3>
-                    <p class="text-gray-600">Para organizações que desejam se alinhar à juventude, educação, saúde integral e sustentabilidade local.</p>
+
+                <!-- Categoria 2 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3">Bolsas & Alimentação</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Garantia de permanência dos jovens: apoio para alimentação saudável em todos os encontros, transporte e auxílio aos adolescentes.
+                        </p>
+                    </div>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Apoio Temático / PF e PJ</span>
                 </div>
-                <div class="bg-white rounded-2xl p-10 hover:shadow-2xl transition-all border border-gray-100">
-                    <i class="fas fa-chalkboard-teacher text-5xl text-brand-purple mb-6"></i>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-4">Apoio Técnico e Mentoria</h3>
-                    <p class="text-gray-600">Especialistas que contribuem ativamente compartilhando conhecimentos valiosos e inspirando os jovens.</p>
+
+                <!-- Categoria 3 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3">Editais & Institutos</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Conexão com fundações, institutos sociais e editais de fomento à juventude, saúde mental e sustentabilidade regenerativa.
+                        </p>
+                    </div>
+                    <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Parcerias Institucionais</span>
                 </div>
-                <div class="bg-white rounded-2xl p-10 hover:shadow-2xl transition-all border border-gray-100">
-                    <i class="fas fa-box-open text-5xl text-brand-purple mb-6"></i>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-4">Produtos e Estrutura</h3>
-                    <p class="text-gray-600">Fornecimento de materiais, espaços físicos, equipamentos e serviços para viabilizar as atividades.</p>
+
+                <!-- Categoria 4 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3">Mentoria & Apoio Técnico</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Profissionais e especialistas que doam tempo e conhecimento para orientar os Change Projects criados pelos jovens.
+                        </p>
+                    </div>
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Rede Voluntária Especializada</span>
                 </div>
-                <div class="bg-white rounded-2xl p-10 hover:shadow-2xl transition-all border border-gray-100">
-                    <i class="fas fa-network-wired text-5xl text-brand-purple mb-6"></i>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-4">Conexões e Rede</h3>
-                    <p class="text-gray-600">Articulação com novos parceiros, apoiadores e oportunidades estratégicas de mercado para os jovens.</p>
+
+                <!-- Categoria 5 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-boxes-stacked"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3">Espaços e Estrutura</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Cessão de locais para oficinas, materiais pedagógicos, equipamentos de mídia e serviços para a viabilização das ações.
+                        </p>
+                    </div>
+                    <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Apoio em Produtos e Serviços</span>
+                </div>
+
+                <!-- Categoria 6 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3">Conexões Estratégicas</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Articulação com novas pontes de mercado, lideranças comunitárias e oportunidades de estágio e inserção para os jovens.
+                        </p>
+                    </div>
+                    <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Articulação em Rede</span>
                 </div>
             </div>
         </div>
@@ -229,11 +1061,18 @@
     <section id="contato" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-6">Venha construir o primeiro ciclo.</h2>
-                <p class="text-xl text-gray-600 font-light">Juntos, formamos jovens protagonistas.<br>Juntos, transformamos territórios.</p>
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-100 text-brand-purple mb-4">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>Vamos Dialogar</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark mb-4">Venha construir o próximo ciclo.</h2>
+                <p class="text-lg text-gray-600 font-light">
+                    Juntos, formamos jovens protagonistas.<br>
+                    Juntos, regeneramos territórios.
+                </p>
             </div>
             
-            <div class="bg-brand-dark rounded-3xl shadow-2xl p-8 md:p-12 text-white">
+            <div class="bg-brand-dark rounded-3xl shadow-2xl p-8 md:p-12 text-white border border-gray-800">
                 <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
                     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                     <input type="hidden" name="subject" value="Novo Contato - Site Iron For Change">
@@ -242,53 +1081,216 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nome Completo</label>
-                            <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-brand-gray border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all">
+                            <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Seu nome">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">E-mail Corporativo</label>
-                            <input type="email" name="email" id="email" required class="w-full px-4 py-3 bg-brand-gray border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all">
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">E-mail de Contato</label>
+                            <input type="email" name="email" id="email" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="seu@email.com">
                         </div>
                     </div>
                     
-                    <div class="mb-6">
-                        <label for="organization" class="block text-sm font-medium text-gray-300 mb-2">Organização / Empresa</label>
-                        <input type="text" name="organization" id="organization" class="w-full px-4 py-3 bg-brand-gray border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="organization" class="block text-sm font-medium text-gray-300 mb-2">Organização / Empresa / Instituição</label>
+                            <input type="text" name="organization" id="organization" class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Nome da empresa ou iniciativa">
+                        </div>
+                        <div>
+                            <label for="category" class="block text-sm font-medium text-gray-300 mb-2">Forma de Interesse</label>
+                            <select name="category" id="category" class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all">
+                                <option value="investimento">Investimento Financeiro</option>
+                                <option value="bolsas">Apoio a Bolsas / Alimentação</option>
+                                <option value="mentoria">Mentoria e Apoio Técnico</option>
+                                <option value="parceria">Parceria Institucional / Edital</option>
+                                <option value="jovens">Inscrição / Indicação de Jovens</option>
+                                <option value="outro">Outro tipo de contribuição</option>
+                            </select>
+                        </div>
                     </div>
                     
                     <div class="mb-8">
-                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Como gostaria de apoiar?</label>
-                        <textarea name="message" id="message" rows="5" required class="w-full px-4 py-3 bg-brand-gray border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all"></textarea>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Mensagem</label>
+                        <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Como gostaria de somar forças com o Iron For Change?"></textarea>
                     </div>
                     
-                    <div class="h-captcha mb-6" data-captcha="true"></div>
-                    
-                    <button type="submit" class="w-full bg-brand-purple hover:bg-opacity-80 text-white font-bold py-4 px-6 rounded-lg transition-colors text-lg shadow-lg">
-                        Enviar Mensagem
+                    <button type="submit" class="w-full bg-brand-purple hover:bg-brand-purpleDark text-white font-bold py-4 px-6 rounded-xl transition-all text-base shadow-xl hover:shadow-brand-purple/20 flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem
                     </button>
                     
-                    <p class="text-sm text-gray-400 mt-6 text-center">
-                        Ou envie um e-mail diretamente para: <a href="mailto:Ironforchange@gmail.com" class="text-brand-purple hover:text-white font-semibold transition-colors">Ironforchange@gmail.com</a>
-                    </p>
+                    <div class="mt-8 pt-6 border-t border-gray-800 text-center text-sm text-gray-400">
+                        Prefere contato direto por e-mail? Escreva para: 
+                        <a href="mailto:Ironforchange@gmail.com" class="text-brand-purple hover:underline font-semibold ml-1">Ironforchange@gmail.com</a>
+                    </div>
                 </form>
-                <script src="https://web3forms.com/client/script.js" async defer></script>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-black text-gray-400 py-16 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <h3 class="text-3xl font-black text-white mb-6 uppercase tracking-widest">Iron<span class="text-brand-purple">For</span>Change</h3>
-            <p class="mb-8 text-lg font-light">Jovens protagonistas. Territórios regenerativos. Futuros sustentáveis.</p>
-            <div class="flex justify-center space-x-8 mb-10">
-                <a href="https://instagram.com/ironforchange" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-brand-purple transition-colors transform hover:scale-110"><i class="fab fa-instagram text-3xl"></i></a>
-                <a href="https://www.youtube.com/watch?v=4yFXuGCbT4g&amp;list=PLj7WQLeQRUh6KcbbQEx1mCS7CIEFPOhLK" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-brand-purple transition-colors transform hover:scale-110"><i class="fab fa-youtube text-3xl"></i></a>
+    <!-- Modal / Lightbox do Infográfico -->
+    <div id="infographicModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6">
+        <div class="relative max-w-5xl w-full max-h-[92vh] bg-brand-gray rounded-3xl border border-gray-800 overflow-hidden flex flex-col shadow-2xl">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between px-6 py-4 border-b border-gray-800 bg-brand-dark">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-full bg-brand-purple/20 text-brand-purple flex items-center justify-center text-sm">
+                        <i class="fas fa-image"></i>
+                    </span>
+                    <div>
+                        <h4 class="text-base font-bold text-white">Infográfico Oficial da Jornada (44 Semanas)</h4>
+                        <p class="text-xs text-gray-400">Iron For Change — Estrutura Pedagógica Completa</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="assets/jornada-do-change-44-semanas.jpg" download="Jornada_do_Change_44_Semanas_IronForChange.jpg" class="text-xs font-semibold bg-brand-purple hover:bg-brand-purpleDark px-3 py-1.5 rounded-lg text-white transition-colors flex items-center">
+                        <i class="fas fa-download mr-1.5"></i> Baixar
+                    </a>
+                    <button onclick="closeInfographicModal()" class="w-8 h-8 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white flex items-center justify-center transition-colors">
+                        <i class="fas fa-times text-base"></i>
+                    </button>
+                </div>
             </div>
-            <div class="border-t border-gray-800 pt-8">
+            <!-- Modal Body with Scrollable Image -->
+            <div class="overflow-y-auto p-4 sm:p-6 flex justify-center bg-black/60">
+                <img src="assets/jornada-do-change-44-semanas.jpg" alt="Infográfico Completo - Jornada do Change 44 Semanas" class="max-w-full h-auto rounded-xl shadow-lg border border-gray-800">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-16 text-center border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center mb-8">
+                <div class="w-12 h-12 rounded-full bg-brand-purple/20 border border-brand-purple flex items-center justify-center text-brand-purple mb-4">
+                    <i class="fas fa-seedling text-xl"></i>
+                </div>
+                <h3 class="text-3xl font-black text-white uppercase tracking-widest">Iron<span class="text-brand-purple">For</span>Change</h3>
+                <p class="mt-2 text-base text-gray-400 max-w-xl font-light">
+                    Jovens que se conhecem, pertencem, imaginam, constroem e regeneram realidades.
+                </p>
+            </div>
+
+            <div class="flex justify-center space-x-6 mb-10">
+                <a href="https://instagram.com/ironforchange" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="https://www.youtube.com/watch?v=4yFXuGCbT4g&list=PLj7WQLeQRUh6KcbbQEx1mCS7CIEFPOhLK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+                <a href="mailto:Ironforchange@gmail.com" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 max-w-5xl mx-auto gap-4">
                 <p>&copy; 2026 Iron For Change. Todos os direitos reservados.</p>
-                <p class="text-sm mt-2 text-gray-500">ironforchange.com.br</p>
+                <div class="flex space-x-6">
+                    <a href="Iron_For_Change_Apresentacao_Institucional.pdf" download class="hover:text-gray-300 transition-colors">Apresentação (PDF)</a>
+                    <a href="assets/jornada-do-change-44-semanas.jpg" download class="hover:text-gray-300 transition-colors">Metodologia (Infográfico)</a>
+                    <a href="https://ironforchange.com" class="hover:text-brand-purple font-medium transition-colors">ironforchange.com</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-times');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+            });
+
+            // Close on link click
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+        }
+
+        // Stage Switcher Function
+        const stageBorders = {
+            1: 'border-emerald-600',
+            2: 'border-blue-600',
+            3: 'border-amber-500',
+            4: 'border-purple-600',
+            5: 'border-emerald-700'
+        };
+
+        function switchStage(stageNum) {
+            // Hide all panels
+            for (let i = 1; i <= 5; i++) {
+                const panel = document.getElementById('stage-panel-' + i);
+                const btn = document.getElementById('tab-btn-' + i);
+                
+                if (panel) panel.classList.add('hidden');
+                if (btn) {
+                    btn.classList.remove('active');
+                    btn.classList.remove('border-emerald-600', 'border-blue-600', 'border-amber-500', 'border-purple-600', 'border-emerald-700');
+                    btn.classList.add('border-transparent');
+                }
+            }
+
+            // Show selected panel
+            const activePanel = document.getElementById('stage-panel-' + stageNum);
+            const activeBtn = document.getElementById('tab-btn-' + stageNum);
+
+            if (activePanel) {
+                activePanel.classList.remove('hidden');
+            }
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+                activeBtn.classList.remove('border-transparent');
+                activeBtn.classList.add(stageBorders[stageNum] || 'border-brand-purple');
+            }
+        }
+
+        // Modal Handlers
+        const infographicModal = document.getElementById('infographicModal');
+
+        function openInfographicModal() {
+            if (infographicModal) {
+                infographicModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeInfographicModal() {
+            if (infographicModal) {
+                infographicModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal on click outside
+        if (infographicModal) {
+            infographicModal.addEventListener('click', (e) => {
+                if (e.target === infographicModal) {
+                    closeInfographicModal();
+                }
+            });
+        }
+
+        // Close on ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && infographicModal && !infographicModal.classList.contains('hidden')) {
+                closeInfographicModal();
+            }
+        });
+    </script>
 </body>
 </html>
