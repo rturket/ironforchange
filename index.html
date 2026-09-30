@@ -1151,52 +1151,69 @@
             </div>
             
             <div class="bg-brand-dark rounded-3xl shadow-2xl p-8 md:p-12 text-white border border-gray-800">
-                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                <form id="contactForm" onsubmit="event.preventDefault(); handleContactSubmit(event);">
                     <input type="hidden" name="access_key" value="63e4449c-cf3f-4fbe-bf28-32697d6a6586">
                     <input type="hidden" name="subject" value="Novo Contato - Site Iron For Change">
                     <input type="hidden" name="from_name" value="Site Iron For Change">
                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nome Completo</label>
-                            <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Seu nome">
+                    <!-- Form Fields (hidden after successful submission) -->
+                    <div id="formFieldsContainer">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nome Completo</label>
+                                <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Seu nome">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">E-mail de Contato</label>
+                                <input type="email" name="email" id="email" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="seu@email.com">
+                            </div>
                         </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">E-mail de Contato</label>
-                            <input type="email" name="email" id="email" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="seu@email.com">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="organization" class="block text-sm font-medium text-gray-300 mb-2">Organização / Empresa / Instituição</label>
+                                <input type="text" name="organization" id="organization" class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Nome da empresa ou iniciativa">
+                            </div>
+                            <div>
+                                <label for="category" class="block text-sm font-medium text-gray-300 mb-2">Forma de Interesse</label>
+                                <select name="category" id="category" class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all">
+                                    <option value="investimento">Investimento Financeiro</option>
+                                    <option value="bolsas">Apoio a Bolsas / Alimentação</option>
+                                    <option value="mentoria">Mentoria e Apoio Técnico</option>
+                                    <option value="parceria">Parceria Institucional / Edital</option>
+                                    <option value="jovens">Inscrição / Indicação de Jovens</option>
+                                    <option value="outro">Outro tipo de contribuição</option>
+                                </select>
+                            </div>
                         </div>
+                        
+                        <div class="mb-8">
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Mensagem</label>
+                            <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Como gostaria de somar forças com o Iron For Change?"></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submitBtn" class="w-full btn-lilac-gradient text-white font-extrabold py-4 px-6 rounded-xl transition-all text-base transform hover:scale-[1.01] flex items-center justify-center cursor-pointer">
+                            <span id="btnText" class="flex items-center"><i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem</span>
+                        </button>
+                        
+                        <div id="formStatus" class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold transition-all"></div>
                     </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label for="organization" class="block text-sm font-medium text-gray-300 mb-2">Organização / Empresa / Instituição</label>
-                            <input type="text" name="organization" id="organization" class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Nome da empresa ou iniciativa">
+
+                    <!-- Beautiful In-Place Success Card -->
+                    <div id="formSuccessCard" class="hidden text-center py-10 px-4">
+                        <div class="w-20 h-20 rounded-full bg-emerald-500/20 border-2 border-emerald-500/50 text-emerald-400 flex items-center justify-center mx-auto mb-5 text-3xl shadow-xl">
+                            <i class="fas fa-check"></i>
                         </div>
-                        <div>
-                            <label for="category" class="block text-sm font-medium text-gray-300 mb-2">Forma de Interesse</label>
-                            <select name="category" id="category" class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all">
-                                <option value="investimento">Investimento Financeiro</option>
-                                <option value="bolsas">Apoio a Bolsas / Alimentação</option>
-                                <option value="mentoria">Mentoria e Apoio Técnico</option>
-                                <option value="parceria">Parceria Institucional / Edital</option>
-                                <option value="jovens">Inscrição / Indicação de Jovens</option>
-                                <option value="outro">Outro tipo de contribuição</option>
-                            </select>
-                        </div>
+                        <h4 class="text-2xl sm:text-3xl font-black text-white mb-3">Mensagem enviada com sucesso!</h4>
+                        <p class="text-gray-300 text-base max-w-lg mx-auto mb-8 font-light leading-relaxed">
+                            Agradecemos o seu interesse no <span class="text-brand-purple font-semibold">Iron For Change</span>. Nossa equipe já recebeu sua mensagem e retornará o mais breve possível.
+                        </p>
+                        <button type="button" onclick="resetContactFormUI()" class="inline-flex items-center text-sm font-semibold text-brand-purple hover:text-white px-6 py-3 rounded-full border border-brand-purple/40 hover:bg-brand-purple/20 transition-all cursor-pointer">
+                            <i class="fas fa-redo-alt mr-2 text-xs"></i> Enviar outra mensagem
+                        </button>
                     </div>
-                    
-                    <div class="mb-8">
-                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Mensagem</label>
-                        <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Como gostaria de somar forças com o Iron For Change?"></textarea>
-                    </div>
-                    
-                    <button type="submit" id="submitBtn" class="w-full btn-lilac-gradient text-white font-extrabold py-4 px-6 rounded-xl transition-all text-base transform hover:scale-[1.01] flex items-center justify-center cursor-pointer">
-                        <span id="btnText" class="flex items-center"><i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem</span>
-                    </button>
-                    
-                    <div id="formStatus" class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold transition-all"></div>
-                    
+
                     <div class="mt-8 pt-6 border-t border-gray-800 text-center text-sm text-gray-400">
                         Prefere contato direto por e-mail? Escreva para: 
                         <a href="mailto:contato@ironforchange.com.br" class="text-brand-purple hover:underline font-semibold ml-1">contato@ironforchange.com.br</a>
@@ -1366,71 +1383,81 @@
             }
         }
 
-        // Contact Form AJAX Handler with Web3Forms
-        const contactForm = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const btnText = document.getElementById('btnText');
-        const formStatus = document.getElementById('formStatus');
+        // Contact Form In-Place AJAX Handler (No page leaving or redirection)
+        function handleContactSubmit(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const formStatus = document.getElementById('formStatus');
+            const formFieldsContainer = document.getElementById('formFieldsContainer');
+            const formSuccessCard = document.getElementById('formSuccessCard');
 
-        if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                
-                // Show loading state
-                if (submitBtn) {
-                    submitBtn.disabled = true;
-                    submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
-                }
-                if (btnText) {
-                    btnText.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando mensagem...';
-                }
-                if (formStatus) {
-                    formStatus.className = 'hidden';
-                }
+            if (!contactForm) return false;
 
-                const formData = new FormData(contactForm);
-                const object = Object.fromEntries(formData);
-                const json = JSON.stringify(object);
+            // Show loading state
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            }
+            if (btnText) {
+                btnText.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando mensagem...';
+            }
+            if (formStatus) {
+                formStatus.className = 'hidden';
+            }
 
-                fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: json
-                })
-                .then(async (response) => {
-                    const resJson = await response.json();
-                    if (response.status === 200) {
-                        if (formStatus) {
-                            formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 block';
-                            formStatus.innerHTML = '<i class="fas fa-check-circle mr-2 text-base"></i> Mensagem enviada com sucesso! Entraremos em contato em breve.';
-                        }
-                        contactForm.reset();
-                    } else {
-                        if (formStatus) {
-                            formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-950/80 text-red-300 border border-red-700/60 block';
-                            formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> ' + (resJson.message || 'Ocorreu um erro ao enviar. Tente novamente ou use o e-mail direto.');
-                        }
-                    }
-                })
-                .catch((error) => {
+            const formData = new FormData(contactForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                const resJson = await response.json();
+                if (response.status === 200 || resJson.success) {
+                    if (formFieldsContainer) formFieldsContainer.classList.add('hidden');
+                    if (formSuccessCard) formSuccessCard.classList.remove('hidden');
+                    contactForm.reset();
+                } else {
                     if (formStatus) {
                         formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-950/80 text-red-300 border border-red-700/60 block';
-                        formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> Falha de conexão. Por favor, escreva para contato@ironforchange.com.br.';
+                        formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> ' + (resJson.message || 'Ocorreu um erro ao enviar. Tente novamente ou use o e-mail direto.');
                     }
-                })
-                .finally(() => {
-                    if (submitBtn) {
-                        submitBtn.disabled = false;
-                        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-                    }
-                    if (btnText) {
-                        btnText.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem';
-                    }
-                });
+                }
+            })
+            .catch((error) => {
+                if (formStatus) {
+                    formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-950/80 text-red-300 border border-red-700/60 block';
+                    formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> Falha de conexão. Por favor, escreva para contato@ironforchange.com.br.';
+                }
+            })
+            .finally(() => {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                }
+                if (btnText) {
+                    btnText.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem';
+                }
             });
+
+            return false;
+        }
+
+        function resetContactFormUI() {
+            const formFieldsContainer = document.getElementById('formFieldsContainer');
+            const formSuccessCard = document.getElementById('formSuccessCard');
+            const formStatus = document.getElementById('formStatus');
+            if (formFieldsContainer) formFieldsContainer.classList.remove('hidden');
+            if (formSuccessCard) formSuccessCard.classList.add('hidden');
+            if (formStatus) formStatus.className = 'hidden';
         }
 
     </script>
