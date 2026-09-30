@@ -8,14 +8,22 @@
     
     <!-- Open Graph / Redes Sociais -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ironforchange.com/">
+    <meta property="og:url" content="https://ironforchange.com.br/">
     <meta property="og:title" content="Iron For Change | Incubadora de Lideranças Regenerativas">
     <meta property="og:description" content="Uma jornada de 44 semanas formando jovens protagonistas que se conhecem, pertencem, imaginam, constroem e regeneram realidades.">
-    <meta property="og:image" content="assets/jornada-do-change-44-semanas.jpg">
+    <meta property="og:image" content="https://ironforchange.com.br/assets/logos/ironforchange-logo-horizontal.png">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ironforchange.com.br/assets/logos/ironforchange-logo-horizontal.png">
 
-    <!-- Favicon SVG -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230a0a0a'/><path d='M50 20 C65 20 75 35 75 50 C75 68 60 80 50 82 C40 80 25 68 25 50 C25 35 35 20 50 20 Z' fill='%23997BAE'/><circle cx='50' cy='50' r='18' fill='%2310B981'/></svg>">
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/logos/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logos/apple-touch-icon.png">
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,31 +32,56 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+                    },
                     colors: {
                         brand: {
-                            purple: '#997BAE',
-                            purpleDark: '#7f5f94',
-                            dark: '#0a0a0a',
-                            light: '#F5F3F7',
-                            gray: '#1c1c1c',
-                            grayBorder: '#2e2e2e'
+                            purple: '#A855F7',       /* Vibrant Electric Lilac */
+                            purpleLight: '#F3E8FF',  /* Soft luminous lilac */
+                            purpleGlow: '#C084FC',   /* Bright neon lilac */
+                            purpleDark: '#7E22CE',   /* Deep royal purple */
+                            purpleDeep: '#581C87',
+                            dark: '#080808',
+                            light: '#FAF7FC',
+                            gray: '#141414',
+                            grayBorder: '#27272a'
                         },
                         stage: {
-                            despertar: '#15803d',
-                            pertencer: '#1d4ed8',
-                            imaginar: '#d97706',
-                            construir: '#7c3aed',
-                            regenerar: '#047857'
+                            despertar: '#10b981',
+                            pertencer: '#3b82f6',
+                            imaginar: '#f59e0b',
+                            construir: '#a855f7',
+                            regenerar: '#14b8a6'
                         }
+                    },
+                    boxShadow: {
+                        'lilac-glow': '0 0 25px rgba(168, 85, 247, 0.4)',
+                        'lilac-glow-lg': '0 0 45px rgba(168, 85, 247, 0.65)'
                     }
                 }
             }
         }
     </script>
     <style>
+        @keyframes gentleFadeIn {
+            from { opacity: 0.35; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stage-panel:not(.hidden) {
+            animation: gentleFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
         .stage-tab.active {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 25px rgba(168, 85, 247, 0.35);
             transform: translateY(-2px);
+        }
+        .btn-lilac-gradient {
+            background: linear-gradient(135deg, #B266FF 0%, #A855F7 50%, #7E22CE 100%);
+            box-shadow: 0 8px 25px -4px rgba(168, 85, 247, 0.45);
+        }
+        .btn-lilac-gradient:hover {
+            background: linear-gradient(135deg, #C084FC 0%, #B266FF 50%, #8B3DE6 100%);
+            box-shadow: 0 12px 35px -4px rgba(168, 85, 247, 0.65);
         }
     </style>
 </head>
@@ -59,11 +92,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
-                <a href="#" class="flex items-center space-x-3 group">
-                    <div class="w-10 h-10 rounded-full bg-brand-purple/20 border border-brand-purple flex items-center justify-center text-brand-purple group-hover:scale-105 transition-transform">
-                        <i class="fas fa-seedling text-lg"></i>
-                    </div>
-                    <span class="font-black text-2xl tracking-widest uppercase">Iron<span class="text-brand-purple">For</span>Change</span>
+                <a href="#" class="flex items-center py-2 group">
+                    <img src="assets/logos/ironforchange-logo-horizontal.png" alt="Iron For Change" class="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:opacity-90">
                 </a>
 
                 <!-- Desktop Menu -->
@@ -80,8 +110,8 @@
                         <i class="fas fa-file-pdf text-brand-purple mr-2"></i> PDF Apresentação
                     </a>
 
-                    <a href="#contato" class="bg-brand-purple hover:bg-opacity-80 px-5 py-2.5 rounded-full font-bold transition-all text-white text-sm shadow-md hover:shadow-brand-purple/20">
-                        Fale Conosco
+                    <a href="#contato" class="btn-lilac-gradient px-6 py-2.5 rounded-full font-bold transition-all text-white text-sm transform hover:scale-105">
+                        <i class="fas fa-paper-plane mr-1.5 text-xs"></i> Fale Conosco
                     </a>
                 </div>
 
@@ -123,26 +153,26 @@
                 <span>Incubadora de Lideranças Regenerativas</span>
             </div>
 
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.15]">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight mb-8 leading-[1.12]">
                 Transformação Humana que Gera <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple via-purple-300 to-white">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-white">
                     Impacto Coletivo.
                 </span>
             </h1>
 
-            <p class="text-lg sm:text-2xl md:text-2xl max-w-3xl mx-auto text-gray-400 mb-12 font-light leading-relaxed">
+            <p class="text-lg sm:text-2xl md:text-2xl max-w-3xl mx-auto text-gray-300 mb-12 font-light leading-relaxed">
                 Uma metodologia viva de <strong class="text-white font-semibold">44 semanas</strong> que desenvolve jovens da consciência individual à transformação real do território.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:space-x-4">
-                <a href="#jornada" class="w-full sm:w-auto inline-flex items-center justify-center bg-brand-purple hover:bg-opacity-90 text-white font-bold py-4 px-8 rounded-full text-base transition-all transform hover:scale-105 shadow-xl shadow-brand-purple/20">
-                    <i class="fas fa-compass mr-2.5"></i> Conhecer a Jornada (44 Sem.)
+                <a href="#contato" class="w-full sm:w-auto inline-flex items-center justify-center btn-lilac-gradient text-white font-extrabold py-4 px-9 rounded-full text-base transition-all transform hover:scale-105">
+                    <i class="fas fa-handshake mr-2.5"></i> Apoie a Próxima Turma
                 </a>
-                <a href="#como-apoiar" class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-4 px-8 rounded-full text-base transition-colors">
-                    <i class="fas fa-hands-helping mr-2.5"></i> Seja um Parceiro
+                <a href="#jornada" class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-4 px-8 rounded-full text-base transition-all transform hover:scale-105">
+                    <i class="fas fa-compass mr-2.5 text-purple-300"></i> Conhecer a Jornada
                 </a>
-                <a href="Iron_For_Change_Apresentacao_Institucional.pdf" download class="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-medium py-4 px-6 rounded-full text-base transition-colors">
-                    <i class="fas fa-download mr-2 text-brand-purple"></i> Apresentação (PDF)
+                <a href="Iron_For_Change_Apresentacao_Institucional.pdf" download class="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border border-gray-700 hover:border-brand-purple text-gray-300 hover:text-white font-semibold py-4 px-6 rounded-full text-base transition-colors">
+                    <i class="fas fa-file-pdf mr-2 text-brand-purple"></i> Apresentação (PDF)
                 </a>
             </div>
 
@@ -192,9 +222,12 @@
                         O <strong class="text-brand-purple font-semibold">Iron For Change</strong> atua como uma incubadora viva. Conectamos esporte, saúde mental, autoconhecimento e cidadania para que os jovens criem soluções sustentáveis e regenerativas para os desafios do seu próprio território.
                     </p>
 
-                    <div class="flex items-center space-x-4">
-                        <a href="Iron_For_Change_Apresentacao_Institucional.pdf" download class="inline-flex items-center text-sm font-bold text-brand-purple hover:text-brand-purpleDark transition-colors">
-                            <i class="fas fa-file-pdf mr-2 text-lg"></i> Ler apresentação institucional completa &rarr;
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a href="#contato" class="inline-flex items-center justify-center btn-lilac-gradient text-white font-bold py-3.5 px-8 rounded-full text-sm transition-all transform hover:scale-105">
+                            <i class="fas fa-handshake mr-2"></i> Quero Fazer Parte
+                        </a>
+                        <a href="Iron_For_Change_Apresentacao_Institucional.pdf" download class="inline-flex items-center justify-center border border-gray-300 hover:border-brand-purple text-gray-700 hover:text-brand-purple font-semibold py-3.5 px-6 rounded-full text-sm transition-colors">
+                            <i class="fas fa-file-pdf mr-2 text-brand-purple"></i> Apresentação (PDF)
                         </a>
                     </div>
                 </div>
@@ -293,6 +326,22 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Callout / CTA Banner in Videos Section -->
+            <div class="mt-16 max-w-4xl mx-auto bg-gradient-to-r from-gray-900 via-brand-gray to-gray-900 border border-brand-purple/40 rounded-3xl p-8 sm:p-10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-purpleGlow block mb-1">
+                        <i class="fas fa-sparkles mr-1"></i> Faça a Diferença
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Pronto para transformar vidas e realidades?</h3>
+                    <p class="text-sm text-gray-300 mt-2 max-w-xl font-light">
+                        Conecte sua empresa, fundação ou instituição pública ao Iron For Change e impulsione jovens protagonistas.
+                    </p>
+                </div>
+                <a href="#contato" class="w-full sm:w-auto inline-flex items-center justify-center btn-lilac-gradient text-white font-extrabold py-4 px-8 rounded-full text-sm whitespace-nowrap transition-all transform hover:scale-105">
+                    <i class="fas fa-paper-plane mr-2"></i> Falar com a Equipe
+                </a>
+            </div>
         </div>
     </section>
 
@@ -322,85 +371,58 @@
                 </p>
             </div>
 
-            <!-- Infographic Card & Teaser Banner -->
-            <div class="mb-14 bg-gradient-to-r from-gray-900 via-brand-gray to-gray-900 border border-gray-800 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center space-x-5">
-                    <div class="w-16 h-16 rounded-2xl bg-brand-purple/20 border border-brand-purple/40 flex items-center justify-center text-brand-purple text-2xl flex-shrink-0">
-                        <i class="fas fa-map-location-dot"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white mb-1">Mapa Completo da Metodologia</h4>
-                        <p class="text-sm text-gray-400 max-w-xl">
-                            Consulte a grade curricular detalhada com os 44 encontros temáticos, perguntas norteadoras e entregáveis de cada etapa.
-                        </p>
-                    </div>
-                </div>
-                <div class="flex flex-wrap gap-3 w-full md:w-auto">
-                    <button onclick="openInfographicModal()" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl bg-brand-purple hover:bg-brand-purpleDark text-white font-bold text-sm transition-all shadow-lg hover:shadow-brand-purple/30">
-                        <i class="fas fa-eye mr-2"></i> Ver Infográfico Oficial
-                    </button>
-                    <a href="assets/jornada-do-change-44-semanas.jpg" download="Jornada_do_Change_44_Semanas_IronForChange.jpg" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-gray-200 font-semibold text-sm transition-colors">
-                        <i class="fas fa-download mr-2"></i> Baixar Imagem
-                    </a>
-                </div>
-            </div>
 
             <!-- Interactive Stage Tabs (5 Etapas) -->
             <div class="mb-10">
-                <div class="flex items-center justify-between mb-4">
-                    <span class="text-xs font-bold tracking-widest text-gray-400 uppercase">Selecione uma etapa para navegar pelos módulos:</span>
-                    <span class="text-xs text-brand-purple font-medium hidden sm:inline"><i class="fas fa-hand-pointer mr-1"></i> Clique para alternar</span>
-                </div>
-
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3" id="stageTabsContainer">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5" id="stageTabsContainer">
                     <!-- Tab 1: Despertar -->
-                    <button onclick="switchStage(1)" id="tab-btn-1" class="stage-tab active text-left p-4 rounded-2xl bg-brand-gray border-2 border-emerald-600 transition-all flex flex-col justify-between">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="w-7 h-7 rounded-full bg-emerald-600 text-white font-black text-xs flex items-center justify-center">1</span>
+                    <button onclick="switchStage(1)" id="tab-btn-1" class="stage-tab active text-left p-4 sm:p-5 rounded-2xl bg-brand-gray border-2 border-emerald-500 transition-all flex flex-col justify-between hover:scale-[1.02] cursor-pointer">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 font-black text-xs flex items-center justify-center border border-emerald-500/40">1</span>
                             <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400">10 Semanas</span>
                         </div>
-                        <h4 class="font-extrabold text-lg text-white">DESPERTAR</h4>
-                        <p class="text-xs text-gray-400 mt-1">Consciência individual</p>
+                        <h4 class="font-black text-lg text-white">DESPERTAR</h4>
+                        <p class="text-xs text-gray-300 mt-1 font-light">Autoconhecimento & Propósito</p>
                     </button>
 
                     <!-- Tab 2: Pertencer -->
-                    <button onclick="switchStage(2)" id="tab-btn-2" class="stage-tab text-left p-4 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-blue-600/50 transition-all flex flex-col justify-between">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="w-7 h-7 rounded-full bg-blue-600 text-white font-black text-xs flex items-center justify-center">2</span>
+                    <button onclick="switchStage(2)" id="tab-btn-2" class="stage-tab text-left p-4 sm:p-5 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-blue-500/50 transition-all flex flex-col justify-between hover:scale-[1.02] cursor-pointer">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 font-black text-xs flex items-center justify-center border border-blue-500/40">2</span>
                             <span class="text-[11px] font-bold uppercase tracking-wider text-blue-400">8 Semanas</span>
                         </div>
-                        <h4 class="font-extrabold text-lg text-white">PERTENCER</h4>
-                        <p class="text-xs text-gray-400 mt-1">Vínculo com o território</p>
+                        <h4 class="font-black text-lg text-white">PERTENCER</h4>
+                        <p class="text-xs text-gray-300 mt-1 font-light">Vínculo com o Território</p>
                     </button>
 
                     <!-- Tab 3: Imaginar -->
-                    <button onclick="switchStage(3)" id="tab-btn-3" class="stage-tab text-left p-4 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-amber-500/50 transition-all flex flex-col justify-between">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="w-7 h-7 rounded-full bg-amber-500 text-white font-black text-xs flex items-center justify-center">3</span>
+                    <button onclick="switchStage(3)" id="tab-btn-3" class="stage-tab text-left p-4 sm:p-5 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-amber-500/50 transition-all flex flex-col justify-between hover:scale-[1.02] cursor-pointer">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 font-black text-xs flex items-center justify-center border border-amber-500/40">3</span>
                             <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">6 Semanas</span>
                         </div>
-                        <h4 class="font-extrabold text-lg text-white">IMAGINAR</h4>
-                        <p class="text-xs text-gray-400 mt-1">Criatividade & Ideação</p>
+                        <h4 class="font-black text-lg text-white">IMAGINAR</h4>
+                        <p class="text-xs text-gray-300 mt-1 font-light">Criatividade & Soluções</p>
                     </button>
 
                     <!-- Tab 4: Construir -->
-                    <button onclick="switchStage(4)" id="tab-btn-4" class="stage-tab text-left p-4 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-purple-500/50 transition-all flex flex-col justify-between">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="w-7 h-7 rounded-full bg-purple-600 text-white font-black text-xs flex items-center justify-center">4</span>
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-purple-400">13 Semanas</span>
+                    <button onclick="switchStage(4)" id="tab-btn-4" class="stage-tab text-left p-4 sm:p-5 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-brand-purple/50 transition-all flex flex-col justify-between hover:scale-[1.02] cursor-pointer">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-full bg-brand-purple/20 text-brand-purpleGlow font-black text-xs flex items-center justify-center border border-brand-purple/40">4</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-purpleGlow">13 Semanas</span>
                         </div>
-                        <h4 class="font-extrabold text-lg text-white">CONSTRUIR</h4>
-                        <p class="text-xs text-gray-400 mt-1">Prototipagem & Ação</p>
+                        <h4 class="font-black text-lg text-white">CONSTRUIR</h4>
+                        <p class="text-xs text-gray-300 mt-1 font-light">Projetos na Prática</p>
                     </button>
 
                     <!-- Tab 5: Regenerar -->
-                    <button onclick="switchStage(5)" id="tab-btn-5" class="stage-tab text-left p-4 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-emerald-700/50 transition-all flex flex-col justify-between col-span-2 sm:col-span-1">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="w-7 h-7 rounded-full bg-emerald-700 text-white font-black text-xs flex items-center justify-center">5</span>
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400">7 Semanas</span>
+                    <button onclick="switchStage(5)" id="tab-btn-5" class="stage-tab text-left p-4 sm:p-5 rounded-2xl bg-brand-gray border-2 border-transparent hover:border-teal-500/50 transition-all flex flex-col justify-between col-span-2 sm:col-span-1 hover:scale-[1.02] cursor-pointer">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-full bg-teal-500/20 text-teal-400 font-black text-xs flex items-center justify-center border border-teal-500/40">5</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-teal-400">7 Semanas</span>
                         </div>
-                        <h4 class="font-extrabold text-lg text-white">REGENERAR</h4>
-                        <p class="text-xs text-gray-400 mt-1">Showcase & Legado</p>
+                        <h4 class="font-black text-lg text-white">REGENERAR</h4>
+                        <p class="text-xs text-gray-300 mt-1 font-light">Showcase & Futuro</p>
                     </button>
                 </div>
             </div>
@@ -431,7 +453,7 @@
                     </div>
 
                     <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-6 flex items-center">
-                        <i class="fas fa-list-check mr-2 text-emerald-400"></i> Encontros e Módulos Semanais:
+                        <i class="fas fa-list-check mr-2 text-emerald-400"></i> Encontros e Atividades Práticas:
                     </h4>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -531,7 +553,7 @@
                     </div>
 
                     <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-6 flex items-center">
-                        <i class="fas fa-list-check mr-2 text-blue-400"></i> Encontros e Módulos Semanais:
+                        <i class="fas fa-list-check mr-2 text-blue-400"></i> Encontros e Atividades Práticas:
                     </h4>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -617,7 +639,7 @@
                     </div>
 
                     <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-6 flex items-center">
-                        <i class="fas fa-list-check mr-2 text-amber-400"></i> Encontros e Módulos Semanais:
+                        <i class="fas fa-list-check mr-2 text-amber-400"></i> Encontros e Atividades Práticas:
                     </h4>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -689,7 +711,7 @@
                     </div>
 
                     <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-6 flex items-center">
-                        <i class="fas fa-list-check mr-2 text-purple-400"></i> Encontros e Módulos Semanais:
+                        <i class="fas fa-list-check mr-2 text-purple-400"></i> Encontros e Atividades Práticas:
                     </h4>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -810,7 +832,7 @@
                     </div>
 
                     <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-6 flex items-center">
-                        <i class="fas fa-list-check mr-2 text-emerald-400"></i> Encontros e Módulos Semanais:
+                        <i class="fas fa-list-check mr-2 text-emerald-400"></i> Encontros e Atividades Práticas:
                     </h4>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -866,6 +888,21 @@
                     </div>
                 </div>
 
+                <!-- Stage CTA Banner -->
+                <div class="mt-10 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-6 bg-brand-dark/60 border border-brand-purple/20 rounded-2xl p-6 sm:p-8">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-purpleGlow block mb-1">
+                            <i class="fas fa-users-rays mr-1"></i> Parcerias & Financiamento de Turmas
+                        </span>
+                        <h4 class="text-xl sm:text-2xl font-black text-white">Deseja apoiar uma turma ou levar a Jornada para sua região?</h4>
+                        <p class="text-sm text-gray-400 mt-1 max-w-xl font-light">
+                            Desenvolvemos parcerias sob medida para empresas, fundações, editais e prefeituras com métricas claras de impacto socioemocional e comunitário.
+                        </p>
+                    </div>
+                    <a href="#contato" class="w-full sm:w-auto inline-flex items-center justify-center btn-lilac-gradient text-white font-extrabold py-3.5 px-8 rounded-full text-sm whitespace-nowrap transition-all transform hover:scale-105">
+                        <i class="fas fa-rocket mr-2"></i> Apoiar uma Turma
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -952,6 +989,12 @@
                     </p>
                 </div>
             </div>
+
+            <div class="mt-14 text-center">
+                <a href="#como-apoiar" class="inline-flex items-center justify-center btn-lilac-gradient text-white font-bold py-4 px-9 rounded-full text-base transition-all transform hover:scale-105">
+                    <i class="fas fa-hand-holding-heart mr-2.5"></i> Veja Como Fazer Parte e Apoiar
+                </a>
+            </div>
         </div>
     </section>
 
@@ -967,6 +1010,11 @@
                 <p class="text-lg text-gray-600 font-light leading-relaxed">
                     Formatamos categorias de apoio para dialogar com diferentes realidades: investidores institucionais, editais, bolsas de apoio e doadores individuais.
                 </p>
+                <div class="mt-8 flex justify-center">
+                    <a href="#contato" class="inline-flex items-center justify-center btn-lilac-gradient text-white font-extrabold py-4 px-9 rounded-full text-base transition-all transform hover:scale-105">
+                        <i class="fas fa-paper-plane mr-2.5"></i> Falar com a Equipe de Parcerias
+                    </a>
+                </div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -981,7 +1029,12 @@
                             Aporte direto para a estrutura operacional, equipe técnica e viabilização das 44 semanas de atividades formativas da turma.
                         </p>
                     </div>
-                    <span class="text-xs font-bold text-brand-purple uppercase tracking-wider">Grandes & Médios Investidores</span>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-brand-purple uppercase tracking-wider">Grandes & Médios Investidores</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-brand-purple hover:text-brand-purpleDark group">
+                            Apoiar <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Categoria 2 -->
@@ -995,7 +1048,12 @@
                             Garantia de permanência dos jovens: apoio para alimentação saudável em todos os encontros, transporte e auxílio aos adolescentes.
                         </p>
                     </div>
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Apoio Temático / PF e PJ</span>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Apoio Temático / PF e PJ</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-700 group">
+                            Apoiar <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Categoria 3 -->
@@ -1009,7 +1067,12 @@
                             Conexão com fundações, institutos sociais e editais de fomento à juventude, saúde mental e sustentabilidade regenerativa.
                         </p>
                     </div>
-                    <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Parcerias Institucionais</span>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Parcerias Institucionais</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-amber-600 hover:text-amber-700 group">
+                            Propor <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Categoria 4 -->
@@ -1023,7 +1086,12 @@
                             Profissionais e especialistas que doam tempo e conhecimento para orientar os Change Projects criados pelos jovens.
                         </p>
                     </div>
-                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Rede Voluntária Especializada</span>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Rede Voluntária</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-emerald-600 hover:text-emerald-700 group">
+                            Participar <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Categoria 5 -->
@@ -1037,7 +1105,12 @@
                             Cessão de locais para oficinas, materiais pedagógicos, equipamentos de mídia e serviços para a viabilização das ações.
                         </p>
                     </div>
-                    <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Apoio em Produtos e Serviços</span>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Produtos e Serviços</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-rose-600 hover:text-rose-700 group">
+                            Oferecer <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Categoria 6 -->
@@ -1051,7 +1124,12 @@
                             Articulação com novas pontes de mercado, lideranças comunitárias e oportunidades de estágio e inserção para os jovens.
                         </p>
                     </div>
-                    <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Articulação em Rede</span>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Articulação em Rede</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-700 group">
+                            Conectar <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1112,7 +1190,7 @@
                         <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Como gostaria de somar forças com o Iron For Change?"></textarea>
                     </div>
                     
-                    <button type="submit" class="w-full bg-brand-purple hover:bg-brand-purpleDark text-white font-bold py-4 px-6 rounded-xl transition-all text-base shadow-xl hover:shadow-brand-purple/20 flex items-center justify-center">
+                    <button type="submit" class="w-full btn-lilac-gradient text-white font-extrabold py-4 px-6 rounded-xl transition-all text-base transform hover:scale-[1.01] flex items-center justify-center">
                         <i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem
                     </button>
                     
@@ -1125,44 +1203,15 @@
         </div>
     </section>
 
-    <!-- Modal / Lightbox do Infográfico -->
-    <div id="infographicModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6">
-        <div class="relative max-w-5xl w-full max-h-[92vh] bg-brand-gray rounded-3xl border border-gray-800 overflow-hidden flex flex-col shadow-2xl">
-            <!-- Modal Header -->
-            <div class="flex items-center justify-between px-6 py-4 border-b border-gray-800 bg-brand-dark">
-                <div class="flex items-center space-x-3">
-                    <span class="w-8 h-8 rounded-full bg-brand-purple/20 text-brand-purple flex items-center justify-center text-sm">
-                        <i class="fas fa-image"></i>
-                    </span>
-                    <div>
-                        <h4 class="text-base font-bold text-white">Infográfico Oficial da Jornada (44 Semanas)</h4>
-                        <p class="text-xs text-gray-400">Iron For Change — Estrutura Pedagógica Completa</p>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <a href="assets/jornada-do-change-44-semanas.jpg" download="Jornada_do_Change_44_Semanas_IronForChange.jpg" class="text-xs font-semibold bg-brand-purple hover:bg-brand-purpleDark px-3 py-1.5 rounded-lg text-white transition-colors flex items-center">
-                        <i class="fas fa-download mr-1.5"></i> Baixar
-                    </a>
-                    <button onclick="closeInfographicModal()" class="w-8 h-8 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white flex items-center justify-center transition-colors">
-                        <i class="fas fa-times text-base"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- Modal Body with Scrollable Image -->
-            <div class="overflow-y-auto p-4 sm:p-6 flex justify-center bg-black/60">
-                <img src="assets/jornada-do-change-44-semanas.jpg" alt="Infográfico Completo - Jornada do Change 44 Semanas" class="max-w-full h-auto rounded-xl shadow-lg border border-gray-800">
-            </div>
-        </div>
-    </div>
+
 
     <!-- Footer -->
     <footer class="bg-black text-gray-400 py-16 text-center border-t border-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center mb-8">
-                <div class="w-12 h-12 rounded-full bg-brand-purple/20 border border-brand-purple flex items-center justify-center text-brand-purple mb-4">
-                    <i class="fas fa-seedling text-xl"></i>
-                </div>
-                <h3 class="text-3xl font-black text-white uppercase tracking-widest">Iron<span class="text-brand-purple">For</span>Change</h3>
+                <a href="#" class="inline-block group mb-4">
+                    <img src="assets/logos/ironforchange-logo-horizontal.png" alt="Iron For Change" class="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105">
+                </a>
                 <p class="mt-2 text-base text-gray-400 max-w-xl font-light">
                     Jovens que se conhecem, pertencem, imaginam, constroem e regeneram realidades.
                 </p>
@@ -1184,8 +1233,7 @@
                 <p>&copy; 2026 Iron For Change. Todos os direitos reservados.</p>
                 <div class="flex space-x-6">
                     <a href="Iron_For_Change_Apresentacao_Institucional.pdf" download class="hover:text-gray-300 transition-colors">Apresentação (PDF)</a>
-                    <a href="assets/jornada-do-change-44-semanas.jpg" download class="hover:text-gray-300 transition-colors">Metodologia (Infográfico)</a>
-                    <a href="https://ironforchange.com" class="hover:text-brand-purple font-medium transition-colors">ironforchange.com</a>
+                    <a href="https://ironforchange.com.br" class="hover:text-brand-purple font-medium transition-colors">ironforchange.com.br</a>
                 </div>
             </div>
         </div>
@@ -1224,12 +1272,52 @@
 
         // Stage Switcher Function
         const stageBorders = {
-            1: 'border-emerald-600',
-            2: 'border-blue-600',
+            1: 'border-emerald-500',
+            2: 'border-blue-500',
             3: 'border-amber-500',
-            4: 'border-purple-600',
-            5: 'border-emerald-700'
+            4: 'border-brand-purple',
+            5: 'border-teal-500'
         };
+
+        // Gentle auto-scroll controller for mobile
+        let activeScrollAnimation = null;
+        function cancelGentleScroll() {
+            if (activeScrollAnimation) {
+                cancelAnimationFrame(activeScrollAnimation);
+                activeScrollAnimation = null;
+            }
+        }
+        window.addEventListener('wheel', cancelGentleScroll, { passive: true });
+        window.addEventListener('touchstart', cancelGentleScroll, { passive: true });
+
+        function gentleScrollTo(targetY, duration = 680) {
+            cancelGentleScroll();
+            const startY = window.pageYOffset;
+            const diff = targetY - startY;
+            if (Math.abs(diff) < 15) return;
+
+            const startTime = performance.now();
+
+            function easeInOutCubic(t) {
+                return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+            }
+
+            function step(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = easeInOutCubic(progress);
+
+                window.scrollTo(0, startY + diff * eased);
+
+                if (progress < 1) {
+                    activeScrollAnimation = requestAnimationFrame(step);
+                } else {
+                    activeScrollAnimation = null;
+                }
+            }
+
+            activeScrollAnimation = requestAnimationFrame(step);
+        }
 
         function switchStage(stageNum) {
             // Hide all panels
@@ -1240,7 +1328,7 @@
                 if (panel) panel.classList.add('hidden');
                 if (btn) {
                     btn.classList.remove('active');
-                    btn.classList.remove('border-emerald-600', 'border-blue-600', 'border-amber-500', 'border-purple-600', 'border-emerald-700');
+                    btn.classList.remove('border-emerald-500', 'border-blue-500', 'border-amber-500', 'border-brand-purple', 'border-teal-500', 'border-emerald-600', 'border-blue-600', 'border-purple-600', 'border-emerald-700');
                     btn.classList.add('border-transparent');
                 }
             }
@@ -1257,40 +1345,31 @@
                 activeBtn.classList.remove('border-transparent');
                 activeBtn.classList.add(stageBorders[stageNum] || 'border-brand-purple');
             }
-        }
 
-        // Modal Handlers
-        const infographicModal = document.getElementById('infographicModal');
+            // Sutil auto-scroll no mobile para que o usuário perceba claramente a mudança do conteúdo abaixo
+            const detailBox = document.getElementById('stageDetailBox');
+            if (detailBox) {
+                const isMobile = window.innerWidth < 1024;
+                const rect = detailBox.getBoundingClientRect();
 
-        function openInfographicModal() {
-            if (infographicModal) {
-                infographicModal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeInfographicModal() {
-            if (infographicModal) {
-                infographicModal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        // Close modal on click outside
-        if (infographicModal) {
-            infographicModal.addEventListener('click', (e) => {
-                if (e.target === infographicModal) {
-                    closeInfographicModal();
+                // No mobile ou se o card estiver posicionado muito abaixo na viewport
+                if (isMobile || rect.top > window.innerHeight * 0.65) {
+                    // Pequeno intervalo (90ms) para registrar visualmente o toque no botão antes da transição suave
+                    setTimeout(() => {
+                        const targetY = window.pageYOffset + detailBox.getBoundingClientRect().top - 90;
+                        gentleScrollTo(targetY, 680);
+                    }, 90);
                 }
-            });
+            }
         }
 
-        // Close on ESC
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && infographicModal && !infographicModal.classList.contains('hidden')) {
-                closeInfographicModal();
-            }
-        });
     </script>
+
+    <!-- Floating Quick Contact Button (Visible on all scroll positions) -->
+    <a href="#contato" aria-label="Entrar em Contato" class="fixed bottom-6 right-6 z-40 btn-lilac-gradient text-white font-bold px-5 py-3.5 rounded-full shadow-2xl flex items-center space-x-2.5 transition-all transform hover:scale-105 active:scale-95 group">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping inline-block"></span>
+        <span class="text-sm font-bold tracking-wide">Falar Conosco</span>
+        <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+    </a>
 </body>
 </html>
