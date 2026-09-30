@@ -1152,9 +1152,10 @@
             
             <div class="bg-brand-dark rounded-3xl shadow-2xl p-8 md:p-12 text-white border border-gray-800">
                 <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="access_key" value="63e4449c-cf3f-4fbe-bf28-32697d6a6586">
                     <input type="hidden" name="subject" value="Novo Contato - Site Iron For Change">
                     <input type="hidden" name="from_name" value="Site Iron For Change">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <div>
@@ -1190,13 +1191,15 @@
                         <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Como gostaria de somar forças com o Iron For Change?"></textarea>
                     </div>
                     
-                    <button type="submit" class="w-full btn-lilac-gradient text-white font-extrabold py-4 px-6 rounded-xl transition-all text-base transform hover:scale-[1.01] flex items-center justify-center">
-                        <i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem
+                    <button type="submit" id="submitBtn" class="w-full btn-lilac-gradient text-white font-extrabold py-4 px-6 rounded-xl transition-all text-base transform hover:scale-[1.01] flex items-center justify-center cursor-pointer">
+                        <span id="btnText" class="flex items-center"><i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem</span>
                     </button>
+                    
+                    <div id="formStatus" class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold transition-all"></div>
                     
                     <div class="mt-8 pt-6 border-t border-gray-800 text-center text-sm text-gray-400">
                         Prefere contato direto por e-mail? Escreva para: 
-                        <a href="mailto:Ironforchange@gmail.com" class="text-brand-purple hover:underline font-semibold ml-1">Ironforchange@gmail.com</a>
+                        <a href="mailto:contato@ironforchange.com.br" class="text-brand-purple hover:underline font-semibold ml-1">contato@ironforchange.com.br</a>
                     </div>
                 </form>
             </div>
@@ -1224,7 +1227,7 @@
                 <a href="https://www.youtube.com/watch?v=4yFXuGCbT4g&list=PLj7WQLeQRUh6KcbbQEx1mCS7CIEFPOhLK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
                     <i class="fab fa-youtube text-xl"></i>
                 </a>
-                <a href="mailto:Ironforchange@gmail.com" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                <a href="mailto:contato@ironforchange.com.br" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
                     <i class="fas fa-envelope text-xl"></i>
                 </a>
             </div>
@@ -1361,6 +1364,73 @@
                     }, 90);
                 }
             }
+        }
+
+        // Contact Form AJAX Handler with Web3Forms
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const formStatus = document.getElementById('formStatus');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                
+                // Show loading state
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+                }
+                if (btnText) {
+                    btnText.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando mensagem...';
+                }
+                if (formStatus) {
+                    formStatus.className = 'hidden';
+                }
+
+                const formData = new FormData(contactForm);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    const resJson = await response.json();
+                    if (response.status === 200) {
+                        if (formStatus) {
+                            formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 block';
+                            formStatus.innerHTML = '<i class="fas fa-check-circle mr-2 text-base"></i> Mensagem enviada com sucesso! Entraremos em contato em breve.';
+                        }
+                        contactForm.reset();
+                    } else {
+                        if (formStatus) {
+                            formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-950/80 text-red-300 border border-red-700/60 block';
+                            formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> ' + (resJson.message || 'Ocorreu um erro ao enviar. Tente novamente ou use o e-mail direto.');
+                        }
+                    }
+                })
+                .catch((error) => {
+                    if (formStatus) {
+                        formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-950/80 text-red-300 border border-red-700/60 block';
+                        formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> Falha de conexão. Por favor, escreva para contato@ironforchange.com.br.';
+                    }
+                })
+                .finally(() => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                    }
+                    if (btnText) {
+                        btnText.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem';
+                    }
+                });
+            });
         }
 
     </script>
