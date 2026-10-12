@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="metaTitle">Iron For Change | Incubadora de Lideranças Regenerativas</title>
+    <meta id="metaDescription" name="description" content="O Iron For Change é uma incubadora de lideranças regenerativas que desenvolve jovens ao longo de uma jornada de 44 semanas da consciência individual à transformação do território.">
+    
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ironforchange.com.br/">
+    <meta id="ogTitle" property="og:title" content="Iron For Change | Incubadora de Lideranças Regenerativas">
+    <meta id="ogDescription" property="og:description" content="Uma jornada de 44 semanas formando jovens protagonistas que se conhecem, pertencem, imaginam, constroem e regeneram realidades.">
+    <meta property="og:image" content="https://ironforchange.com.br/assets/logos/ironforchange-logo-horizontal.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://ironforchange.com.br/assets/logos/ironforchange-logo-horizontal.png">
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/logos/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logos/apple-touch-icon.png">
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#A855F7',       /* Vibrant Electric Lilac */
+                            purpleLight: '#F3E8FF',  /* Soft luminous lilac */
+                            purpleGlow: '#C084FC',   /* Bright neon lilac */
+                            purpleDark: '#7E22CE',   /* Deep royal purple */
+                            purpleDeep: '#581C87',
+                            dark: '#080808',
+                            light: '#FAF7FC',
+                            gray: '#141414',
+                            grayBorder: '#27272a'
+                        },
+                        stage: {
+                            despertar: '#10b981',
+                            pertencer: '#3b82f6',
+                            imaginar: '#f59e0b',
+                            construir: '#a855f7',
+                            regenerar: '#14b8a6'
+                        }
+                    },
+                    boxShadow: {
+                        'lilac-glow': '0 0 25px rgba(168, 85, 247, 0.4)',
+                        'lilac-glow-lg': '0 0 45px rgba(168, 85, 247, 0.65)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes gentleFadeIn {
+            from { opacity: 0.35; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stage-panel:not(.hidden) {
+            animation: gentleFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .stage-tab.active {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 25px rgba(168, 85, 247, 0.35);
+            transform: translateY(-2px);
+        }
+        .btn-lilac-gradient {
+            background: linear-gradient(135deg, #B266FF 0%, #A855F7 50%, #7E22CE 100%);
+            box-shadow: 0 8px 25px -4px rgba(168, 85, 247, 0.45);
+        }
+        .btn-lilac-gradient:hover {
+            background: linear-gradient(135deg, #C084FC 0%, #B266FF 50%, #8B3DE6 100%);
+            box-shadow: 0 12px 35px -4px rgba(168, 85, 247, 0.65);
+        }
+        .lang-btn.active {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: #A855F7;
+            box-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+            color: #ffffff;
+        }
+        .lang-btn:not(.active) {
+            opacity: 0.65;
+        }
+        .lang-btn:not(.active):hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-brand-purple selection:text-white">
+    <!-- Barra de Apresentação de Modelos -->
+    <div class="bg-black text-white border-b border-brand-purple/40 px-3 py-2 text-xs z-[60] relative">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="inline-flex items-center px-2 py-0.5 rounded bg-brand-purple/20 text-brand-purple text-[11px] font-extrabold uppercase tracking-wider border border-brand-purple/40">
+                    <i class="fas fa-images mr-1.5"></i> Modelo 4 de 5
+                </span>
+                <span class="text-gray-300 font-medium text-[11px]">Slider Interativo (Alternador de Vivências: Território & Mar)</span>
+            </div>
+            <div class="flex items-center gap-1.5 flex-wrap justify-center">
+                <a href="index.html" class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-gray-900 text-gray-400 hover:text-white border border-gray-800 transition-all">Original</a>
+                <a href="index-1.html" class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-gray-900 text-gray-300 hover:text-white hover:bg-gray-800 border border-gray-800 transition-all">1. Split Hero</a>
+                <a href="index-2.html" class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-gray-900 text-gray-300 hover:text-white hover:bg-gray-800 border border-gray-800 transition-all">2. Fundo Imersivo</a>
+                <a href="index-3.html" class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-gray-900 text-gray-300 hover:text-white hover:bg-gray-800 border border-gray-800 transition-all">3. Duplo Panorâmico</a>
+                <a href="index-4.html" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-brand-purple text-white shadow-sm ring-1 ring-purple-300 transition-all">4. Slider Interativo</a>
+                <a href="index-5.html" class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-gray-900 text-gray-300 hover:text-white hover:bg-gray-800 border border-gray-800 transition-all">5. Bento Grid</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-brand-dark/95 backdrop-blur-md text-white sticky top-0 z-50 shadow-lg border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <a href="#" class="flex items-center py-2 group flex-shrink-0 mr-3">
+                    <img src="assets/logos/ironforchange-logo-horizontal.png" alt="Iron For Change" class="h-9 sm:h-10 xl:h-11 w-auto object-contain transition-transform group-hover:opacity-90">
+                </a>
+
+                <!-- Desktop Menu (visible on xl and above: >= 1280px) -->
+                <div class="hidden xl:flex items-center space-x-2 2xl:space-x-5">
+                    <a href="#quem-somos" data-i18n="nav.about" class="hover:text-brand-purple transition-colors text-xs 2xl:text-sm font-medium whitespace-nowrap">Quem Somos</a>
+                    <a href="#videos" data-i18n="nav.project" class="hover:text-brand-purple transition-colors text-xs 2xl:text-sm font-medium whitespace-nowrap">O Projeto</a>
+                    <a href="#jornada" class="hover:text-brand-purple transition-colors text-xs 2xl:text-sm font-medium whitespace-nowrap flex items-center">
+                        <span data-i18n="nav.journey">A Jornada</span> 
+                        <span data-i18n="nav.weeksBadge" class="ml-1.5 px-2 py-0.5 text-[10px] 2xl:text-[11px] font-bold bg-brand-purple/30 text-brand-purple rounded-full border border-brand-purple/40 whitespace-nowrap">44 Semanas</span>
+                    </a>
+                    <a href="#principios" data-i18n="nav.principles" class="hover:text-brand-purple transition-colors text-xs 2xl:text-sm font-medium whitespace-nowrap">Princípios</a>
+                    <a href="#como-apoiar" data-i18n="nav.support" class="hover:text-brand-purple transition-colors text-xs 2xl:text-sm font-medium whitespace-nowrap">Como Apoiar</a>
+                    
+                    <!-- Language Selector (Desktop) -->
+                    <div class="flex items-center space-x-1 bg-gray-900 border border-gray-700/80 rounded-full p-1 shadow-inner flex-shrink-0">
+                        <button type="button" onclick="setLanguage('pt')" id="lang-btn-pt-desktop" aria-label="Português (Brasil)" class="lang-btn active flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold transition-all border border-transparent cursor-pointer">
+                            <svg class="w-4 h-3 rounded-sm shadow-sm flex-shrink-0" viewBox="0 0 720 504" fill="none">
+                                <rect width="720" height="504" fill="#009B3A"/>
+                                <polygon points="360,37.8 680.4,252 360,466.2 39.6,252" fill="#FEDF00"/>
+                                <circle cx="360" cy="252" r="126" fill="#002776"/>
+                                <path d="M 234 252 A 126 126 0 0 1 486 252" stroke="#FFFFFF" stroke-width="12" fill="none"/>
+                            </svg>
+                            <span>BR</span>
+                        </button>
+                        <button type="button" onclick="setLanguage('en')" id="lang-btn-en-desktop" aria-label="English (US)" class="lang-btn flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold transition-all border border-transparent cursor-pointer">
+                            <svg class="w-4 h-3 rounded-sm shadow-sm flex-shrink-0" viewBox="0 0 741 390">
+                                <rect width="741" height="390" fill="#B22234"/>
+                                <path d="M0,30H741M0,90H741M0,150H741M0,210H741M0,270H741M0,330H741" stroke="#FFFFFF" stroke-width="30"/>
+                                <rect width="296.4" height="210" fill="#3C3B6E"/>
+                                <g fill="#FFFFFF">
+                                    <circle cx="28" cy="21" r="7"/><circle cx="82" cy="21" r="7"/><circle cx="136" cy="21" r="7"/><circle cx="190" cy="21" r="7"/><circle cx="244" cy="21" r="7"/>
+                                    <circle cx="55" cy="42" r="7"/><circle cx="109" cy="42" r="7"/><circle cx="163" cy="42" r="7"/><circle cx="217" cy="42" r="7"/>
+                                    <circle cx="28" cy="63" r="7"/><circle cx="82" cy="63" r="7"/><circle cx="136" cy="63" r="7"/><circle cx="190" cy="63" r="7"/><circle cx="244" cy="63" r="7"/>
+                                    <circle cx="55" cy="84" r="7"/><circle cx="109" cy="84" r="7"/><circle cx="163" cy="84" r="7"/><circle cx="217" cy="84" r="7"/>
+                                    <circle cx="28" cy="105" r="7"/><circle cx="82" cy="105" r="7"/><circle cx="136" cy="105" r="7"/><circle cx="190" cy="105" r="7"/><circle cx="244" cy="105" r="7"/>
+                                    <circle cx="55" cy="126" r="7"/><circle cx="109" cy="126" r="7"/><circle cx="163" cy="126" r="7"/><circle cx="217" cy="126" r="7"/>
+                                    <circle cx="28" cy="147" r="7"/><circle cx="82" cy="147" r="7"/><circle cx="136" cy="147" r="7"/><circle cx="190" cy="147" r="7"/><circle cx="244" cy="147" r="7"/>
+                                    <circle cx="55" cy="168" r="7"/><circle cx="109" cy="168" r="7"/><circle cx="163" cy="168" r="7"/><circle cx="217" cy="168" r="7"/>
+                                    <circle cx="28" cy="189" r="7"/><circle cx="82" cy="189" r="7"/><circle cx="136" cy="189" r="7"/><circle cx="190" cy="189" r="7"/><circle cx="244" cy="189" r="7"/>
+                                </g>
+                            </svg>
+                            <span>US</span>
+                        </button>
+                    </div>
+
+                    <!-- PDF Link (Never wraps) -->
+                    <a id="navPdfLink" href="Iron_For_Change_Apresentacao_Institucional.pdf" download="Iron_For_Change_Apresentacao_Institucional.pdf" class="inline-flex items-center text-xs font-semibold text-gray-300 hover:text-white border border-gray-700 hover:border-gray-500 px-3 py-2 rounded-lg transition-colors whitespace-nowrap flex-shrink-0">
+                        <i class="fas fa-file-pdf text-brand-purple mr-1.5"></i> <span data-i18n="nav.pdfBtn">PDF Apresentação</span>
+                    </a>
+
+                    <!-- Contact button (Never wraps) -->
+                    <a href="#contato" data-i18n="nav.contactBtn" class="btn-lilac-gradient px-4 2xl:px-5 py-2.5 rounded-full font-bold transition-all text-white text-xs 2xl:text-sm transform hover:scale-105 whitespace-nowrap flex-shrink-0">
+                        <i class="fas fa-paper-plane mr-1.5 text-xs"></i> <span data-i18n="nav.contactText">Fale Conosco</span>
+                    </a>
+                </div>
+
+                <!-- Mobile / Tablet Right Bar (Visible below xl: < 1280px) -->
+                <div class="flex items-center space-x-3 xl:hidden">
+                    <!-- Language Selector (Mobile & Tablet) -->
+                    <div class="flex items-center space-x-1 bg-gray-900 border border-gray-700/80 rounded-full p-1">
+                        <button type="button" onclick="setLanguage('pt')" id="lang-btn-pt-mobile" aria-label="Português" class="lang-btn active p-1.5 rounded-full transition-all border border-transparent cursor-pointer">
+                            <svg class="w-5 h-3.5 rounded-sm" viewBox="0 0 720 504" fill="none">
+                                <rect width="720" height="504" fill="#009B3A"/>
+                                <polygon points="360,37.8 680.4,252 360,466.2 39.6,252" fill="#FEDF00"/>
+                                <circle cx="360" cy="252" r="126" fill="#002776"/>
+                                <path d="M 234 252 A 126 126 0 0 1 486 252" stroke="#FFFFFF" stroke-width="12" fill="none"/>
+                            </svg>
+                        </button>
+                        <button type="button" onclick="setLanguage('en')" id="lang-btn-en-mobile" aria-label="English" class="lang-btn p-1.5 rounded-full transition-all border border-transparent cursor-pointer">
+                            <svg class="w-5 h-3.5 rounded-sm" viewBox="0 0 741 390">
+                                <rect width="741" height="390" fill="#B22234"/>
+                                <path d="M0,30H741M0,90H741M0,150H741M0,210H741M0,270H741M0,330H741" stroke="#FFFFFF" stroke-width="30"/>
+                                <rect width="296.4" height="210" fill="#3C3B6E"/>
+                                <g fill="#FFFFFF">
+                                    <circle cx="28" cy="21" r="7"/><circle cx="82" cy="21" r="7"/><circle cx="136" cy="21" r="7"/><circle cx="190" cy="21" r="7"/><circle cx="244" cy="21" r="7"/>
+                                    <circle cx="55" cy="42" r="7"/><circle cx="109" cy="42" r="7"/><circle cx="163" cy="42" r="7"/><circle cx="217" cy="42" r="7"/>
+                                    <circle cx="28" cy="63" r="7"/><circle cx="82" cy="63" r="7"/><circle cx="136" cy="63" r="7"/><circle cx="190" cy="63" r="7"/><circle cx="244" cy="63" r="7"/>
+                                    <circle cx="55" cy="84" r="7"/><circle cx="109" cy="84" r="7"/><circle cx="163" cy="84" r="7"/><circle cx="217" cy="84" r="7"/>
+                                    <circle cx="28" cy="105" r="7"/><circle cx="82" cy="105" r="7"/><circle cx="136" cy="105" r="7"/><circle cx="190" cy="105" r="7"/><circle cx="244" cy="105" r="7"/>
+                                    <circle cx="55" cy="126" r="7"/><circle cx="109" cy="126" r="7"/><circle cx="163" cy="126" r="7"/><circle cx="217" cy="126" r="7"/>
+                                    <circle cx="28" cy="147" r="7"/><circle cx="82" cy="147" r="7"/><circle cx="136" cy="147" r="7"/><circle cx="190" cy="147" r="7"/><circle cx="244" cy="147" r="7"/>
+                                    <circle cx="55" cy="168" r="7"/><circle cx="109" cy="168" r="7"/><circle cx="163" cy="168" r="7"/><circle cx="217" cy="168" r="7"/>
+                                    <circle cx="28" cy="189" r="7"/><circle cx="82" cy="189" r="7"/><circle cx="136" cy="189" r="7"/><circle cx="190" cy="189" r="7"/><circle cx="244" cy="189" r="7"/>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Hamburger Button -->
+                    <button id="mobileMenuButton" type="button" aria-label="Menu" class="text-gray-300 hover:text-white focus:outline-none p-2 rounded-lg bg-gray-900 border border-gray-800 cursor-pointer">
+                        <i class="fas fa-bars text-xl" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu (Visible on xl:hidden when opened) -->
+        <div id="mobileMenu" class="hidden xl:hidden bg-brand-dark border-b border-gray-800 px-6 pt-3 pb-6 space-y-3 shadow-2xl">
+            <a href="#quem-somos" data-i18n="nav.about" class="block py-2 text-gray-300 hover:text-brand-purple font-medium mobile-link">Quem Somos</a>
+            <a href="#videos" data-i18n="nav.project" class="block py-2 text-gray-300 hover:text-brand-purple font-medium mobile-link">O Projeto</a>
+            <a href="#jornada" class="block py-2 text-gray-300 hover:text-brand-purple font-medium mobile-link">
+                <span data-i18n="nav.journey">A Jornada</span> (<span data-i18n="nav.weeksBadge">44 Semanas</span>)
+            </a>
+            <a href="#principios" data-i18n="nav.principles" class="block py-2 text-gray-300 hover:text-brand-purple font-medium mobile-link">Princípios Orientadores</a>
+            <a href="#como-apoiar" data-i18n="nav.support" class="block py-2 text-gray-300 hover:text-brand-purple font-medium mobile-link">Como Apoiar</a>
+            
+            <a id="mobilePdfLink" href="Iron_For_Change_Apresentacao_Institucional.pdf" download="Iron_For_Change_Apresentacao_Institucional.pdf" class="block py-2 text-brand-purple font-medium mobile-link">
+                <i class="fas fa-file-pdf mr-2"></i> <span data-i18n="nav.pdfBtnMobile">Baixar Apresentação (PDF)</span>
+            </a>
+            
+            <a href="#contato" data-i18n="nav.contactBtn" class="block text-center bg-brand-purple text-white font-bold py-3 rounded-full mobile-link shadow-md mt-2">
+                Fale Conosco
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Modelo 4: Slider Interativo / Alternador de Vivências) -->
+    <section class="relative bg-brand-dark text-white pt-12 pb-20 lg:pt-20 lg:pb-28 flex items-center min-h-[85vh] overflow-hidden">
+        <!-- Subtle Glow Effects -->
+        <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-purple/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Coluna Esquerda: Textos e CTAs -->
+                <div class="lg:col-span-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-brand-purple/20 text-brand-purple border border-brand-purple/30 mb-6 backdrop-blur-sm">
+                        <i class="fas fa-sparkles"></i>
+                        <span data-i18n="hero.badge">Incubadora de Lideranças Regenerativas</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl xl:text-6xl font-black tracking-tight mb-6 leading-[1.12]">
+                        <span data-i18n="hero.titleLine1">Transformação Humana que Gera</span> <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-white" data-i18n="hero.titleLine2">
+                            Impacto Coletivo.
+                        </span>
+                    </h1>
+
+                    <p class="text-base sm:text-xl max-w-2xl mx-auto lg:mx-0 text-gray-300 mb-8 font-light leading-relaxed">
+                        <span data-i18n="hero.description">Uma metodologia viva de 44 semanas que desenvolve jovens da consciência individual à transformação real do território.</span>
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start items-center gap-3.5">
+                        <a href="#contato" class="w-full sm:w-auto inline-flex items-center justify-center btn-lilac-gradient text-white font-extrabold py-3.5 px-7 rounded-full text-sm transition-all transform hover:scale-105 whitespace-nowrap">
+                            <i class="fas fa-handshake mr-2"></i> <span data-i18n="hero.ctaPrimary">Apoie a Próxima Turma</span>
+                        </a>
+                        <a href="#jornada" class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-3.5 px-6 rounded-full text-sm transition-all transform hover:scale-105 whitespace-nowrap">
+                            <i class="fas fa-compass mr-2 text-purple-300"></i> <span data-i18n="hero.ctaSecondary">Conhecer a Jornada</span>
+                        </a>
+                        <a id="heroPdfLink" href="Iron_For_Change_Apresentacao_Institucional.pdf" download="Iron_For_Change_Apresentacao_Institucional.pdf" class="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border border-gray-700 hover:border-brand-purple text-gray-300 hover:text-white font-semibold py-3.5 px-5 rounded-full text-sm transition-colors whitespace-nowrap">
+                            <i class="fas fa-file-pdf mr-2 text-brand-purple"></i> <span data-i18n="hero.ctaPdf">Apresentação (PDF)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Showcase Interativo com Abas (Território & Mar) -->
+                <div class="lg:col-span-6">
+                    <div class="bg-brand-gray/90 border border-gray-800 rounded-3xl p-3 sm:p-4 shadow-2xl relative">
+                        <!-- Abas Superiores do Alternador -->
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <div class="grid grid-cols-2 gap-2 w-full bg-black/60 p-1.5 rounded-2xl border border-gray-800">
+                                <button type="button" onclick="switchHeroSlide(1)" id="heroSlideBtn1" class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all bg-brand-purple text-white shadow-md cursor-pointer">
+                                    <i class="fas fa-mountain-sun"></i>
+                                    <span data-i18n="hero.tab1">No Território</span>
+                                </button>
+                                <button type="button" onclick="switchHeroSlide(2)" id="heroSlideBtn2" class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all text-gray-400 hover:text-white cursor-pointer">
+                                    <i class="fas fa-sailboat"></i>
+                                    <span data-i18n="hero.tab2">Na Jornada (Mar)</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Slide 1: Mirante / Território -->
+                        <div id="heroSlidePanel1" class="relative rounded-2xl overflow-hidden h-[290px] sm:h-[370px] group">
+                            <img src="assets/jovens-mirante-territorio.jpeg" alt="Jovens no Território" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+                            <div class="absolute top-4 left-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-black/70 text-emerald-400 backdrop-blur-md border border-emerald-500/30">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                                <span data-i18n="hero.photo1Badge">Conexão com o Território</span>
+                            </div>
+                            <div class="absolute bottom-5 left-5 right-5 text-left">
+                                <h3 class="text-lg sm:text-2xl font-extrabold text-white mb-1" data-i18n="hero.photo1Title">Olhar para o Futuro da Comunidade</h3>
+                                <p class="text-xs sm:text-sm text-gray-200 font-light" data-i18n="hero.photo1Caption">
+                                    Jovens protagonistas diagnosticando e transformando seu próprio território
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Veleiro / Jornada -->
+                        <div id="heroSlidePanel2" class="hidden relative rounded-2xl overflow-hidden h-[290px] sm:h-[370px] group">
+                            <img src="assets/jovens-veleiro-jornada.jpeg" alt="Jovens na Jornada no Mar" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+                            <div class="absolute top-4 left-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-black/70 text-brand-purpleGlow backdrop-blur-md border border-brand-purple/40">
+                                <span class="w-2 h-2 rounded-full bg-brand-purple animate-ping"></span>
+                                <span data-i18n="hero.photo2Badge">A Jornada em Equipe</span>
+                            </div>
+                            <div class="absolute bottom-5 left-5 right-5 text-left">
+                                <h3 class="text-lg sm:text-2xl font-extrabold text-white mb-1" data-i18n="hero.photo2Title">Travessia & Saúde Integral</h3>
+                                <p class="text-xs sm:text-sm text-gray-200 font-light" data-i18n="hero.photo2Caption">
+                                    Vivências práticas, esporte e resiliência ao longo de 44 semanas
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Miniaturas Rápidas no Rodapé do Card -->
+                        <div class="flex items-center justify-between mt-3 px-1">
+                            <span class="text-[11px] text-gray-400 flex items-center gap-1.5">
+                                <i class="fas fa-users text-brand-purple"></i>
+                                <span>Protagonismo juvenil do início ao fim</span>
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <button type="button" onclick="switchHeroSlide(1)" id="heroDot1" aria-label="Slide 1" class="w-8 h-2 rounded-full bg-brand-purple transition-all cursor-pointer"></button>
+                                <button type="button" onclick="switchHeroSlide(2)" id="heroDot2" aria-label="Slide 2" class="w-2.5 h-2 rounded-full bg-gray-700 hover:bg-gray-500 transition-all cursor-pointer"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Quick Metrics Highlights -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mt-14 pt-10 border-t border-gray-800/80 text-left">
+                <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <div class="text-3xl font-extrabold text-brand-purple mb-1">44</div>
+                    <div class="text-xs font-semibold text-white uppercase tracking-wider" data-i18n="metrics.m1Title">Semanas de Jornada</div>
+                    <div class="text-xs text-gray-400 mt-1" data-i18n="metrics.m1Sub">Formação contínua e imersiva</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <div class="text-3xl font-extrabold text-blue-400 mb-1">5</div>
+                    <div class="text-xs font-semibold text-white uppercase tracking-wider" data-i18n="metrics.m2Title">Macro-Etapas</div>
+                    <div class="text-xs text-gray-400 mt-1" data-i18n="metrics.m2Sub">Do autoconhecimento ao território</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <div class="text-3xl font-extrabold text-amber-400 mb-1">100%</div>
+                    <div class="text-xs font-semibold text-white uppercase tracking-wider" data-i18n="metrics.m3Title">Protagonismo Juvenil</div>
+                    <div class="text-xs text-gray-400 mt-1" data-i18n="metrics.m3Sub">Projetos criados pelos jovens</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <div class="text-3xl font-extrabold text-emerald-400 mb-1" data-i18n="metrics.m4Num">Impacto</div>
+                    <div class="text-xs font-semibold text-white uppercase tracking-wider" data-i18n="metrics.m4Title">Regenerativo</div>
+                    <div class="text-xs text-gray-400 mt-1" data-i18n="metrics.m4Sub">Saúde integral e território</div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function switchHeroSlide(num) {
+                const p1 = document.getElementById('heroSlidePanel1');
+                const p2 = document.getElementById('heroSlidePanel2');
+                const b1 = document.getElementById('heroSlideBtn1');
+                const b2 = document.getElementById('heroSlideBtn2');
+                const d1 = document.getElementById('heroDot1');
+                const d2 = document.getElementById('heroDot2');
+                if (!p1 || !p2) return;
+                if (num === 1) {
+                    p1.classList.remove('hidden');
+                    p2.classList.add('hidden');
+                    b1.className = 'flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all bg-brand-purple text-white shadow-md cursor-pointer';
+                    b2.className = 'flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all text-gray-400 hover:text-white cursor-pointer';
+                    d1.className = 'w-8 h-2 rounded-full bg-brand-purple transition-all cursor-pointer';
+                    d2.className = 'w-2.5 h-2 rounded-full bg-gray-700 hover:bg-gray-500 transition-all cursor-pointer';
+                } else {
+                    p1.classList.add('hidden');
+                    p2.classList.remove('hidden');
+                    b2.className = 'flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all bg-brand-purple text-white shadow-md cursor-pointer';
+                    b1.className = 'flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all text-gray-400 hover:text-white cursor-pointer';
+                    d2.className = 'w-8 h-2 rounded-full bg-brand-purple transition-all cursor-pointer';
+                    d1.className = 'w-2.5 h-2 rounded-full bg-gray-700 hover:bg-gray-500 transition-all cursor-pointer';
+                }
+            }
+        </script>
+    </section>
+
+    <!-- Quem Somos & O Desafio -->
+    <section id="quem-somos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-100 text-brand-purple mb-4">
+                        <i class="fas fa-bullseye"></i>
+                        <span data-i18n="about.badge">Nossa Causa</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark mb-6 leading-tight">
+                        <span data-i18n="about.title1">O potencial existe.</span><br>
+                        <span class="text-brand-purple" data-i18n="about.title2">As oportunidades precisam chegar.</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed" data-i18n="about.p1">
+                        Adolescentes enfrentam desafios cada vez mais complexos que comprometem seu desenvolvimento e o futuro das comunidades: sofrimento psíquico, bullying, falta de perspectiva e baixa participação cidadã.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-i18n="about.p2">
+                        O Iron For Change atua como uma incubadora viva. Conectamos esporte, saúde mental, autoconhecimento e cidadania para que os jovens criem soluções sustentáveis e regenerativas para os desafios do seu próprio território.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a href="#contato" class="inline-flex items-center justify-center btn-lilac-gradient text-white font-bold py-3.5 px-8 rounded-full text-sm transition-all transform hover:scale-105">
+                            <i class="fas fa-handshake mr-2"></i> <span data-i18n="about.ctaJoin">Quero Fazer Parte</span>
+                        </a>
+                        <a id="aboutPdfLink" href="Iron_For_Change_Apresentacao_Institucional.pdf" download="Iron_For_Change_Apresentacao_Institucional.pdf" class="inline-flex items-center justify-center border border-gray-300 hover:border-brand-purple text-gray-700 hover:text-brand-purple font-semibold py-3.5 px-6 rounded-full text-sm transition-colors">
+                            <i class="fas fa-file-pdf mr-2 text-brand-purple"></i> <span data-i18n="about.ctaPdf">Apresentação (PDF)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-5">
+                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-emerald-600 hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-4">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p1Title">Saúde Integral</h3>
+                        <p class="text-sm text-gray-600" data-i18n="pillars.p1Desc">Autocuidado, saúde mental, alimentação consciente e conexão com o corpo.</p>
+                    </div>
+
+                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-blue-600 hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-4">
+                            <i class="fas fa-users-gear"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p2Title">Protagonismo</h3>
+                        <p class="text-sm text-gray-600" data-i18n="pillars.p2Desc">Liderança autêntica, cidadania ativa e voz ativa para liderar transformações.</p>
+                    </div>
+
+                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-amber-600 hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p3Title">Inovação Social</h3>
+                        <p class="text-sm text-gray-600" data-i18n="pillars.p3Desc">Metodologias participativas, ideação criativa e prototipagem de projetos.</p>
+                    </div>
+
+                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-brand-purple hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-purple flex items-center justify-center text-2xl mb-4">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p4Title">Regeneração</h3>
+                        <p class="text-sm text-gray-600" data-i18n="pillars.p4Desc">Soluções concretas que deixam legados sociais, comunitários e ecológicos duradouros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Projeto em Ação (Vídeos) -->
+    <section id="videos" class="py-24 bg-brand-light border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-200 text-brand-purpleDark mb-4">
+                    <i class="fas fa-play-circle"></i>
+                    <span data-i18n="videos.badge">Em Ação</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark mb-4" data-i18n="videos.title">O Projeto em Movimento</h2>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto" data-i18n="videos.subtitle">
+                    Conheça nossa história, a raiz médica e socioemocional com a Dra. Maisa Hortal e o impacto no Ironman Brasil.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col group border border-gray-100">
+                    <div class="relative w-full aspect-video bg-black">
+                        <iframe src="https://www.youtube.com/embed/4yFXuGCbT4g" title="A mudança começa em você" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-brand-purple uppercase tracking-wider" data-i18n="videos.v1Tag">Manifesto</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2 text-brand-dark group-hover:text-brand-purple transition-colors" data-i18n="videos.v1Title">A mudança começa em você</h3>
+                            <p class="text-gray-600 text-sm" data-i18n="videos.v1Desc">Entenda a essência e a visão por trás da incubadora de líderes e transformação de vidas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col group border border-gray-100">
+                    <div class="relative w-full aspect-video bg-black">
+                        <iframe src="https://www.youtube.com/embed/pSkiuGan5lY" title="Projeto Iron For Change - Dra Maisa Hortal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-brand-purple uppercase tracking-wider" data-i18n="videos.v2Tag">Propósito & Saúde</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2 text-brand-dark group-hover:text-brand-purple transition-colors" data-i18n="videos.v2Title">Visão Médica e Propósito</h3>
+                            <p class="text-gray-600 text-sm" data-i18n="videos.v2Desc">Dra. Maisa Hortal apresenta a fundamentação em saúde integral, pertencimento e impacto social.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col group border border-gray-100">
+                    <div class="relative w-full aspect-video bg-black">
+                        <iframe src="https://www.youtube.com/embed/cMJtS3FfCKs" title="IronMan 2023 Florianópolis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-brand-purple uppercase tracking-wider" data-i18n="videos.v3Tag">Território & Esporte</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2 text-brand-dark group-hover:text-brand-purple transition-colors" data-i18n="videos.v3Title">Ação no Ironman 2023</h3>
+                            <p class="text-gray-600 text-sm" data-i18n="videos.v3Desc">Como conectamos a energia e resiliência do esporte de alta intensidade à transformação comunitária.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Callout / CTA Banner in Videos Section -->
+            <div class="mt-16 max-w-4xl mx-auto bg-gradient-to-r from-gray-900 via-brand-gray to-gray-900 border border-brand-purple/40 rounded-3xl p-8 sm:p-10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-purpleGlow block mb-1">
+                        <i class="fas fa-sparkles mr-1"></i> <span data-i18n="videos.calloutTag">Faça a Diferença</span>
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white" data-i18n="videos.calloutTitle">Pronto para transformar vidas e realidades?</h3>
+                    <p class="text-sm text-gray-300 mt-2 max-w-xl font-light" data-i18n="videos.calloutDesc">
+                        Conecte sua empresa, fundação ou instituição pública ao Iron For Change e impulsione jovens protagonistas.
+                    </p>
+                </div>
+                <a href="#contato" class="w-full sm:w-auto inline-flex items-center justify-center btn-lilac-gradient text-white font-extrabold py-4 px-8 rounded-full text-sm whitespace-nowrap transition-all transform hover:scale-105">
+                    <i class="fas fa-paper-plane mr-2"></i> <span data-i18n="videos.calloutBtn">Falar com a Equipe</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jornada do Change - 44 Semanas (Full Curriculum & Interactive Stage Navigator) -->
+    <section id="jornada" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Background subtle elements -->
+        <div class="absolute -right-20 top-40 w-96 h-96 bg-brand-purple/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-20 bottom-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-brand-purple/20 text-brand-purple border border-brand-purple/30 mb-4">
+                    <i class="fas fa-calendar-check"></i>
+                    <span data-i18n="journey.badge">Metodologia Pedagógica • 44 Semanas de Atividades</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6" data-i18n="journey.title">
+                    A Jornada do Change
+                </h2>
+                <p class="text-lg sm:text-2xl text-gray-300 font-light leading-relaxed mb-4">
+                    <span class="text-brand-purple font-normal" data-i18n="journey.subtitleHighlight">Da consciência individual à transformação do território:</span><br class="hidden sm:inline">
+                    <span data-i18n="journey.subtitleRest">jovens que se conhecem, pertencem, imaginam, constroem e regeneram realidades.</span>
+                </p>
+                <p class="text-sm sm:text-base text-gray-400" data-i18n="journey.note">
+                    Ciclo anual contínuo com 44 semanas letivas e recesso de 2 semanas planejado.
+                </p>
+
+                <!-- Download Links for Infographics (Metodologia e Teoria da Mudança) -->
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+                    <a id="journeyInfographicDownload" href="assets/infografico-ironforchange-pt.jpg" download="infografico-ironforchange-pt.jpg" class="inline-flex items-center text-xs font-semibold text-gray-300 hover:text-white bg-gray-900/90 hover:bg-brand-purple/30 border border-gray-700 hover:border-brand-purple/60 px-4 py-2.5 rounded-full transition-all shadow-md">
+                        <i class="fas fa-file-arrow-down text-brand-purple mr-2 text-sm"></i> <span data-i18n="journey.downloadInfographic">Baixar Infográfico da Metodologia</span>
+                    </a>
+                    <a id="theoryInfographicDownload" href="assets/teoria-da-mudanca-ironforchange-pt.jpg" download="teoria-da-mudanca-ironforchange-pt.jpg" class="inline-flex items-center text-xs font-semibold text-gray-300 hover:text-white bg-gray-900/90 hover:bg-brand-purple/30 border border-gray-700 hover:border-brand-purple/60 px-4 py-2.5 rounded-full transition-all shadow-md">
+                        <i class="fas fa-file-arrow-down text-brand-purple mr-2 text-sm"></i> <span data-i18n="journey.downloadTheory">Baixar Teoria da Mudança</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Interactive Stage Tabs (5 Etapas) Container -->
+            <div class="mb-10">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5" id="stageTabsContainer">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+
+            <!-- Dynamic Stage Detail Container -->
+            <div id="stageDetailBox" class="bg-brand-gray rounded-3xl p-6 sm:p-10 border border-gray-800 shadow-2xl transition-all">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- Stage CTA Banner -->
+            <div class="mt-10 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-6 bg-brand-dark/60 border border-brand-purple/20 rounded-2xl p-6 sm:p-8">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-purpleGlow block mb-1">
+                        <i class="fas fa-users-rays mr-1"></i> <span data-i18n="journey.ctaTag">Parcerias & Financiamento de Turmas</span>
+                    </span>
+                    <h4 class="text-xl sm:text-2xl font-black text-white" data-i18n="journey.ctaTitle">Deseja apoiar uma turma ou levar a Jornada para sua região?</h4>
+                    <p class="text-sm text-gray-400 mt-1 max-w-xl font-light" data-i18n="journey.ctaDesc">
+                        Desenvolvemos parcerias sob medida para empresas, fundações, editais e prefeituras com métricas claras de impacto socioemocional e comunitário.
+                    </p>
+                </div>
+                <a href="#contato" class="w-full sm:w-auto inline-flex items-center justify-center btn-lilac-gradient text-white font-extrabold py-3.5 px-8 rounded-full text-sm whitespace-nowrap transition-all transform hover:scale-105">
+                    <i class="fas fa-rocket mr-2"></i> <span data-i18n="journey.ctaBtn">Apoiar uma Turma</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Princípios Orientadores -->
+    <section id="principios" class="py-24 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-100 text-brand-purple mb-4">
+                    <i class="fas fa-compass"></i>
+                    <span data-i18n="principles.badge">Diretrizes Pedagógicas</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark mb-4" data-i18n="principles.title">Princípios que Orientam</h2>
+                <p class="text-lg text-gray-600 font-light" data-i18n="principles.subtitle">
+                    Os seis pilares éticos e metodológicos que sustentam cada encontro, atividade e decisão pedagógica do Iron For Change.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Principio 1 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-100 text-brand-purple flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3" data-i18n="principles.p1Title">Protagonismo Juvenil</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-i18n="principles.p1Desc">
+                        Os adolescentes não são meros beneficiários passivos. Eles são os autores, formuladores e executores diretos das mudanças que desejam ver no mundo.
+                    </p>
+                </div>
+
+                <!-- Principio 2 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-book-open-reader"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3" data-i18n="principles.p2Title">Aprendizagem Viva e Significativa</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-i18n="principles.p2Desc">
+                        A teoria só existe para servir à prática. O aprendizado ocorre a partir de vivências reais, resolução de problemas concretos e reflexão contínua.
+                    </p>
+                </div>
+
+                <!-- Principio 3 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-people-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3" data-i18n="principles.p3Title">Colaboração e Diversidade</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-i18n="principles.p3Desc">
+                        Valorização das diferentes histórias, talentos e origens. O poder transformador surge da cooperação generosa e do trabalho em equipe.
+                    </p>
+                </div>
+
+                <!-- Principio 4 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-map-pin"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3" data-i18n="principles.p4Title">Território como Professor</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-i18n="principles.p4Desc">
+                        A comunidade, o bairro e o meio ambiente local são a principal sala de aula. É no contato com o território que o jovem desenvolve empatia e senso de pertencimento.
+                    </p>
+                </div>
+
+                <!-- Principio 5 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3" data-i18n="principles.p5Title">Ação com Propósito</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-i18n="principles.p5Desc">
+                        Toda ação deve estar alinhada a valores éticos, integridade humana e saúde integral. Agir com clareza de intenção e foco no bem comum.
+                    </p>
+                </div>
+
+                <!-- Principio 6 -->
+                <div class="p-8 rounded-2xl bg-brand-light border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3" data-i18n="principles.p6Title">Regeneração e Legado</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-i18n="principles.p6Desc">
+                        Não basta apenas não causar danos; é preciso regenerar as relações humanas, a saúde dos jovens e a vitalidade socioecológica dos territórios.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-14 text-center">
+                <a href="#como-apoiar" class="inline-flex items-center justify-center btn-lilac-gradient text-white font-bold py-4 px-9 rounded-full text-base transition-all transform hover:scale-105">
+                    <i class="fas fa-hand-holding-heart mr-2.5"></i> <span data-i18n="principles.ctaSupport">Veja Como Fazer Parte e Apoiar</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Apoiar (Estratégias de Captação & Parcerias) -->
+    <section id="como-apoiar" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-200 text-brand-purpleDark mb-4">
+                    <i class="fas fa-handshake"></i>
+                    <span data-i18n="support.badge">Parcerias e Captação</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark mb-6" data-i18n="support.title">Sua organização pode fazer parte</h2>
+                <p class="text-lg text-gray-600 font-light leading-relaxed" data-i18n="support.subtitle">
+                    Formatamos categorias de apoio para dialogar com diferentes realidades: investidores institucionais, editais, bolsas de apoio e doadores individuais.
+                </p>
+                <div class="mt-8 flex justify-center">
+                    <a href="#contato" class="inline-flex items-center justify-center btn-lilac-gradient text-white font-extrabold py-4 px-9 rounded-full text-base transition-all transform hover:scale-105">
+                        <i class="fas fa-paper-plane mr-2.5"></i> <span data-i18n="support.ctaContact">Falar com a Equipe de Parcerias</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Categoria 1 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-purple flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3" data-i18n="support.c1Title">Investimento Financeiro</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" data-i18n="support.c1Desc">
+                            Aporte direto para a estrutura operacional, equipe técnica e viabilização das 44 semanas de atividades formativas da turma.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-brand-purple uppercase tracking-wider" data-i18n="support.c1Tag">Grandes & Médios Investidores</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-brand-purple hover:text-brand-purpleDark group">
+                            <span data-i18n="support.actionSupport">Apoiar</span> <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Categoria 2 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3" data-i18n="support.c2Title">Bolsas & Alimentação</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" data-i18n="support.c2Desc">
+                            Garantia de permanência dos jovens: apoio para alimentação saudável em todos os encontros, transporte e auxílio aos adolescentes.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider" data-i18n="support.c2Tag">Apoio Temático / PF e PJ</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-700 group">
+                            <span data-i18n="support.actionSupport">Apoiar</span> <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Categoria 3 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3" data-i18n="support.c3Title">Editais & Institutos</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" data-i18n="support.c3Desc">
+                            Conexão com fundações, institutos sociais e editais de fomento à juventude, saúde mental e sustentabilidade regenerativa.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-amber-600 uppercase tracking-wider" data-i18n="support.c3Tag">Parcerias Institucionais</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-amber-600 hover:text-amber-700 group">
+                            <span data-i18n="support.actionPropose">Propor</span> <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Categoria 4 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3" data-i18n="support.c4Title">Mentoria & Apoio Técnico</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" data-i18n="support.c4Desc">
+                            Profissionais e especialistas que doam tempo e conhecimento para orientar os Change Projects criados pelos jovens.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider" data-i18n="support.c4Tag">Rede Voluntária</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-emerald-600 hover:text-emerald-700 group">
+                            <span data-i18n="support.actionParticipate">Participar</span> <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Categoria 5 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-boxes-stacked"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3" data-i18n="support.c5Title">Espaços e Estrutura</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" data-i18n="support.c5Desc">
+                            Cessão de locais para oficinas, materiais pedagógicos, equipamentos de mídia e serviços para a viabilização das ações.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-rose-600 uppercase tracking-wider" data-i18n="support.c5Tag">Produtos e Serviços</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-rose-600 hover:text-rose-700 group">
+                            <span data-i18n="support.actionOffer">Oferecer</span> <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Categoria 6 -->
+                <div class="bg-white rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-3" data-i18n="support.c6Title">Conexões Estratégicas</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" data-i18n="support.c6Desc">
+                            Articulação com novas pontes de mercado, lideranças comunitárias e oportunidades de estágio e inserção para os jovens.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider" data-i18n="support.c6Tag">Articulação em Rede</span>
+                        <a href="#contato" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-700 group">
+                            <span data-i18n="support.actionConnect">Conectar</span> <i class="fas fa-arrow-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-100 text-brand-purple mb-4">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span data-i18n="contact.badge">Vamos Dialogar</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark mb-4" data-i18n="contact.title">Venha construir o próximo ciclo.</h2>
+                <p class="text-lg text-gray-600 font-light" data-i18n="contact.subtitle">
+                    Juntos, formamos jovens protagonistas.<br>
+                    Juntos, regeneramos territórios.
+                </p>
+            </div>
+            
+            <div class="bg-brand-dark rounded-3xl shadow-2xl p-8 md:p-12 text-white border border-gray-800">
+                <form id="contactForm" onsubmit="event.preventDefault(); handleContactSubmit(event);">
+                    <input type="hidden" name="access_key" value="63e4449c-cf3f-4fbe-bf28-32697d6a6586">
+                    <input type="hidden" name="subject" value="Novo Contato - Site Iron For Change (Página Teste)">
+                    <input type="hidden" name="from_name" value="Site Iron For Change">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <!-- Form Fields (hidden after successful submission) -->
+                    <div id="formFieldsContainer">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2" data-i18n="form.nameLabel">Nome Completo</label>
+                                <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Seu nome" data-i18n-placeholder="form.namePlaceholder">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2" data-i18n="form.emailLabel">E-mail de Contato</label>
+                                <input type="email" name="email" id="email" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="seu@email.com" data-i18n-placeholder="form.emailPlaceholder">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="organization" class="block text-sm font-medium text-gray-300 mb-2" data-i18n="form.orgLabel">Organização / Empresa / Instituição</label>
+                                <input type="text" name="organization" id="organization" class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Nome da empresa ou iniciativa" data-i18n-placeholder="form.orgPlaceholder">
+                            </div>
+                            <div>
+                                <label for="category" class="block text-sm font-medium text-gray-300 mb-2" data-i18n="form.interestLabel">Forma de Interesse</label>
+                                <select name="category" id="category" class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all">
+                                    <option value="investimento" data-i18n="form.cat1">Investimento Financeiro</option>
+                                    <option value="bolsas" data-i18n="form.cat2">Apoio a Bolsas / Alimentação</option>
+                                    <option value="mentoria" data-i18n="form.cat3">Mentoria e Apoio Técnico</option>
+                                    <option value="parceria" data-i18n="form.cat4">Parceria Institucional / Edital</option>
+                                    <option value="jovens" data-i18n="form.cat5">Inscrição / Indicação de Jovens</option>
+                                    <option value="outro" data-i18n="form.cat6">Outro tipo de contribuição</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2" data-i18n="form.msgLabel">Mensagem</label>
+                            <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Como gostaria de somar forças com o Iron For Change?" data-i18n-placeholder="form.msgPlaceholder"></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submitBtn" class="w-full btn-lilac-gradient text-white font-extrabold py-4 px-6 rounded-xl transition-all text-base transform hover:scale-[1.01] flex items-center justify-center cursor-pointer">
+                            <span id="btnText" class="flex items-center"><i class="fas fa-paper-plane mr-2"></i> <span data-i18n="form.submitBtn">Enviar Mensagem</span></span>
+                        </button>
+                        
+                        <div id="formStatus" class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold transition-all"></div>
+                    </div>
+
+                    <!-- In-Place Success Card -->
+                    <div id="formSuccessCard" class="hidden text-center py-10 px-4">
+                        <div class="w-20 h-20 rounded-full bg-emerald-500/20 border-2 border-emerald-500/50 text-emerald-400 flex items-center justify-center mx-auto mb-5 text-3xl shadow-xl">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h4 class="text-2xl sm:text-3xl font-black text-white mb-3" data-i18n="form.successTitle">Mensagem enviada com sucesso!</h4>
+                        <p class="text-gray-300 text-base max-w-lg mx-auto mb-8 font-light leading-relaxed" data-i18n="form.successDesc">
+                            Agradecemos o seu interesse no <span class="text-brand-purple font-semibold">Iron For Change</span>. Nossa equipe já recebeu sua mensagem e retornará o mais breve possível.
+                        </p>
+                        <button type="button" onclick="resetContactFormUI()" class="inline-flex items-center text-sm font-semibold text-brand-purple hover:text-white px-6 py-3 rounded-full border border-brand-purple/40 hover:bg-brand-purple/20 transition-all cursor-pointer">
+                            <i class="fas fa-redo-alt mr-2 text-xs"></i> <span data-i18n="form.resetBtn">Enviar outra mensagem</span>
+                        </button>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-800 text-center text-sm text-gray-400">
+                        <span data-i18n="form.emailDirectText">Prefere contato direto por e-mail? Escreva para:</span> 
+                        <a href="mailto:contato@ironforchange.com.br" class="text-brand-purple hover:underline font-semibold ml-1">contato@ironforchange.com.br</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-16 text-center border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center mb-8">
+                <a href="#" class="inline-block group mb-4">
+                    <img src="assets/logos/ironforchange-logo-horizontal.png" alt="Iron For Change" class="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105">
+                </a>
+                <p class="mt-2 text-base text-gray-400 max-w-xl font-light" data-i18n="footer.slogan">
+                    Jovens que se conhecem, pertencem, imaginam, constroem e regeneram realidades.
+                </p>
+            </div>
+
+            <div class="flex justify-center space-x-6 mb-10">
+                <a href="https://instagram.com/ironforchange" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="https://www.youtube.com/watch?v=4yFXuGCbT4g&list=PLj7WQLeQRUh6KcbbQEx1mCS7CIEFPOhLK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+                <a href="mailto:contato@ironforchange.com.br" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 max-w-5xl mx-auto gap-4">
+                <p data-i18n="footer.rights">&copy; 2026 Iron For Change. Todos os direitos reservados.</p>
+                <div class="flex flex-wrap items-center justify-center sm:justify-end gap-x-6 gap-y-2">
+                    <a id="footerPdfLink" href="Iron_For_Change_Apresentacao_Institucional.pdf" download="Iron_For_Change_Apresentacao_Institucional.pdf" class="hover:text-gray-300 transition-colors" data-i18n="footer.pdf">Apresentação (PDF)</a>
+                    <a id="footerInfographicLink" href="assets/infografico-ironforchange-pt.jpg" download="infografico-ironforchange-pt.jpg" class="hover:text-gray-300 transition-colors" data-i18n="footer.infographic">Infográfico da Metodologia</a>
+                    <a id="footerTheoryLink" href="assets/teoria-da-mudanca-ironforchange-pt.jpg" download="teoria-da-mudanca-ironforchange-pt.jpg" class="hover:text-gray-300 transition-colors" data-i18n="footer.theory">Teoria da Mudança</a>
+                    <a href="https://ironforchange.com.br" class="hover:text-brand-purple font-medium transition-colors">ironforchange.com.br</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Quick Contact Button -->
+    <a href="#contato" aria-label="Entrar em Contato" class="fixed bottom-6 right-6 z-40 btn-lilac-gradient text-white font-bold px-5 py-3.5 rounded-full shadow-2xl flex items-center space-x-2.5 transition-all transform hover:scale-105 active:scale-95 group">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping inline-block"></span>
+        <span class="text-sm font-bold tracking-wide" data-i18n="floatingBtn.text">Falar Conosco</span>
+        <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+    </a>
+
+    <!-- Interactive Multilingual Engine & Scripts -->
+    <script>
+        // Multilingual Translations Dictionary
+        const translations = {
+            pt: {
+                meta: {
+                    title: "Iron For Change | Incubadora de Lideranças Regenerativas",
+                    desc: "O Iron For Change é uma incubadora de lideranças regenerativas que desenvolve jovens ao longo de uma jornada de 44 semanas da consciência individual à transformação do território."
+                },
+                nav: {
+                    about: "Quem Somos",
+                    project: "O Projeto",
+                    journey: "A Jornada",
+                    weeksBadge: "44 Semanas",
+                    infographic: "Infográfico",
+                    principles: "Princípios",
+                    support: "Como Apoiar",
+                    pdfBtn: "PDF Apresentação",
+                    pdfBtnMobile: "Baixar Apresentação (PDF)",
+                    contactBtn: "Fale Conosco",
+                    contactText: "Fale Conosco"
+                },
+                hero: {
+                    badge: "Incubadora de Lideranças Regenerativas",
+                    titleLine1: "Transformação Humana que Gera",
+                    titleLine2: "Impacto Coletivo.",
+                    description: "Uma metodologia viva de 44 semanas que desenvolve jovens da consciência individual à transformação real do território.",
+                    ctaPrimary: "Apoie a Próxima Turma",
+                    ctaSecondary: "Conhecer a Jornada",
+                    ctaPdf: "Apresentação (PDF)",
+                    photo1Badge: "Conexão com o Território",
+                    photo1Title: "Olhar para o Futuro da Comunidade",
+                    photo1Caption: "Jovens protagonistas diagnosticando e transformando seu próprio território",
+                    photo2Badge: "A Jornada em Equipe",
+                    photo2Title: "Travessia & Saúde Integral",
+                    photo2Caption: "Vivências práticas, esporte e resiliência ao longo de 44 semanas",
+                    tab1: "No Território",
+                    tab2: "Na Jornada (Mar)"
+                },
+                metrics: {
+                    m1Title: "Semanas de Jornada",
+                    m1Sub: "Formação contínua e imersiva",
+                    m2Title: "Macro-Etapas",
+                    m2Sub: "Do autoconhecimento ao território",
+                    m3Title: "Protagonismo Juvenil",
+                    m3Sub: "Projetos criados pelos jovens",
+                    m4Num: "Impacto",
+                    m4Title: "Regenerativo",
+                    m4Sub: "Saúde integral e território"
+                },
+                about: {
+                    badge: "Nossa Causa",
+                    title1: "O potencial existe.",
+                    title2: "As oportunidades precisam chegar.",
+                    p1: "Adolescentes enfrentam desafios cada vez mais complexos que comprometem seu desenvolvimento e o futuro das comunidades: sofrimento psíquico, bullying, falta de perspectiva e baixa participação cidadã.",
+                    p2: "O Iron For Change atua como uma incubadora viva. Conectamos esporte, saúde mental, autoconhecimento e cidadania para que os jovens criem soluções sustentáveis e regenerativas para os desafios do seu próprio território.",
+                    ctaJoin: "Quero Fazer Parte",
+                    ctaPdf: "Apresentação (PDF)"
+                },
+                pillars: {
+                    p1Title: "Saúde Integral",
+                    p1Desc: "Autocuidado, saúde mental, alimentação consciente e conexão com o corpo.",
+                    p2Title: "Protagonismo",
+                    p2Desc: "Liderança autêntica, cidadania ativa e voz ativa para liderar transformações.",
+                    p3Title: "Inovação Social",
+                    p3Desc: "Metodologias participativas, ideação criativa e prototipagem de projetos.",
+                    p4Title: "Regeneração",
+                    p4Desc: "Soluções concretas que deixam legados sociais, comunitários e ecológicos duradouros."
+                },
+                videos: {
+                    badge: "Em Ação",
+                    title: "O Projeto em Movimento",
+                    subtitle: "Conheça nossa história, a raiz médica e socioemocional com a Dra. Maisa Hortal e o impacto no Ironman Brasil.",
+                    v1Tag: "Manifesto",
+                    v1Title: "A mudança começa em você",
+                    v1Desc: "Entenda a essência e a visão por trás da incubadora de líderes e transformação de vidas.",
+                    v2Tag: "Propósito & Saúde",
+                    v2Title: "Visão Médica e Propósito",
+                    v2Desc: "Dra. Maisa Hortal apresenta a fundamentação em saúde integral, pertencimento e impacto social.",
+                    v3Tag: "Território & Esporte",
+                    v3Title: "Ação no Ironman 2023",
+                    v3Desc: "Como conectamos a energia e resiliência do esporte de alta intensidade à transformação comunitária.",
+                    calloutTag: "Faça a Diferença",
+                    calloutTitle: "Pronto para transformar vidas e realidades?",
+                    calloutDesc: "Conecte sua empresa, fundação ou instituição pública ao Iron For Change e impulsione jovens protagonistas.",
+                    calloutBtn: "Falar com a Equipe"
+                },
+                infographic: {
+                    badge: "Visão Visual Completa",
+                    title: "Infográficos Oficiais",
+                    subtitle: "Mapas visuais sintéticos da metodologia e da nossa Teoria da Mudança: da identificação dos desafios à regeneração dos territórios.",
+                    tab1: "Jornada do Change (5 Etapas)",
+                    tab2: "Teoria da Mudança",
+                    caption1: "Jornada do Change (5 Etapas) • Versão oficial em Português",
+                    caption2: "Teoria da Mudança do IronForChange • Versão oficial em Português",
+                    btnExpand: "Expandir",
+                    btnDownload: "Baixar Imagem"
+                },
+                journey: {
+                    badge: "Metodologia Pedagógica • 44 Semanas de Atividades",
+                    title: "A Jornada do Change",
+                    subtitleHighlight: "Da consciência individual à transformação do território:",
+                    subtitleRest: "jovens que se conhecem, pertencem, imaginam, constroem e regeneram realidades.",
+                    note: "Ciclo anual contínuo com 44 semanas letivas e recesso de 2 semanas planejado.",
+                    ctaTag: "Parcerias & Financiamento de Turmas",
+                    ctaTitle: "Deseja apoiar uma turma ou levar a Jornada para sua região?",
+                    ctaDesc: "Desenvolvemos parcerias sob medida para empresas, fundações, editais e prefeituras com métricas claras de impacto socioemocional e comunitário.",
+                    ctaBtn: "Apoiar uma Turma",
+                    productOfStage: "Produto da Etapa",
+                    activitiesTitle: "Encontros e Atividades Práticas:",
+                    downloadInfographic: "Baixar Infográfico da Metodologia",
+                    downloadTheory: "Baixar Teoria da Mudança"
+                },
+                principles: {
+                    badge: "Diretrizes Pedagógicas",
+                    title: "Princípios que Orientam",
+                    subtitle: "Os seis pilares éticos e metodológicos que sustentam cada encontro, atividade e decisão pedagógica do Iron For Change.",
+                    p1Title: "Protagonismo Juvenil",
+                    p1Desc: "Os adolescentes não são meros beneficiários passivos. Eles são os autores, formuladores e executores diretos das mudanças que desejam ver no mundo.",
+                    p2Title: "Aprendizagem Viva e Significativa",
+                    p2Desc: "A teoria só existe para servir à prática. O aprendizado ocorre a partir de vivências reais, resolução de problemas concretos e reflexão contínua.",
+                    p3Title: "Colaboração e Diversidade",
+                    p3Desc: "Valorização das diferentes histórias, talentos e origens. O poder transformador surge da cooperação generosa e do trabalho em equipe.",
+                    p4Title: "Território como Professor",
+                    p4Desc: "A comunidade, o bairro e o meio ambiente local são a principal sala de aula. É no contato com o território que o jovem desenvolve empatia e senso de pertencimento.",
+                    p5Title: "Ação com Propósito",
+                    p5Desc: "Toda ação deve estar alinhada a valores éticos, integridade humana e saúde integral. Agir com clareza de intenção e foco no bem comum.",
+                    p6Title: "Regeneração e Legado",
+                    p6Desc: "Não basta apenas não causar danos; é preciso regenerar as relações humanas, a saúde dos jovens e a vitalidade socioecológica dos territórios.",
+                    ctaSupport: "Veja Como Fazer Parte e Apoiar"
+                },
+                support: {
+                    badge: "Parcerias e Captação",
+                    title: "Sua organização pode fazer parte",
+                    subtitle: "Formatamos categorias de apoio para dialogar com diferentes realidades: investidores institucionais, editais, bolsas de apoio e doadores individuais.",
+                    ctaContact: "Falar com a Equipe de Parcerias",
+                    actionSupport: "Apoiar",
+                    actionPropose: "Propor",
+                    actionParticipate: "Participar",
+                    actionOffer: "Oferecer",
+                    actionConnect: "Conectar",
+                    c1Title: "Investimento Financeiro",
+                    c1Desc: "Aporte direto para a estrutura operacional, equipe técnica e viabilização das 44 semanas de atividades formativas da turma.",
+                    c1Tag: "Grandes & Médios Investidores",
+                    c2Title: "Bolsas & Alimentação",
+                    c2Desc: "Garantia de permanência dos jovens: apoio para alimentação saudável em todos os encontros, transporte e auxílio aos adolescentes.",
+                    c2Tag: "Apoio Temático / PF e PJ",
+                    c3Title: "Editais & Institutos",
+                    c3Desc: "Conexão com fundações, institutos sociais e editais de fomento à juventude, saúde mental e sustentabilidade regenerativa.",
+                    c3Tag: "Parcerias Institucionais",
+                    c4Title: "Mentoria & Apoio Técnico",
+                    c4Desc: "Profissionais e especialistas que doam tempo e conhecimento para orientar os Change Projects criados pelos jovens.",
+                    c4Tag: "Rede Voluntária",
+                    c5Title: "Espaços e Estrutura",
+                    c5Desc: "Cessão de locais para oficinas, materiais pedagógicos, equipamentos de mídia e serviços para a viabilização das ações.",
+                    c5Tag: "Produtos e Serviços",
+                    c6Title: "Conexões Estratégicas",
+                    c6Desc: "Articulação com novas pontes de mercado, lideranças comunitárias e oportunidades de estágio e inserção para os jovens.",
+                    c6Tag: "Articulação em Rede"
+                },
+                contact: {
+                    badge: "Vamos Dialogar",
+                    title: "Venha construir o próximo ciclo.",
+                    subtitle: "Juntos, formamos jovens protagonistas.<br>Juntos, regeneramos territórios."
+                },
+                form: {
+                    nameLabel: "Nome Completo",
+                    namePlaceholder: "Seu nome",
+                    emailLabel: "E-mail de Contato",
+                    emailPlaceholder: "seu@email.com",
+                    orgLabel: "Organização / Empresa / Instituição",
+                    orgPlaceholder: "Nome da empresa ou iniciativa",
+                    interestLabel: "Forma de Interesse",
+                    cat1: "Investimento Financeiro",
+                    cat2: "Apoio a Bolsas / Alimentação",
+                    cat3: "Mentoria e Apoio Técnico",
+                    cat4: "Parceria Institucional / Edital",
+                    cat5: "Inscrição / Indicação de Jovens",
+                    cat6: "Outro tipo de contribuição",
+                    msgLabel: "Mensagem",
+                    msgPlaceholder: "Como gostaria de somar forças com o Iron For Change?",
+                    submitBtn: "Enviar Mensagem",
+                    sendingText: "Enviando mensagem...",
+                    successTitle: "Mensagem enviada com sucesso!",
+                    successDesc: "Agradecemos o seu interesse no Iron For Change. Nossa equipe já recebeu sua mensagem e retornará o mais breve possível.",
+                    resetBtn: "Enviar outra mensagem",
+                    emailDirectText: "Prefere contato direto por e-mail? Escreva para:"
+                },
+                footer: {
+                    slogan: "Jovens que se conhecem, pertencem, imaginam, constroem e regeneram realidades.",
+                    rights: "© 2026 Iron For Change. Todos os direitos reservados.",
+                    pdf: "Apresentação (PDF)",
+                    infographic: "Infográfico da Metodologia",
+                    theory: "Teoria da Mudança"
+                },
+                floatingBtn: {
+                    text: "Falar Conosco"
+                }
+            },
+            en: {
+                meta: {
+                    title: "Iron For Change | Regenerative Leadership Incubator",
+                    desc: "Iron For Change is a regenerative leadership incubator developing adolescents across a 44-week journey from personal self-awareness to territorial transformation."
+                },
+                nav: {
+                    about: "About Us",
+                    project: "The Project",
+                    journey: "The Journey",
+                    weeksBadge: "44 Weeks",
+                    infographic: "Infographic",
+                    principles: "Principles",
+                    support: "How to Support",
+                    pdfBtn: "Presentation (PDF)",
+                    pdfBtnMobile: "Download Presentation (PDF)",
+                    contactBtn: "Contact Us",
+                    contactText: "Contact Us"
+                },
+                hero: {
+                    badge: "Regenerative Leadership Incubator",
+                    titleLine1: "Human Transformation Driving",
+                    titleLine2: "Collective Impact.",
+                    description: "A living 44-week methodology developing youth from individual self-awareness to tangible territorial transformation.",
+                    ctaPrimary: "Support the Next Cohort",
+                    ctaSecondary: "Explore the Journey",
+                    ctaPdf: "Presentation (PDF)",
+                    photo1Badge: "Connection with the Territory",
+                    photo1Title: "Looking Toward the Community's Future",
+                    photo1Caption: "Young changemakers diagnosing and transforming their own territory",
+                    photo2Badge: "The Team Journey",
+                    photo2Title: "Crossing & Holistic Health",
+                    photo2Caption: "Hands-on experiences, sport, and resilience across 44 weeks",
+                    tab1: "In the Territory",
+                    tab2: "In the Journey (Sea)"
+                },
+                metrics: {
+                    m1Title: "Journey Weeks",
+                    m1Sub: "Continuous, immersive cohort training",
+                    m2Title: "Macro-Stages",
+                    m2Sub: "From self-awareness to the territory",
+                    m3Title: "Youth Agency",
+                    m3Sub: "Projects designed by youth themselves",
+                    m4Num: "Regenerative",
+                    m4Title: "Impact",
+                    m4Sub: "Holistic health & community solutions"
+                },
+                about: {
+                    badge: "Our Cause",
+                    title1: "The potential exists.",
+                    title2: "Opportunities must arrive.",
+                    p1: "Adolescents face increasingly complex challenges that undermine their well-being and community futures: psychological distress, bullying, fragile social bonds, and low civic engagement.",
+                    p2: "Iron For Change operates as a living incubator. We bridge sport, mental health, self-discovery, and active citizenship so youth can create sustainable, regenerative solutions for their own territories.",
+                    ctaJoin: "Join the Mission",
+                    ctaPdf: "Presentation (PDF)"
+                },
+                pillars: {
+                    p1Title: "Holistic Health",
+                    p1Desc: "Self-care, mental health, mindful nutrition, and deep connection with the body.",
+                    p2Title: "Youth Agency",
+                    p2Desc: "Authentic leadership, civic participation, and an empowered voice to drive change.",
+                    p3Title: "Social Innovation",
+                    p3Desc: "Participatory design, creative ideation, and agile project prototyping.",
+                    p4Title: "Regeneration",
+                    p4Desc: "Concrete solutions that cultivate lasting social, community, and ecological legacies."
+                },
+                videos: {
+                    badge: "In Motion",
+                    title: "The Project in Motion",
+                    subtitle: "Discover our origin story, the medical and socio-emotional foundation led by Dr. Maisa Hortal, and our impact at Ironman Brazil.",
+                    v1Tag: "Manifesto",
+                    v1Title: "Change begins in you",
+                    v1Desc: "Understand the essence and driving vision behind the changemaker leadership incubator.",
+                    v2Tag: "Purpose & Health",
+                    v2Title: "Medical Vision & Purpose",
+                    v2Desc: "Dr. Maisa Hortal details the foundations of holistic health, belonging, and social transformation.",
+                    v3Tag: "Territory & Sport",
+                    v3Title: "Action at Ironman 2023",
+                    v3Desc: "How we connect the stamina and resilience of endurance sports to community regeneration.",
+                    calloutTag: "Make a Difference",
+                    calloutTitle: "Ready to transform lives and territories?",
+                    calloutDesc: "Connect your company, foundation, or public institution with Iron For Change and empower young changemakers.",
+                    calloutBtn: "Talk to Our Team"
+                },
+                infographic: {
+                    badge: "Full Visual Blueprints",
+                    title: "Official Infographics",
+                    subtitle: "Comprehensive visual maps of our methodology and Theory of Change: from systemic challenges to territorial regeneration.",
+                    tab1: "The Change Journey (5 Steps)",
+                    tab2: "Theory of Change",
+                    caption1: "The Change Journey (5 Steps) • Official English Edition",
+                    caption2: "Theory of Change of IronForChange • Official English Edition",
+                    btnExpand: "Expand",
+                    btnDownload: "Download Image"
+                },
+                journey: {
+                    badge: "Pedagogical Methodology • 44 Activity Weeks",
+                    title: "The Change Journey",
+                    subtitleHighlight: "From individual awareness to territorial transformation:",
+                    subtitleRest: "youth who know themselves, belong, imagine, build, and regenerate communities.",
+                    note: "Continuous annual cycle featuring 44 teaching weeks and a planned 2-week mid-cycle recess.",
+                    ctaTag: "Cohorts Sponsorship & Alliances",
+                    ctaTitle: "Would you like to sponsor a cohort or bring the Journey to your region?",
+                    ctaDesc: "We craft tailored partnerships for corporations, philanthropic foundations, and municipalities with measurable socio-emotional and territorial metrics.",
+                    ctaBtn: "Sponsor a Cohort",
+                    productOfStage: "Stage Deliverable",
+                    activitiesTitle: "Practical Sessions & Activities:",
+                    downloadInfographic: "Download Methodology Infographic",
+                    downloadTheory: "Download Theory of Change"
+                },
+                principles: {
+                    badge: "Pedagogical Guidelines",
+                    title: "Guiding Principles",
+                    subtitle: "The six ethical and pedagogical pillars underpinning every workshop, experience, and educational decision at Iron For Change.",
+                    p1Title: "Youth Agency",
+                    p1Desc: "Adolescents are never passive beneficiaries. They are the authors, architects, and direct implementers of the change they want to see in the world.",
+                    p2Title: "Experiential & Meaningful Learning",
+                    p2Desc: "Theory exists solely to empower practice. True learning happens through real experiences, solving concrete problems, and continuous reflection.",
+                    p3Title: "Collaboration & Diversity",
+                    p3Desc: "Celebrating diverse backgrounds, talents, and origins. Transformative power emerges from generous cooperation and cohesive teamwork.",
+                    p4Title: "Territory as Teacher",
+                    p4Desc: "The local neighborhood, nature, and community constitute the primary classroom. Deep contact with the territory cultivates empathy and belonging.",
+                    p5Title: "Purpose-Driven Action",
+                    p5Desc: "Every initiative must align with ethical values, human dignity, and holistic health. Acting with intentionality and focus on the common good.",
+                    p6Title: "Regeneration & Legacy",
+                    p6Desc: "It is not enough to do no harm; we must regenerate human connections, youth vitality, and socio-ecological flourishing.",
+                    ctaSupport: "Explore How to Partner & Support"
+                },
+                support: {
+                    badge: "Partnerships & Investment",
+                    title: "Your organization can be part of this",
+                    subtitle: "We structured flexible partnership tiers to engage institutional funders, grantmakers, scholarship sponsors, and individual donors.",
+                    ctaContact: "Talk to Our Partnerships Team",
+                    actionSupport: "Support",
+                    actionPropose: "Submit RFP",
+                    actionParticipate: "Join as Mentor",
+                    actionOffer: "Provide",
+                    actionConnect: "Connect",
+                    c1Title: "Financial Investment",
+                    c1Desc: "Direct funding for operating infrastructure, facilitators, and the complete 44-week training journey for a cohort.",
+                    c1Tag: "Institutional & Corporate Investors",
+                    c2Title: "Scholarships & Nutrition",
+                    c2Desc: "Securing student retention: nourishing meals at every session, transportation stipends, and student support.",
+                    c2Tag: "Thematic Support / Individuals & SMEs",
+                    c3Title: "Grants & Foundations",
+                    c3Desc: "Strategic alignment with philanthropic foundations and RFP grants focused on youth empowerment, mental health, and sustainability.",
+                    c3Tag: "Institutional Partnerships",
+                    c4Title: "Mentorship & Technical Support",
+                    c4Desc: "Specialists and corporate teams who volunteer time and expertise to guide youth-led Change Projects.",
+                    c4Tag: "Volunteer & Expert Network",
+                    c5Title: "Spaces & Infrastructure",
+                    c5Desc: "Providing workshop venues, educational supplies, digital equipment, and technical services.",
+                    c5Tag: "In-Kind Goods & Facilities",
+                    c6Title: "Strategic Alliances",
+                    c6Desc: "Opening corporate pathways, community stakeholder bridges, internship opportunities, and youth career access.",
+                    c6Tag: "Ecosystem Network"
+                },
+                contact: {
+                    badge: "Let's Connect",
+                    title: "Come build the next cycle with us.",
+                    subtitle: "Together, we cultivate young changemakers.<br>Together, we regenerate territories."
+                },
+                form: {
+                    nameLabel: "Full Name",
+                    namePlaceholder: "Your full name",
+                    emailLabel: "Contact Email",
+                    emailPlaceholder: "your@email.com",
+                    orgLabel: "Organization / Company / Institution",
+                    orgPlaceholder: "Your company or organization",
+                    interestLabel: "Area of Interest",
+                    cat1: "Financial Investment",
+                    cat2: "Scholarships & Nutrition Support",
+                    cat3: "Mentorship & Technical Guidance",
+                    cat4: "Institutional Partnership / Grant",
+                    cat5: "Youth Enrollment / Referral",
+                    cat6: "Other Form of Contribution",
+                    msgLabel: "Message",
+                    msgPlaceholder: "How would you like to join forces with Iron For Change?",
+                    submitBtn: "Send Message",
+                    sendingText: "Sending message...",
+                    successTitle: "Message successfully sent!",
+                    successDesc: "Thank you for connecting with Iron For Change. Our team has received your message and will get back to you shortly.",
+                    resetBtn: "Send another message",
+                    emailDirectText: "Prefer direct email contact? Write to:"
+                },
+                footer: {
+                    slogan: "Youth who know themselves, belong, imagine, build, and regenerate communities.",
+                    rights: "© 2026 Iron For Change. All rights reserved.",
+                    pdf: "Presentation (PDF)",
+                    infographic: "Methodology Infographic",
+                    theory: "Theory of Change"
+                },
+                floatingBtn: {
+                    text: "Get in Touch"
+                }
+            }
+        };
+
+        // Complete 44-Week Curriculum Matrix (PT & EN)
+        const stagesData = {
+            pt: [
+                {
+                    num: 1,
+                    title: "DESPERTAR",
+                    weeksCount: "10 Semanas",
+                    subtitle: "Autoconhecimento & Propósito",
+                    color: "emerald",
+                    tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
+                    badgeColor: "text-emerald-400",
+                    question: '"Quem sou eu e qual é a minha capacidade de transformar a realidade?"',
+                    productTitle: "Mapa do Meu Change",
+                    productDesc: "Síntese de autoconhecimento, valores, saúde integral e projeto de vida.",
+                    weeks: [
+                        { num: 1, title: "Boas-vindas: o início da Jornada", desc: "Acolhimento, pactos de convivência e apresentação da proposta regenerativa." },
+                        { num: 2, title: "Reconhecimento do grupo", desc: "Dinâmicas de integração, escuta empática e fortalecimento de vínculos." },
+                        { num: 3, title: "Ikigai, propósito e projeto de vida", desc: "Identificação de paixões, talentos, missão e vocação pessoal." },
+                        { num: 4, title: "Nós e o Todo – Cosmovisão sistêmica", desc: "Compreensão de interdependência ecológica, social e comunitária." },
+                        { num: 5, title: "Saúde integral e autocuidado", desc: "Fundamentos da saúde física, emocional e manejo de estresse." },
+                        { num: 6, title: "Alimentação e escolhas", desc: "Nutrição consciente e impacto dos hábitos na energia vital." },
+                        { num: 7, title: "Meditação e atenção plena", desc: "Foco, presença, respiração e autorregulação emocional." },
+                        { num: 8, title: "Movimento – O corpo em movimento", desc: "Práticas corporais, esportivas e expressão física de vitalidade." },
+                        { num: 9, title: "Comunicação – Como me expresso e como escuto", desc: "Comunicação Não-Violenta (CNV), oratória e escuta ativa." },
+                        { num: 10, title: "Meu Change começa em mim – Integração", desc: "Consolidação do autodiagnóstico individual e celebração da 1ª etapa." }
+                    ]
+                },
+                {
+                    num: 2,
+                    title: "PERTENCER",
+                    weeksCount: "8 Semanas",
+                    subtitle: "Vínculo com o Território",
+                    color: "blue",
+                    tagClass: "bg-blue-950 text-blue-400 border-blue-800",
+                    badgeColor: "text-blue-400",
+                    question: '"A que lugar pertenço e como posso participar da transformação dele?"',
+                    productTitle: "Mapa de Desafios, Ativos e Oportunidades",
+                    productDesc: "Diagnóstico participativo detalhado do território e suas potencialidades.",
+                    weeks: [
+                        { num: 1, title: "O que é território?", desc: "Conceito de território vivo, memória histórica e identidade cultural." },
+                        { num: 2, title: "Caminhada pelo território (expedição)", desc: "Trabalho de campo, olhar atento e registro de realidades locais." },
+                        { num: 3, title: "Participação social", desc: "Espaços comunitários, associações de moradores, coletivos e conselhos." },
+                        { num: 4, title: "Como posso pertencer ao território?", desc: "Fortalecimento do sentimento de pertença, afeto e responsabilidade cívica." },
+                        { num: 5, title: "Como é a realidade do meu bairro e da minha cidade?", desc: "Análise de dados socioeconômicos, ambientais e contrastes urbanos." },
+                        { num: 6, title: "Gestão participativa (simulação)", desc: "Roleplay e tomada de decisão democrática sobre dilemas comunitários." },
+                        { num: 7, title: "O que é política? – Para além da política partidária", desc: "Política como arte da convivência humana, polis e direitos fundamentais." },
+                        { num: 8, title: "Diagnóstico participativo – O que queremos transformar?", desc: "Priorização de desafios locais e fechamento do mapa de oportunidades." }
+                    ]
+                },
+                {
+                    num: 3,
+                    title: "IMAGINAR",
+                    weeksCount: "6 Semanas",
+                    subtitle: "Criatividade & Soluções",
+                    color: "amber",
+                    tagClass: "bg-amber-950 text-amber-400 border-amber-800",
+                    badgeColor: "text-amber-400",
+                    question: '"E se as coisas pudessem ser diferentes?"',
+                    productTitle: "Desafio Escolhido + Ideia do Change Project",
+                    productDesc: "Definição do problema real a solucionar e escopo preliminar da inovação.",
+                    weeks: [
+                        { num: 1, title: "O processo imaginativo e criativo", desc: "Desbloqueio de criatividade, pensamento divergente e imaginação cívica." },
+                        { num: 2, title: "Como boas ideias surgem?", desc: "Casos inspiradores, serendipidade, combinação de conceitos e observação." },
+                        { num: 3, title: "Bons exemplos e como eles aconteceram", desc: "Estudo de cases reais de impacto juvenil no Brasil e no mundo." },
+                        { num: 4, title: "Metodologias participativas e criativas – Regathon", desc: "Maratona imersiva de cocriação com ferramentas de Design Thinking." },
+                        { num: 5, title: "Brainstorm – Que ideias temos?", desc: "Geração volumosa de alternativas, clusterização e seleção de hipóteses." },
+                        { num: 6, title: "Estado da arte + definição do desafio", desc: "Pesquisa de campo: 'Alguém já tentou resolver isso? O que podemos inovar?'" }
+                    ]
+                },
+                {
+                    num: 4,
+                    title: "CONSTRUIR",
+                    weeksCount: "13 Semanas",
+                    subtitle: "Projetos na Prática",
+                    color: "purple",
+                    tagClass: "bg-purple-950 text-purple-400 border-purple-800",
+                    badgeColor: "text-brand-purpleGlow",
+                    question: '"Como transformamos uma ideia em realidade?"',
+                    productTitle: "Projeto em Execução com Resultados",
+                    productDesc: "Protótipo testado no território, rede de mentores e evidências de impacto.",
+                    weeks: [
+                        { num: 1, title: "O que é um projeto?", desc: "Estrutura básica: objetivos, justificativa, escopo e público-alvo." },
+                        { num: 2, title: "Diferentes linguagens de projetos", desc: "Modelos de projetos em pesquisa, terceiro setor e iniciativa privada." },
+                        { num: 3, title: "Definindo nosso Change Project", desc: "Formação dos times, divisão de papéis e fechamento do plano de trabalho." },
+                        { num: 4, title: "Teoria da Mudança simplificada", desc: "Atividades → Resultados diretos → Impacto sistêmico de longo prazo." },
+                        { num: 5, title: "Rede de parceiros", desc: "Mapeamento de stakeholders e aliados comunitários estratégicos." },
+                        { num: 6, title: "Quem pode ser meu tutor, orientador ou inspirador?", desc: "Conexão direta com mentores especialistas e referências profissionais." },
+                        { num: 7, title: "Recursos e captação", desc: "Orçamento enxuto, financiamento coletivo, editais e doações." },
+                        { num: 8, title: "Prototipagem – Vamos testar!", desc: "Criação do MVP (produto mínimo viável) em pequena escala para validação rápida." },
+                        { num: 9, title: "Execução I", desc: "Entrada em campo com as atividades planejadas no território." },
+                        { num: 10, title: "Avaliação e mentoria", desc: "Rodada de feedback: 'O que funcionou? O que precisamos mudar e ajustar?'" },
+                        { num: 11, title: "Execução II", desc: "Iteração e ampliação do projeto com melhorias incorporadas." },
+                        { num: 12, title: "Troca de experiências – Change Exchange", desc: "Apresentação cruzada entre grupos de jovens para intercâmbio de soluções." },
+                        { num: 13, title: "Preparação para Regenerar – Resultados e comunicação", desc: "Consolidação de métricas, fotos, depoimentos e preparação para a etapa final." }
+                    ]
+                },
+                {
+                    num: 5,
+                    title: "REGENERAR",
+                    weeksCount: "7 Semanas",
+                    subtitle: "Showcase & Futuro",
+                    color: "teal",
+                    tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
+                    badgeColor: "text-teal-400",
+                    question: '"O que aprendemos e que transformação deixamos?"',
+                    productTitle: "Legado da Jornada e Plano de Continuidade",
+                    productDesc: "Sustentabilidade dos projetos, formação da rede Alumni e novos ciclos.",
+                    weeks: [
+                        { num: 1, title: "Execução final dos projetos", desc: "Última rodada de intervenção prática, ajustes finais e fechamento das entregas." },
+                        { num: 2, title: "Avaliação dos projetos – O que fizemos e o que mudou?", desc: "Balanço quantitativo e qualitativo das transformações geradas." },
+                        { num: 3, title: "Minha transformação – Quem eu era e quem sou agora?", desc: "Reflexão socioemocional profunda sobre o crescimento individual do jovem." },
+                        { num: 4, title: "Comunicação do impacto – Como contar nossa transformação?", desc: "Storytelling, produção de materiais visuais, relatórios e depoimentos." },
+                        { num: 5, title: "Preparação do Showcase", desc: "Ensaios de pitch, stands de demonstração e organização do evento comunitário." },
+                        { num: 6, title: "Showcase IronForChange", desc: "Grande celebração pública: apresentação dos projetos para a comunidade e parceiros." },
+                        { num: 7, title: "Próximos passos e legado", desc: "Continuidade dos projetos, entrada na Rede Alumni IFC e pontes com oportunidades de mercado." }
+                    ]
+                }
+            ],
+            en: [
+                {
+                    num: 1,
+                    title: "AWAKEN",
+                    weeksCount: "10 Weeks",
+                    subtitle: "Self-Awareness & Purpose",
+                    color: "emerald",
+                    tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
+                    badgeColor: "text-emerald-400",
+                    question: '"Who am I and what is my capacity to transform reality?"',
+                    productTitle: "My Change Map",
+                    productDesc: "Synthesis of self-awareness, core values, holistic health, and life purpose.",
+                    weeks: [
+                        { num: 1, title: "Welcome: Journey Launch", desc: "Welcoming cohort, shared coexistence agreements, and introduction to regeneration." },
+                        { num: 2, title: "Cohort Integration & Trust", desc: "Group dynamics, empathetic listening, and strengthening community bonds." },
+                        { num: 3, title: "Ikigai, Purpose & Life Vision", desc: "Discovering passions, personal talents, vocation, and mission." },
+                        { num: 4, title: "We & the Whole – Systemic Worldview", desc: "Understanding social, ecological, and territorial interdependencies." },
+                        { num: 5, title: "Holistic Health & Self-Care", desc: "Foundations of physical health, emotional regulation, and stress management." },
+                        { num: 6, title: "Nutrition & Daily Habits", desc: "Mindful nutrition, conscious lifestyle choices, and vital energy." },
+                        { num: 7, title: "Meditation & Mindfulness", desc: "Focus, presence, breathing techniques, and somatic awareness." },
+                        { num: 8, title: "Movement – The Body in Motion", desc: "Physical practices, athletics, and dynamic expressions of vitality." },
+                        { num: 9, title: "Communication – Expression & Listening", desc: "Nonviolent Communication (NVC), public speaking, and active listening." },
+                        { num: 10, title: "Change Begins in Me – Synthesis", desc: "Consolidation of personal growth maps and Stage 1 celebration." }
+                    ]
+                },
+                {
+                    num: 2,
+                    title: "BELONG",
+                    weeksCount: "8 Weeks",
+                    subtitle: "Territorial Roots & Bonds",
+                    color: "blue",
+                    tagClass: "bg-blue-950 text-blue-400 border-blue-800",
+                    badgeColor: "text-blue-400",
+                    question: '"Where do I belong and how can I participate in its transformation?"',
+                    productTitle: "Map of Challenges, Assets & Opportunities",
+                    productDesc: "Comprehensive participatory diagnostic of community assets and local realities.",
+                    weeks: [
+                        { num: 1, title: "What is Territory?", desc: "The concept of living territory, historical memory, and cultural identity." },
+                        { num: 2, title: "Territorial Expedition", desc: "Field immersion, observant walkthroughs, and recording local challenges." },
+                        { num: 3, title: "Civic & Social Participation", desc: "Community centers, neighborhood councils, youth collectives, and boards." },
+                        { num: 4, title: "How do I belong to the Territory?", desc: "Nurturing deep belonging, communal affection, and civic duty." },
+                        { num: 5, title: "Reality of my Neighborhood & City", desc: "Analyzing socioeconomic indicators, ecological realities, and urban contrasts." },
+                        { num: 6, title: "Participatory Governance Simulation", desc: "Roleplaying democratic decision-making around real neighborhood dilemmas." },
+                        { num: 7, title: "What is Politics? – Beyond Party Lines", desc: "Politics as the art of peaceful coexistence, the polis, and human rights." },
+                        { num: 8, title: "Participatory Diagnosis – What to Change?", desc: "Prioritizing local challenges and synthesizing the community opportunity map." }
+                    ]
+                },
+                {
+                    num: 3,
+                    title: "IMAGINE",
+                    weeksCount: "6 Weeks",
+                    subtitle: "Creativity & Innovation",
+                    color: "amber",
+                    tagClass: "bg-amber-950 text-amber-400 border-amber-800",
+                    badgeColor: "text-amber-400",
+                    question: '"What if things could be completely different?"',
+                    productTitle: "Chosen Challenge + Change Project Concept",
+                    productDesc: "Clear framing of the community challenge and initial project blueprint.",
+                    weeks: [
+                        { num: 1, title: "The Creative & Imaginative Process", desc: "Unlocking lateral thinking, divergent imagination, and civic creativity." },
+                        { num: 2, title: "How Great Ideas Emerge", desc: "Case studies, serendipity, concept combinations, and field observation." },
+                        { num: 3, title: "Inspiring Youth Benchmarks", desc: "Analysis of real youth-led community projects across Brazil and globally." },
+                        { num: 4, title: "Participatory Design – Regathon", desc: "Collaborative co-creation hackathon powered by Design Thinking tools." },
+                        { num: 5, title: "Brainstorming – Divergent Ideation", desc: "Generating high-volume solutions, grouping concepts, and forming hypotheses." },
+                        { num: 6, title: "State of the Art & Challenge Definition", desc: "Desk & field research: 'Has someone tackled this before? Where can we innovate?'" }
+                    ]
+                },
+                {
+                    num: 4,
+                    title: "BUILD",
+                    weeksCount: "13 Weeks",
+                    subtitle: "Hands-on Implementation",
+                    color: "purple",
+                    tagClass: "bg-purple-950 text-purple-400 border-purple-800",
+                    badgeColor: "text-brand-purpleGlow",
+                    question: '"How do we turn an idea into real-world reality?"',
+                    productTitle: "Active Project in Execution with Measured Results",
+                    productDesc: "Field-tested prototype, active mentor network, and preliminary impact evidence.",
+                    weeks: [
+                        { num: 1, title: "What makes a Project?", desc: "Core architecture: objectives, justification, scope, target audience, and timeline." },
+                        { num: 2, title: "Project Methodologies", desc: "Frameworks across academic research, non-profits, and social entrepreneurship." },
+                        { num: 3, title: "Defining our Change Project", desc: "Team formation, role allocation, leadership distribution, and sprint planning." },
+                        { num: 4, title: "Simplified Theory of Change", desc: "Inputs & Activities → Direct Outputs → Long-term Systemic Impact." },
+                        { num: 5, title: "Partner & Stakeholder Mapping", desc: "Identifying key community allies, schools, and institutional supporters." },
+                        { num: 6, title: "Mentorship & Guidance", desc: "Direct pairing with industry mentors, community elders, and technical advisors." },
+                        { num: 7, title: "Budgeting & Resource Mobilization", desc: "Lean budgeting, grassroots fundraising, grants, and in-kind donation drives." },
+                        { num: 8, title: "Prototyping – Rapid Testing", desc: "Building a small-scale MVP (minimum viable prototype) for fast validation." },
+                        { num: 9, title: "Field Execution I", desc: "Launching initial community interventions and activities in the neighborhood." },
+                        { num: 10, title: "Review & Mentor Feedback", desc: "Feedback loop: 'What worked? What bottlenecks require adjustments?'" },
+                        { num: 11, title: "Field Execution II", desc: "Iterating and expanding the project scope based on real-world feedback." },
+                        { num: 12, title: "Change Exchange Sessions", desc: "Cross-cohort peer review to share lessons, troubleshoot, and cross-pollinate." },
+                        { num: 13, title: "Preparing for Regeneration", desc: "Data consolidation, media collection, testimonials, and preparation for showcase." }
+                    ]
+                },
+                {
+                    num: 5,
+                    title: "REGENERATE",
+                    weeksCount: "7 Weeks",
+                    subtitle: "Showcase & Long-term Legacy",
+                    color: "teal",
+                    tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
+                    badgeColor: "text-teal-400",
+                    question: '"What have we learned and what lasting legacy do we leave?"',
+                    productTitle: "Journey Legacy & Sustainability Roadmap",
+                    productDesc: "Project continuity strategy, Alumni network integration, and next cycles.",
+                    weeks: [
+                        { num: 1, title: "Final Project Delivery", desc: "Final field implementations, wrap-ups, and concrete community handoffs." },
+                        { num: 2, title: "Impact Evaluation – What changed?", desc: "Quantitative and qualitative assessment of community and personal impact." },
+                        { num: 3, title: "Personal Metamorphosis", desc: "Deep socio-emotional self-reflection on the adolescent's transformation." },
+                        { num: 4, title: "Communicating Impact & Storytelling", desc: "Impact reporting, storytelling, video recaps, and photography exhibition." },
+                        { num: 5, title: "Showcase Pitch Preparation", desc: "Public speaking rehearsals, demo stand design, and community invite outreach." },
+                        { num: 6, title: "IronForChange Public Showcase", desc: "Celebration day: high-visibility presentations for families, funders, and leaders." },
+                        { num: 7, title: "Next Horizons & Alumni Network", desc: "Project continuity plans, entering the IFC Alumni network, and career pathways." }
+                    ]
+                }
+            ]
+        };
+
+        let currentLang = 'pt';
+        let currentStage = 1;
+
+        const stageBorderColors = {
+            1: 'border-emerald-500',
+            2: 'border-blue-500',
+            3: 'border-amber-500',
+            4: 'border-brand-purple',
+            5: 'border-teal-500'
+        };
+
+        function setLanguage(lang) {
+            if (lang !== 'pt' && lang !== 'en') lang = 'pt';
+            currentLang = lang;
+            localStorage.setItem('ifc_selected_lang', lang);
+
+            // Update HTML Lang attribute & Page Title
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+            document.title = translations[lang].meta.title;
+            const metaDesc = document.getElementById('metaDescription');
+            if (metaDesc) metaDesc.content = translations[lang].meta.desc;
+
+            // Update Desktop and Mobile Flag Buttons Active State
+            const btnPtDesk = document.getElementById('lang-btn-pt-desktop');
+            const btnEnDesk = document.getElementById('lang-btn-en-desktop');
+            const btnPtMob = document.getElementById('lang-btn-pt-mobile');
+            const btnEnMob = document.getElementById('lang-btn-en-mobile');
+
+            [btnPtDesk, btnPtMob].forEach(el => {
+                if (!el) return;
+                if (lang === 'pt') {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+
+            [btnEnDesk, btnEnMob].forEach(el => {
+                if (!el) return;
+                if (lang === 'en') {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+
+            // Update text nodes with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const val = getNestedTranslation(translations[lang], key);
+                if (val !== undefined) {
+                    el.innerHTML = val;
+                }
+            });
+
+            // Update input placeholders with data-i18n-placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                const val = getNestedTranslation(translations[lang], key);
+                if (val !== undefined) {
+                    el.placeholder = val;
+                }
+            });
+
+            // Dynamic PDF Asset Links
+            const isEn = lang === 'en';
+            const pdfFile = isEn ? 'Iron_For_Change_Institutional_Presentation.pdf' : 'Iron_For_Change_Apresentacao_Institucional.pdf';
+            ['navPdfLink', 'mobilePdfLink', 'heroPdfLink', 'aboutPdfLink', 'footerPdfLink'].forEach(id => {
+                const link = document.getElementById(id);
+                if (link) {
+                    link.href = pdfFile;
+                    link.setAttribute('download', pdfFile);
+                }
+            });
+
+            // Dynamic Infographics Download Links (Metodologia e Teoria da Mudança)
+            const infogFile = isEn ? 'assets/infographic-ironforchange-en.jpg' : 'assets/infografico-ironforchange-pt.jpg';
+            const infogName = isEn ? 'infographic-ironforchange-en.jpg' : 'infografico-ironforchange-pt.jpg';
+            ['journeyInfographicDownload', 'footerInfographicLink'].forEach(id => {
+                const link = document.getElementById(id);
+                if (link) {
+                    link.href = infogFile;
+                    link.setAttribute('download', infogName);
+                }
+            });
+
+            const theoryFile = isEn ? 'assets/theory-of-change-ironforchange-en.jpg' : 'assets/teoria-da-mudanca-ironforchange-pt.jpg';
+            const theoryName = isEn ? 'theory-of-change-ironforchange-en.jpg' : 'teoria-da-mudanca-ironforchange-pt.jpg';
+            ['theoryInfographicDownload', 'footerTheoryLink'].forEach(id => {
+                const link = document.getElementById(id);
+                if (link) {
+                    link.href = theoryFile;
+                    link.setAttribute('download', theoryName);
+                }
+            });
+
+            // Re-render Stage Tabs and Current Stage Detail
+            renderStageTabs();
+            renderStageDetail(currentStage);
+        }
+
+        function getNestedTranslation(obj, path) {
+            return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+        }
+
+        // Render Stage Navigation Tabs
+        function renderStageTabs() {
+            const container = document.getElementById('stageTabsContainer');
+            if (!container) return;
+            const stages = stagesData[currentLang];
+
+            container.innerHTML = stages.map(s => {
+                const isActive = s.num === currentStage;
+                const activeBorder = isActive ? stageBorderColors[s.num] : 'border-transparent';
+                const activeClass = isActive ? 'active' : '';
+
+                return `
+                    <button onclick="switchStage(${s.num})" id="tab-btn-${s.num}" class="stage-tab ${activeClass} text-left p-4 sm:p-5 rounded-2xl bg-brand-gray border-2 ${activeBorder} transition-all flex flex-col justify-between hover:scale-[1.02] cursor-pointer">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-full bg-${s.color}-500/20 text-${s.color}-400 font-black text-xs flex items-center justify-center border border-${s.color}-500/40">${s.num}</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-${s.color}-400">${s.weeksCount}</span>
+                        </div>
+                        <h4 class="font-black text-lg text-white">${s.title}</h4>
+                        <p class="text-xs text-gray-300 mt-1 font-light">${s.subtitle}</p>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        // Render Stage Detail Box
+        function renderStageDetail(num) {
+            currentStage = num;
+            const box = document.getElementById('stageDetailBox');
+            if (!box) return;
+
+            const stages = stagesData[currentLang];
+            const s = stages.find(item => item.num === num) || stages[0];
+            const t = translations[currentLang].journey;
+
+            const weeksHtml = s.weeks.map((w, idx) => {
+                const isSpanTwo = (s.weeks.length % 2 !== 0 && idx === s.weeks.length - 1) ? 'md:col-span-2' : '';
+                return `
+                    <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-${s.color}-700/60 transition-colors ${isSpanTwo}">
+                        <span class="w-8 h-8 rounded-lg bg-${s.color}-600/20 text-${s.color}-400 font-bold text-sm flex items-center justify-center flex-shrink-0 border border-${s.color}-600/30">${w.num}</span>
+                        <div>
+                            <h5 class="font-bold text-white text-base">${w.title}</h5>
+                            <p class="text-xs text-gray-400 mt-1">${w.desc}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            box.innerHTML = `
+                <div class="stage-panel">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 mb-8 border-b border-gray-800 gap-4">
+                        <div>
+                            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${s.tagClass} mb-3">
+                                <i class="fas fa-seedling"></i>
+                                <span>${currentLang === 'pt' ? 'Etapa' : 'Stage'} 0${s.num} • ${s.weeksCount}</span>
+                            </div>
+                            <h3 class="text-3xl font-black text-white">${s.num}. ${s.title}</h3>
+                            <p class="text-lg text-${s.color}-300 font-medium italic mt-2">
+                                ${s.question}
+                            </p>
+                        </div>
+                        <div class="bg-gray-900/90 border border-${s.color}-800/40 rounded-2xl p-4 md:max-w-xs flex-shrink-0">
+                            <span class="text-[11px] font-bold uppercase tracking-widest text-${s.color}-400 block mb-1">
+                                <i class="fas fa-check-circle mr-1"></i> ${t.productOfStage}
+                            </span>
+                            <span class="text-base font-bold text-white block">${s.productTitle}</span>
+                            <p class="text-xs text-gray-400 mt-1">${s.productDesc}</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-6 flex items-center">
+                        <i class="fas fa-list-check mr-2 text-${s.color}-400"></i> ${t.activitiesTitle}
+                    </h4>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        ${weeksHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        function switchStage(stageNum) {
+            currentStage = stageNum;
+            renderStageTabs();
+            renderStageDetail(stageNum);
+
+            // Gentle scroll for mobile viewport
+            const detailBox = document.getElementById('stageDetailBox');
+            if (detailBox && (window.innerWidth < 1024)) {
+                setTimeout(() => {
+                    const targetY = window.pageYOffset + detailBox.getBoundingClientRect().top - 90;
+                    window.scrollTo({ top: targetY, behavior: 'smooth' });
+                }, 80);
+            }
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-times');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+        }
+
+        // Contact Form AJAX Handler (In-place Web3Forms)
+        function handleContactSubmit(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const formStatus = document.getElementById('formStatus');
+            const formFieldsContainer = document.getElementById('formFieldsContainer');
+            const formSuccessCard = document.getElementById('formSuccessCard');
+
+            if (!contactForm) return false;
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            }
+            if (btnText) {
+                btnText.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i> ${translations[currentLang].form.sendingText}`;
+            }
+            if (formStatus) formStatus.className = 'hidden';
+
+            const formData = new FormData(contactForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                const resJson = await response.json();
+                if (response.status === 200 || resJson.success) {
+                    if (formFieldsContainer) formFieldsContainer.classList.add('hidden');
+                    if (formSuccessCard) formSuccessCard.classList.remove('hidden');
+                    contactForm.reset();
+                } else {
+                    if (formStatus) {
+                        formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-950/80 text-red-300 border border-red-700/60 block';
+                        formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> ' + (resJson.message || 'Error sending message. Please try again.');
+                    }
+                }
+            })
+            .catch(() => {
+                if (formStatus) {
+                    formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-950/80 text-red-300 border border-red-700/60 block';
+                    formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> Falha de conexão. Por favor, envie e-mail para contato@ironforchange.com.br.';
+                }
+            })
+            .finally(() => {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                }
+                if (btnText) {
+                    btnText.innerHTML = `<i class="fas fa-paper-plane mr-2"></i> ${translations[currentLang].form.submitBtn}`;
+                }
+            });
+
+            return false;
+        }
+
+        function resetContactFormUI() {
+            const formFieldsContainer = document.getElementById('formFieldsContainer');
+            const formSuccessCard = document.getElementById('formSuccessCard');
+            const formStatus = document.getElementById('formStatus');
+            if (formFieldsContainer) formFieldsContainer.classList.remove('hidden');
+            if (formSuccessCard) formSuccessCard.classList.add('hidden');
+            if (formStatus) formStatus.className = 'hidden';
+        }
+
+        // Initialize Language (URL Query > localStorage > Default 'pt')
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramLang = urlParams.get('lang');
+            const storedLang = localStorage.getItem('ifc_selected_lang');
+            
+            let initialLang = 'pt';
+            if (paramLang && (paramLang === 'en' || paramLang === 'pt')) {
+                initialLang = paramLang;
+            } else if (storedLang && (storedLang === 'en' || storedLang === 'pt')) {
+                initialLang = storedLang;
+            }
+
+            setLanguage(initialLang);
+        });
+    </script>
+</body>
+</html>
