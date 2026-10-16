@@ -833,8 +833,8 @@
                             <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Como gostaria de somar forças com o Iron For Change?" data-i18n-placeholder="form.msgPlaceholder"></textarea>
                         </div>
                         
-                        <button type="submit" id="submitBtn" class="w-full btn-lilac-gradient text-white font-extrabold py-4 px-6 rounded-xl transition-all text-base transform hover:scale-[1.01] flex items-center justify-center cursor-pointer">
-                            <span id="btnText" class="flex items-center"><i class="fas fa-paper-plane mr-2"></i> <span data-i18n="form.submitBtn">Enviar Mensagem</span></span>
+                        <button type="submit" id="submitBtn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-4 px-6 rounded-xl transition-all text-base transform hover:scale-[1.01] flex items-center justify-center cursor-pointer shadow-lg shadow-emerald-950/40 hover:shadow-emerald-600/30">
+                            <span id="btnText" class="flex items-center"><i class="fab fa-whatsapp text-xl mr-2"></i> <span data-i18n="form.submitBtn">Conversar pelo WhatsApp</span></span>
                         </button>
                         
                         <div id="formStatus" class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold transition-all"></div>
@@ -843,19 +843,27 @@
                     <!-- In-Place Success Card -->
                     <div id="formSuccessCard" class="hidden text-center py-10 px-4">
                         <div class="w-20 h-20 rounded-full bg-emerald-500/20 border-2 border-emerald-500/50 text-emerald-400 flex items-center justify-center mx-auto mb-5 text-3xl shadow-xl">
-                            <i class="fas fa-check"></i>
+                            <i class="fab fa-whatsapp text-4xl"></i>
                         </div>
-                        <h4 class="text-2xl sm:text-3xl font-black text-white mb-3" data-i18n="form.successTitle">Mensagem enviada com sucesso!</h4>
+                        <h4 class="text-2xl sm:text-3xl font-black text-white mb-3" data-i18n="form.successTitle">Mensagem pronta no WhatsApp!</h4>
                         <p class="text-gray-300 text-base max-w-lg mx-auto mb-8 font-light leading-relaxed" data-i18n="form.successDesc">
-                            Agradecemos o seu interesse no <span class="text-brand-purple font-semibold">Iron For Change</span>. Nossa equipe já recebeu sua mensagem e retornará o mais breve possível.
+                            Uma conversa foi iniciada com o número <span class="text-emerald-400 font-semibold">+55 11 98287-5533</span> com todos os seus dados preenchidos. Caso a janela não tenha aberto automaticamente, clique no botão abaixo:
                         </p>
-                        <button type="button" onclick="resetContactFormUI()" class="inline-flex items-center text-sm font-semibold text-brand-purple hover:text-white px-6 py-3 rounded-full border border-brand-purple/40 hover:bg-brand-purple/20 transition-all cursor-pointer">
-                            <i class="fas fa-redo-alt mr-2 text-xs"></i> <span data-i18n="form.resetBtn">Enviar outra mensagem</span>
-                        </button>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                            <a id="whatsappDirectLink" href="https://wa.me/5511982875533" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-white bg-emerald-600 hover:bg-emerald-500 px-7 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-emerald-500/30 cursor-pointer">
+                                <i class="fab fa-whatsapp text-xl mr-2"></i> <span data-i18n="form.openWhatsappBtn">Abrir WhatsApp</span>
+                            </a>
+                            <button type="button" onclick="resetContactFormUI()" class="w-full sm:w-auto inline-flex items-center justify-center text-sm font-semibold text-gray-300 hover:text-white px-6 py-3.5 rounded-xl border border-gray-700 hover:border-gray-500 hover:bg-gray-800 transition-all cursor-pointer">
+                                <i class="fas fa-redo-alt mr-2 text-xs"></i> <span data-i18n="form.resetBtn">Enviar outra mensagem</span>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="mt-8 pt-6 border-t border-gray-800 text-center text-sm text-gray-400">
-                        <span data-i18n="form.emailDirectText">Prefere contato direto por e-mail? Escreva para:</span> 
+                        <span data-i18n="form.directContactText">Prefere contato direto? Fale no WhatsApp:</span> 
+                        <a href="https://wa.me/5511982875533" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-semibold ml-1 mr-2 inline-flex items-center"><i class="fab fa-whatsapp mr-1"></i>+55 11 98287-5533</a>
+                        <span class="text-gray-600 hidden sm:inline">|</span>
+                        <span class="block sm:inline sm:ml-2 mt-1 sm:mt-0" data-i18n="form.orEmailText">ou por e-mail:</span>
                         <a href="mailto:contato@ironforchange.com.br" class="text-brand-purple hover:underline font-semibold ml-1">contato@ironforchange.com.br</a>
                     </div>
                 </form>
@@ -927,13 +935,16 @@
             </div>
 
             <div class="flex justify-center space-x-6 mb-10">
-                <a href="https://instagram.com/ironforchange" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                <a href="https://wa.me/5511982875533" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-emerald-600 hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110" title="WhatsApp (+55 11 98287-5533)">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+                <a href="https://instagram.com/ironforchange" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110" title="Instagram">
                     <i class="fab fa-instagram text-xl"></i>
                 </a>
-                <a href="https://www.youtube.com/watch?v=4yFXuGCbT4g&list=PLj7WQLeQRUh6KcbbQEx1mCS7CIEFPOhLK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                <a href="https://www.youtube.com/watch?v=4yFXuGCbT4g&list=PLj7WQLeQRUh6KcbbQEx1mCS7CIEFPOhLK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110" title="YouTube">
                     <i class="fab fa-youtube text-xl"></i>
                 </a>
-                <a href="mailto:contato@ironforchange.com.br" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                <a href="mailto:contato@ironforchange.com.br" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110" title="E-mail">
                     <i class="fas fa-envelope text-xl"></i>
                 </a>
             </div>
@@ -954,7 +965,7 @@
     <a href="#contato" aria-label="Entrar em Contato" class="fixed bottom-6 right-6 z-40 btn-lilac-gradient text-white font-bold px-5 py-3.5 rounded-full shadow-2xl flex items-center space-x-2.5 transition-all transform hover:scale-105 active:scale-95 group">
         <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping inline-block"></span>
         <span class="text-sm font-bold tracking-wide" data-i18n="floatingBtn.text">Falar Conosco</span>
-        <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+        <i class="fab fa-whatsapp text-lg group-hover:scale-110 transition-transform"></i>
     </a>
 
     <!-- Interactive Multilingual Engine & Scripts -->
@@ -1138,12 +1149,14 @@
                     cat6: "Outro tipo de contribuição",
                     msgLabel: "Mensagem",
                     msgPlaceholder: "Como gostaria de somar forças com o Iron For Change?",
-                    submitBtn: "Enviar Mensagem",
-                    sendingText: "Enviando mensagem...",
-                    successTitle: "Mensagem enviada com sucesso!",
-                    successDesc: "Agradecemos o seu interesse no Iron For Change. Nossa equipe já recebeu sua mensagem e retornará o mais breve possível.",
+                    submitBtn: "Conversar pelo WhatsApp",
+                    sendingText: "Abrindo WhatsApp...",
+                    successTitle: "Mensagem pronta no WhatsApp!",
+                    successDesc: "Uma conversa foi iniciada com o número <span class=\"text-emerald-400 font-semibold\">+55 11 98287-5533</span> com todos os seus dados preenchidos. Caso a janela não tenha aberto automaticamente, clique no botão abaixo:",
+                    openWhatsappBtn: "Abrir WhatsApp",
                     resetBtn: "Enviar outra mensagem",
-                    emailDirectText: "Prefere contato direto por e-mail? Escreva para:"
+                    directContactText: "Prefere contato direto? Fale no WhatsApp:",
+                    orEmailText: "ou por e-mail:"
                 },
                 supporters: {
                     badge: "Rede de Apoio",
@@ -1338,12 +1351,14 @@
                     cat6: "Other Form of Contribution",
                     msgLabel: "Message",
                     msgPlaceholder: "How would you like to join forces with Iron For Change?",
-                    submitBtn: "Send Message",
-                    sendingText: "Sending message...",
-                    successTitle: "Message successfully sent!",
-                    successDesc: "Thank you for connecting with Iron For Change. Our team has received your message and will get back to you shortly.",
+                    submitBtn: "Chat via WhatsApp",
+                    sendingText: "Opening WhatsApp...",
+                    successTitle: "Message ready on WhatsApp!",
+                    successDesc: "A new conversation was initiated with <span class=\"text-emerald-400 font-semibold\">+55 11 98287-5533</span> with your details pre-filled. If the window did not open automatically, click the button below:",
+                    openWhatsappBtn: "Open WhatsApp",
                     resetBtn: "Send another message",
-                    emailDirectText: "Prefer direct email contact? Write to:"
+                    directContactText: "Prefer direct contact? Message on WhatsApp:",
+                    orEmailText: "or by email:"
                 },
                 supporters: {
                     badge: "Support Network",
@@ -1827,75 +1842,72 @@
             });
         }
 
-        // Contact Form AJAX Handler (In-place Web3Forms)
+        // Contact Form WhatsApp Direct Handler
         function handleContactSubmit(e) {
             if (e && e.preventDefault) e.preventDefault();
             const contactForm = document.getElementById('contactForm');
-            const submitBtn = document.getElementById('submitBtn');
-            const btnText = document.getElementById('btnText');
-            const formStatus = document.getElementById('formStatus');
             const formFieldsContainer = document.getElementById('formFieldsContainer');
             const formSuccessCard = document.getElementById('formSuccessCard');
+            const whatsappDirectLink = document.getElementById('whatsappDirectLink');
 
             if (!contactForm) return false;
 
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return false;
             }
-            if (btnText) {
-                btnText.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i> ${translations[currentLang].form.sendingText}`;
+
+            const name = (document.getElementById('name')?.value || '').trim();
+            const email = (document.getElementById('email')?.value || '').trim();
+            const organization = (document.getElementById('organization')?.value || '').trim();
+            const categorySelect = document.getElementById('category');
+            const categoryText = categorySelect && categorySelect.options[categorySelect.selectedIndex] ? categorySelect.options[categorySelect.selectedIndex].text : '';
+            const message = (document.getElementById('message')?.value || '').trim();
+
+            const isEn = currentLang === 'en';
+            const orgDisplay = organization || (isEn ? 'Not specified' : 'Não informada');
+
+            // Format WhatsApp Message
+            let text = '';
+            if (isEn) {
+                text = `*Contact via Website - Iron For Change*\n\n` +
+                       `👤 *Name:* ${name}\n` +
+                       `📧 *Email:* ${email}\n` +
+                       `🏢 *Organization:* ${orgDisplay}\n` +
+                       `🎯 *Interest:* ${categoryText}\n\n` +
+                       `💬 *Message:*\n"${message}"`;
+            } else {
+                text = `*Contato via Site - Iron For Change*\n\n` +
+                       `👤 *Nome:* ${name}\n` +
+                       `📧 *E-mail:* ${email}\n` +
+                       `🏢 *Organização:* ${orgDisplay}\n` +
+                       `🎯 *Interesse:* ${categoryText}\n\n` +
+                       `💬 *Mensagem:*\n"${message}"`;
             }
-            if (formStatus) formStatus.className = 'hidden';
 
-            const formData = new FormData(contactForm);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
+            const phone = '5511982875533';
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                const resJson = await response.json();
-                if (response.status === 200 || resJson.success) {
-                    if (formFieldsContainer) formFieldsContainer.classList.add('hidden');
-                    if (formSuccessCard) formSuccessCard.classList.remove('hidden');
-                    contactForm.reset();
-                } else {
-                    if (formStatus) {
-                        formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-950/80 text-red-300 border border-red-700/60 block';
-                        formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> ' + (resJson.message || 'Error sending message. Please try again.');
-                    }
-                }
-            })
-            .catch(() => {
-                if (formStatus) {
-                    formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-950/80 text-red-300 border border-red-700/60 block';
-                    formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> Falha de conexão. Por favor, envie e-mail para contato@ironforchange.com.br.';
-                }
-            })
-            .finally(() => {
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-                }
-                if (btnText) {
-                    btnText.innerHTML = `<i class="fas fa-paper-plane mr-2"></i> ${translations[currentLang].form.submitBtn}`;
-                }
-            });
+            if (whatsappDirectLink) {
+                whatsappDirectLink.href = whatsappUrl;
+            }
+
+            // Open WhatsApp directly in new window/tab
+            window.open(whatsappUrl, '_blank');
+
+            // Show confirmation UI
+            if (formFieldsContainer) formFieldsContainer.classList.add('hidden');
+            if (formSuccessCard) formSuccessCard.classList.remove('hidden');
 
             return false;
         }
 
         function resetContactFormUI() {
+            const contactForm = document.getElementById('contactForm');
             const formFieldsContainer = document.getElementById('formFieldsContainer');
             const formSuccessCard = document.getElementById('formSuccessCard');
             const formStatus = document.getElementById('formStatus');
+            if (contactForm) contactForm.reset();
             if (formFieldsContainer) formFieldsContainer.classList.remove('hidden');
             if (formSuccessCard) formSuccessCard.classList.add('hidden');
             if (formStatus) formStatus.className = 'hidden';
