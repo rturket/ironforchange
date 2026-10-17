@@ -242,8 +242,15 @@
         </div>
     </nav>
 
-    <!-- Hero Section (Modelo 4: Slider Interativo / Alternador de Vivências) -->
+    <!-- Hero Section (Modelo 4: Slider Interativo / Alternador de 4 Vivências) -->
     <section class="relative bg-brand-dark text-white pt-12 pb-20 lg:pt-20 lg:pb-28 flex items-center min-h-[85vh] overflow-hidden">
+        <!-- Fundo Translúcido Sutil com Jovens no Mirante (Visão de Futuro) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+            <img src="assets/jovens-mirante-territorio.jpeg" alt="" class="w-full h-full object-cover object-center opacity-15 blur-[1px]">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-brand-dark/80"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/60"></div>
+        </div>
+
         <!-- Subtle Glow Effects -->
         <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-purple/20 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-10 right-10 w-80 h-80 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
@@ -282,51 +289,91 @@
                     </div>
                 </div>
 
-                <!-- Coluna Direita: Showcase Interativo com Abas (Território & Mar) -->
+                <!-- Coluna Direita: Showcase Interativo com 4 Abas (Ponte, Praia, Mirante, Mar) -->
                 <div class="lg:col-span-6">
                     <div class="bg-brand-gray/90 border border-gray-800 rounded-3xl p-3 sm:p-4 shadow-2xl relative">
-                        <!-- Abas Superiores do Alternador -->
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <div class="grid grid-cols-2 gap-2 w-full bg-black/60 p-1.5 rounded-2xl border border-gray-800">
-                                <button type="button" onclick="switchHeroSlide(1)" id="heroSlideBtn1" class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all bg-brand-purple text-white shadow-md cursor-pointer">
-                                    <i class="fas fa-mountain-sun"></i>
-                                    <span data-i18n="hero.tab1">No Território</span>
+                        <!-- Abas Superiores do Alternador (4 Vivências) -->
+                        <div class="mb-3">
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 bg-black/60 p-1.5 rounded-2xl border border-gray-800">
+                                <button type="button" onclick="switchHeroSlide(1)" id="heroSlideBtn1" class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl text-[11px] font-bold transition-all bg-brand-purple text-white shadow-md cursor-pointer">
+                                    <i class="fas fa-bridge text-[10px]"></i>
+                                    <span data-i18n="hero.tab1">Território (Ponte)</span>
                                 </button>
-                                <button type="button" onclick="switchHeroSlide(2)" id="heroSlideBtn2" class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all text-gray-400 hover:text-white cursor-pointer">
-                                    <i class="fas fa-sailboat"></i>
-                                    <span data-i18n="hero.tab2">Na Jornada (Mar)</span>
+                                <button type="button" onclick="switchHeroSlide(2)" id="heroSlideBtn2" class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl text-[11px] font-bold transition-all text-gray-400 hover:text-white cursor-pointer">
+                                    <i class="fas fa-heart-pulse text-[10px]"></i>
+                                    <span data-i18n="hero.tab2">Saúde & Diálogo</span>
+                                </button>
+                                <button type="button" onclick="switchHeroSlide(3)" id="heroSlideBtn3" class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl text-[11px] font-bold transition-all text-gray-400 hover:text-white cursor-pointer">
+                                    <i class="fas fa-mountain-sun text-[10px]"></i>
+                                    <span data-i18n="hero.tab3">Visão do Futuro</span>
+                                </button>
+                                <button type="button" onclick="switchHeroSlide(4)" id="heroSlideBtn4" class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl text-[11px] font-bold transition-all text-gray-400 hover:text-white cursor-pointer">
+                                    <i class="fas fa-sailboat text-[10px]"></i>
+                                    <span data-i18n="hero.tab4">Travessia (Mar)</span>
                                 </button>
                             </div>
                         </div>
 
-                        <!-- Slide 1: Mirante / Território -->
+                        <!-- Slide 1: Ponte Hercílio Luz / Florianópolis -->
                         <div id="heroSlidePanel1" class="relative rounded-2xl overflow-hidden h-[290px] sm:h-[370px] group">
-                            <img src="assets/jovens-mirante-territorio.jpeg" alt="Jovens no Território" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            <img src="assets/jovens-ponte-hercilio-luz.jpeg" alt="Jovens na Ponte Hercílio Luz" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
-                            <div class="absolute top-4 left-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-black/70 text-emerald-400 backdrop-blur-md border border-emerald-500/30">
-                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                                <span data-i18n="hero.photo1Badge">Conexão com o Território</span>
+                            <div class="absolute top-4 left-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-black/70 text-blue-300 backdrop-blur-md border border-blue-500/30">
+                                <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+                                <span data-i18n="hero.photo1Badge">Pertencimento & Território</span>
                             </div>
                             <div class="absolute bottom-5 left-5 right-5 text-left">
-                                <h3 class="text-lg sm:text-2xl font-extrabold text-white mb-1" data-i18n="hero.photo1Title">Olhar para o Futuro da Comunidade</h3>
+                                <h3 class="text-lg sm:text-2xl font-extrabold text-white mb-1" data-i18n="hero.photo1Title">Florianópolis & Pertencimento</h3>
                                 <p class="text-xs sm:text-sm text-gray-200 font-light" data-i18n="hero.photo1Caption">
+                                    Jovens na Ponte Hercílio Luz conectando identidade, raízes culturais e comunidade
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Diálogo na Praia / Saúde Integral -->
+                        <div id="heroSlidePanel2" class="hidden relative rounded-2xl overflow-hidden h-[290px] sm:h-[370px] group">
+                            <img src="assets/jovens-praia-dialogo.jpeg" alt="Jovens em Diálogo na Praia" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+                            <div class="absolute top-4 left-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-black/70 text-emerald-300 backdrop-blur-md border border-emerald-500/30">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                                <span data-i18n="hero.photo2Badge">Saúde Integral & Diálogo</span>
+                            </div>
+                            <div class="absolute bottom-5 left-5 right-5 text-left">
+                                <h3 class="text-lg sm:text-2xl font-extrabold text-white mb-1" data-i18n="hero.photo2Title">Escuta Ativa & Conexão</h3>
+                                <p class="text-xs sm:text-sm text-gray-200 font-light" data-i18n="hero.photo2Caption">
+                                    Vivências de diálogo, empatia e desenvolvimento socioemocional em grupo na praia
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Mirante / Território & Futuro -->
+                        <div id="heroSlidePanel3" class="hidden relative rounded-2xl overflow-hidden h-[290px] sm:h-[370px] group">
+                            <img src="assets/jovens-mirante-territorio.jpeg" alt="Jovens no Território" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+                            <div class="absolute top-4 left-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-black/70 text-amber-300 backdrop-blur-md border border-amber-500/30">
+                                <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                                <span data-i18n="hero.photo3Badge">Visão Comunitária</span>
+                            </div>
+                            <div class="absolute bottom-5 left-5 right-5 text-left">
+                                <h3 class="text-lg sm:text-2xl font-extrabold text-white mb-1" data-i18n="hero.photo3Title">Olhar para o Futuro do Território</h3>
+                                <p class="text-xs sm:text-sm text-gray-200 font-light" data-i18n="hero.photo3Caption">
                                     Jovens protagonistas diagnosticando e transformando seu próprio território
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Slide 2: Veleiro / Jornada -->
-                        <div id="heroSlidePanel2" class="hidden relative rounded-2xl overflow-hidden h-[290px] sm:h-[370px] group">
+                        <!-- Slide 4: Veleiro / Travessia no Mar -->
+                        <div id="heroSlidePanel4" class="hidden relative rounded-2xl overflow-hidden h-[290px] sm:h-[370px] group">
                             <img src="assets/jovens-veleiro-jornada.jpeg" alt="Jovens na Jornada no Mar" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
                             <div class="absolute top-4 left-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-black/70 text-brand-purpleGlow backdrop-blur-md border border-brand-purple/40">
                                 <span class="w-2 h-2 rounded-full bg-brand-purple animate-ping"></span>
-                                <span data-i18n="hero.photo2Badge">A Jornada em Equipe</span>
+                                <span data-i18n="hero.photo4Badge">A Jornada em Equipe</span>
                             </div>
                             <div class="absolute bottom-5 left-5 right-5 text-left">
-                                <h3 class="text-lg sm:text-2xl font-extrabold text-white mb-1" data-i18n="hero.photo2Title">Travessia & Saúde Integral</h3>
-                                <p class="text-xs sm:text-sm text-gray-200 font-light" data-i18n="hero.photo2Caption">
-                                    Vivências práticas, esporte e resiliência ao longo de 44 semanas
+                                <h3 class="text-lg sm:text-2xl font-extrabold text-white mb-1" data-i18n="hero.photo4Title">Travessia, Esporte & Resiliência</h3>
+                                <p class="text-xs sm:text-sm text-gray-200 font-light" data-i18n="hero.photo4Caption">
+                                    Vivências práticas, esportivas e náuticas ao longo de 44 semanas
                                 </p>
                             </div>
                         </div>
@@ -335,11 +382,13 @@
                         <div class="flex items-center justify-between mt-3 px-1">
                             <span class="text-[11px] text-gray-400 flex items-center gap-1.5">
                                 <i class="fas fa-users text-brand-purple"></i>
-                                <span>Protagonismo juvenil do início ao fim</span>
+                                <span>Vivências reais em Florianópolis</span>
                             </span>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-1.5">
                                 <button type="button" onclick="switchHeroSlide(1)" id="heroDot1" aria-label="Slide 1" class="w-8 h-2 rounded-full bg-brand-purple transition-all cursor-pointer"></button>
                                 <button type="button" onclick="switchHeroSlide(2)" id="heroDot2" aria-label="Slide 2" class="w-2.5 h-2 rounded-full bg-gray-700 hover:bg-gray-500 transition-all cursor-pointer"></button>
+                                <button type="button" onclick="switchHeroSlide(3)" id="heroDot3" aria-label="Slide 3" class="w-2.5 h-2 rounded-full bg-gray-700 hover:bg-gray-500 transition-all cursor-pointer"></button>
+                                <button type="button" onclick="switchHeroSlide(4)" id="heroDot4" aria-label="Slide 4" class="w-2.5 h-2 rounded-full bg-gray-700 hover:bg-gray-500 transition-all cursor-pointer"></button>
                             </div>
                         </div>
                     </div>
@@ -373,35 +422,35 @@
         </div>
         <script>
             function switchHeroSlide(num) {
-                const p1 = document.getElementById('heroSlidePanel1');
-                const p2 = document.getElementById('heroSlidePanel2');
-                const b1 = document.getElementById('heroSlideBtn1');
-                const b2 = document.getElementById('heroSlideBtn2');
-                const d1 = document.getElementById('heroDot1');
-                const d2 = document.getElementById('heroDot2');
-                if (!p1 || !p2) return;
-                if (num === 1) {
-                    p1.classList.remove('hidden');
-                    p2.classList.add('hidden');
-                    b1.className = 'flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all bg-brand-purple text-white shadow-md cursor-pointer';
-                    b2.className = 'flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all text-gray-400 hover:text-white cursor-pointer';
-                    d1.className = 'w-8 h-2 rounded-full bg-brand-purple transition-all cursor-pointer';
-                    d2.className = 'w-2.5 h-2 rounded-full bg-gray-700 hover:bg-gray-500 transition-all cursor-pointer';
-                } else {
-                    p1.classList.add('hidden');
-                    p2.classList.remove('hidden');
-                    b2.className = 'flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all bg-brand-purple text-white shadow-md cursor-pointer';
-                    b1.className = 'flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition-all text-gray-400 hover:text-white cursor-pointer';
-                    d2.className = 'w-8 h-2 rounded-full bg-brand-purple transition-all cursor-pointer';
-                    d1.className = 'w-2.5 h-2 rounded-full bg-gray-700 hover:bg-gray-500 transition-all cursor-pointer';
+                const totalSlides = 4;
+                for (let i = 1; i <= totalSlides; i++) {
+                    const p = document.getElementById('heroSlidePanel' + i);
+                    const b = document.getElementById('heroSlideBtn' + i);
+                    const d = document.getElementById('heroDot' + i);
+                    if (p && b && d) {
+                        if (i === num) {
+                            p.classList.remove('hidden');
+                            b.className = 'flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl text-[11px] font-bold transition-all bg-brand-purple text-white shadow-md cursor-pointer';
+                            d.className = 'w-8 h-2 rounded-full bg-brand-purple transition-all cursor-pointer';
+                        } else {
+                            p.classList.add('hidden');
+                            b.className = 'flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl text-[11px] font-bold transition-all text-gray-400 hover:text-white cursor-pointer';
+                            d.className = 'w-2.5 h-2 rounded-full bg-gray-700 hover:bg-gray-500 transition-all cursor-pointer';
+                        }
+                    }
                 }
             }
         </script>
     </section>
 
     <!-- Quem Somos & O Desafio -->
-    <section id="quem-somos" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="quem-somos" class="py-24 bg-white relative overflow-hidden">
+        <!-- Fundo Translúcido Sutil com Jovens na Ponte Hercílio Luz (Identidade de Florianópolis) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+            <img src="assets/jovens-ponte-hercilio-luz.jpeg" alt="" class="w-full h-full object-cover object-top opacity-[0.04] blur-[1px]">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                     <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-100 text-brand-purple mb-4">
@@ -429,37 +478,54 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-5">
-                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-emerald-600 hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-4">
-                            <i class="fas fa-heart-pulse"></i>
+                <div class="space-y-6">
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-emerald-600 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-4">
+                                <i class="fas fa-heart-pulse"></i>
+                            </div>
+                            <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p1Title">Saúde Integral</h3>
+                            <p class="text-sm text-gray-600" data-i18n="pillars.p1Desc">Autocuidado, saúde mental, alimentação consciente e conexão com o corpo.</p>
                         </div>
-                        <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p1Title">Saúde Integral</h3>
-                        <p class="text-sm text-gray-600" data-i18n="pillars.p1Desc">Autocuidado, saúde mental, alimentação consciente e conexão com o corpo.</p>
+
+                        <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-blue-600 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-4">
+                                <i class="fas fa-users-gear"></i>
+                            </div>
+                            <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p2Title">Protagonismo</h3>
+                            <p class="text-sm text-gray-600" data-i18n="pillars.p2Desc">Liderança autêntica, cidadania ativa e voz ativa para liderar transformações.</p>
+                        </div>
+
+                        <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-amber-600 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p3Title">Inovação Social</h3>
+                            <p class="text-sm text-gray-600" data-i18n="pillars.p3Desc">Metodologias participativas, ideação criativa e prototipagem de projetos.</p>
+                        </div>
+
+                        <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-brand-purple hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-purple flex items-center justify-center text-2xl mb-4">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p4Title">Regeneração</h3>
+                            <p class="text-sm text-gray-600" data-i18n="pillars.p4Desc">Soluções concretas que deixam legados sociais, comunitários e ecológicos duradouros.</p>
+                        </div>
                     </div>
 
-                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-blue-600 hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-4">
-                            <i class="fas fa-users-gear"></i>
+                    <!-- Card de Foto Aberta com Jovens em Diálogo na Praia -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 group h-48 sm:h-56">
+                        <img src="assets/jovens-praia-dialogo.jpeg" alt="Vivências Humanas" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                        <div class="absolute top-3 left-3 inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-black/60 text-emerald-300 backdrop-blur-md border border-emerald-400/30">
+                            <i class="fas fa-heart text-[10px]"></i>
+                            <span data-i18n="about.photoBadge">Vivências Humanas • Saúde Integral & Diálogo</span>
                         </div>
-                        <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p2Title">Protagonismo</h3>
-                        <p class="text-sm text-gray-600" data-i18n="pillars.p2Desc">Liderança autêntica, cidadania ativa e voz ativa para liderar transformações.</p>
-                    </div>
-
-                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-amber-600 hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-4">
-                            <i class="fas fa-lightbulb"></i>
+                        <div class="absolute bottom-3 left-3 right-3 text-left">
+                            <p class="text-xs sm:text-sm text-gray-200 font-medium leading-snug drop-shadow" data-i18n="about.photoCaption">
+                                Escuta empática, conexão genuína e desenvolvimento socioemocional em contato com a natureza.
+                            </p>
                         </div>
-                        <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p3Title">Inovação Social</h3>
-                        <p class="text-sm text-gray-600" data-i18n="pillars.p3Desc">Metodologias participativas, ideação criativa e prototipagem de projetos.</p>
-                    </div>
-
-                    <div class="bg-brand-light p-7 rounded-2xl border-t-4 border-brand-purple hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-purple flex items-center justify-center text-2xl mb-4">
-                            <i class="fas fa-seedling"></i>
-                        </div>
-                        <h3 class="font-bold text-brand-dark text-lg mb-2" data-i18n="pillars.p4Title">Regeneração</h3>
-                        <p class="text-sm text-gray-600" data-i18n="pillars.p4Desc">Soluções concretas que deixam legados sociais, comunitários e ecológicos duradouros.</p>
                     </div>
                 </div>
             </div>
@@ -544,6 +610,12 @@
 
     <!-- Jornada do Change - 44 Semanas (Full Curriculum & Interactive Stage Navigator) -->
     <section id="jornada" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Fundo Translúcido Sutil com Jovens no Mirante (Visão de Futuro) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+            <img src="assets/jovens-mirante-territorio.jpeg" alt="" class="w-full h-full object-cover object-center opacity-10 blur-[1px]">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/95 to-brand-dark"></div>
+        </div>
+
         <!-- Background subtle elements -->
         <div class="absolute -right-20 top-40 w-96 h-96 bg-brand-purple/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute -left-20 bottom-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -979,6 +1051,11 @@
                 <a href="https://www.instagram.com/bracadas.sustentaveis/" target="_blank" rel="noopener noreferrer" class="w-[calc(50%-0.5rem)] sm:w-36 md:w-40 lg:flex-1 h-28 bg-white rounded-2xl p-4 flex items-center justify-center border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-brand-purple/60 hover:-translate-y-1 transition-all group" title="Braçadas Sustentáveis pelo Futuro da Água (@bracadas.sustentaveis)">
                     <img src="assets/logos/logo-bracadas-sustentaveis.png" alt="Braçadas Sustentáveis pelo Futuro da Água" class="max-h-16 max-w-[120px] w-auto h-auto object-contain transition-transform group-hover:scale-105">
                 </a>
+
+                <!-- 8. Founder Haus -->
+                <a href="https://founderhaus.club/" target="_blank" rel="noopener noreferrer" class="w-[calc(50%-0.5rem)] sm:w-36 md:w-40 lg:flex-1 h-28 bg-white rounded-2xl p-4 flex items-center justify-center border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-brand-purple/60 hover:-translate-y-1 transition-all group" title="Founder Haus (founderhaus.club)">
+                    <img src="assets/logos/logo-founder-haus.png" alt="Founder Haus" class="max-h-16 max-w-[120px] w-auto h-auto object-contain transition-transform group-hover:scale-105">
+                </a>
             </div>
         </div>
     </section>
@@ -1059,14 +1136,22 @@
                     ctaPrimary: "Apoie a Próxima Turma",
                     ctaSecondary: "Conhecer a Jornada",
                     ctaPdf: "Apresentação (PDF)",
-                    photo1Badge: "Conexão com o Território",
-                    photo1Title: "Olhar para o Futuro da Comunidade",
-                    photo1Caption: "Jovens protagonistas diagnosticando e transformando seu próprio território",
-                    photo2Badge: "A Jornada em Equipe",
-                    photo2Title: "Travessia & Saúde Integral",
-                    photo2Caption: "Vivências práticas, esporte e resiliência ao longo de 44 semanas",
-                    tab1: "No Território",
-                    tab2: "Na Jornada (Mar)"
+                    photo1Badge: "Pertencimento & Território",
+                    photo1Title: "Florianópolis & Pertencimento",
+                    photo1Caption: "Jovens na Ponte Hercílio Luz conectando identidade, raízes culturais e comunidade",
+                    photo2Badge: "Saúde Integral & Diálogo",
+                    photo2Title: "Escuta Ativa & Conexão",
+                    photo2Caption: "Vivências de diálogo, empatia e desenvolvimento socioemocional em grupo na praia",
+                    photo3Badge: "Visão Comunitária",
+                    photo3Title: "Olhar para o Futuro do Território",
+                    photo3Caption: "Jovens protagonistas diagnosticando e transformando seu próprio território",
+                    photo4Badge: "A Jornada em Equipe",
+                    photo4Title: "Travessia, Esporte & Resiliência",
+                    photo4Caption: "Vivências práticas, esportivas e náuticas ao longo de 44 semanas",
+                    tab1: "Território (Ponte)",
+                    tab2: "Saúde & Diálogo",
+                    tab3: "Visão do Futuro",
+                    tab4: "Travessia (Mar)"
                 },
                 metrics: {
                     m1Title: "Semanas de Jornada",
@@ -1085,6 +1170,8 @@
                     title2: "As oportunidades precisam chegar.",
                     p1: "Adolescentes enfrentam desafios cada vez mais complexos que comprometem seu desenvolvimento e o futuro das comunidades: sofrimento psíquico, bullying, falta de perspectiva e baixa participação cidadã.",
                     p2: "O Iron For Change atua como uma incubadora viva. Conectamos esporte, saúde mental, autoconhecimento e cidadania para que os jovens criem soluções sustentáveis e regenerativas para os desafios do seu próprio território.",
+                    photoBadge: "Vivências Humanas • Saúde Integral & Diálogo",
+                    photoCaption: "Escuta empática, conexão genuína e desenvolvimento socioemocional em contato com a natureza.",
                     ctaJoin: "Quero Fazer Parte",
                     ctaPdf: "Apresentação (PDF)"
                 },
@@ -1261,14 +1348,22 @@
                     ctaPrimary: "Support the Next Cohort",
                     ctaSecondary: "Explore the Journey",
                     ctaPdf: "Presentation (PDF)",
-                    photo1Badge: "Connection with the Territory",
-                    photo1Title: "Looking Toward the Community's Future",
-                    photo1Caption: "Young changemakers diagnosing and transforming their own territory",
-                    photo2Badge: "The Team Journey",
-                    photo2Title: "Crossing & Holistic Health",
-                    photo2Caption: "Hands-on experiences, sport, and resilience across 44 weeks",
-                    tab1: "In the Territory",
-                    tab2: "In the Journey (Sea)"
+                    photo1Badge: "Belonging & Territory",
+                    photo1Title: "Florianópolis & Belonging",
+                    photo1Caption: "Youth at the Hercílio Luz Bridge connecting identity, cultural roots, and community",
+                    photo2Badge: "Holistic Health & Dialogue",
+                    photo2Title: "Active Listening & Connection",
+                    photo2Caption: "Dialogue, empathetic listening, and socioemotional self-care group experiences on the beach",
+                    photo3Badge: "Community Vision",
+                    photo3Title: "Looking Toward the Community's Future",
+                    photo3Caption: "Young changemakers diagnosing and transforming their own territory",
+                    photo4Badge: "The Team Journey",
+                    photo4Title: "Crossing, Sports & Resilience",
+                    photo4Caption: "Hands-on nautical, sports, and resilience experiences across 44 weeks",
+                    tab1: "Territory (Bridge)",
+                    tab2: "Health & Dialogue",
+                    tab3: "Future Vision",
+                    tab4: "Crossing (Sea)"
                 },
                 metrics: {
                     m1Title: "Journey Weeks",
@@ -1287,6 +1382,8 @@
                     title2: "Opportunities must arrive.",
                     p1: "Adolescents face increasingly complex challenges that undermine their well-being and community futures: psychological distress, bullying, fragile social bonds, and low civic engagement.",
                     p2: "Iron For Change operates as a living incubator. We bridge sport, mental health, self-discovery, and active citizenship so youth can create sustainable, regenerative solutions for their own territories.",
+                    photoBadge: "Human Experiences • Holistic Health & Dialogue",
+                    photoCaption: "Empathetic listening, genuine connection, and socioemotional growth in direct contact with nature.",
                     ctaJoin: "Join the Mission",
                     ctaPdf: "Presentation (PDF)"
                 },
@@ -1450,6 +1547,9 @@
                     color: "emerald",
                     tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
                     badgeColor: "text-emerald-400",
+                    image: "assets/jovens-praia-dialogo.jpeg",
+                    imageBadge: "Saúde Integral & Diálogo",
+                    imageCaption: "Autocuidado, escuta ativa e reconexão socioemocional em grupo na praia.",
                     question: '"Quem sou eu e qual é a minha capacidade de transformar a realidade?"',
                     productTitle: "Mapa do Meu Change",
                     productDesc: "Síntese de autoconhecimento, valores, saúde integral e projeto de vida.",
@@ -1474,6 +1574,9 @@
                     color: "blue",
                     tagClass: "bg-blue-950 text-blue-400 border-blue-800",
                     badgeColor: "text-blue-400",
+                    image: "assets/jovens-ponte-hercilio-luz.jpeg",
+                    imageBadge: "Pertencimento & Território",
+                    imageCaption: "Jovens na Ponte Hercílio Luz conectando raízes culturais e comunidade em Florianópolis.",
                     question: '"A que lugar pertenço e como posso participar da transformação dele?"',
                     productTitle: "Mapa de Desafios, Ativos e Oportunidades",
                     productDesc: "Diagnóstico participativo detalhado do território e suas potencialidades.",
@@ -1496,6 +1599,9 @@
                     color: "amber",
                     tagClass: "bg-amber-950 text-amber-400 border-amber-800",
                     badgeColor: "text-amber-400",
+                    image: "assets/jovens-mirante-territorio.jpeg",
+                    imageBadge: "Visão & Diagnóstico Local",
+                    imageCaption: "Olhar sistêmico no mirante mapeando desafios e oportunidades comunitárias.",
                     question: '"E se as coisas pudessem ser diferentes?"',
                     productTitle: "Desafio Escolhido + Ideia do Change Project",
                     productDesc: "Definição do problema real a solucionar e escopo preliminar da inovação.",
@@ -1516,6 +1622,9 @@
                     color: "purple",
                     tagClass: "bg-purple-950 text-purple-400 border-purple-800",
                     badgeColor: "text-brand-purpleGlow",
+                    image: "assets/jovens-veleiro-jornada.jpeg",
+                    imageBadge: "Trabalho em Equipe & Travessia",
+                    imageCaption: "Vivência náutica e esportiva desenvolvendo liderança e resiliência coletiva.",
                     question: '"Como transformamos uma ideia em realidade?"',
                     productTitle: "Projeto em Execução com Resultados",
                     productDesc: "Protótipo testado no território, rede de mentores e evidências de impacto.",
@@ -1543,6 +1652,9 @@
                     color: "teal",
                     tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
                     badgeColor: "text-teal-400",
+                    image: "assets/jovens-ponte-hercilio-luz.jpeg",
+                    imageBadge: "Legado & Cidade Sustentável",
+                    imageCaption: "Jovens protagonistas entregando projetos de impacto real para Florianópolis.",
                     question: '"O que aprendemos e que transformação deixamos?"',
                     productTitle: "Legado da Jornada e Plano de Continuidade",
                     productDesc: "Sustentabilidade dos projetos, formação da rede Alumni e novos ciclos.",
@@ -1566,6 +1678,9 @@
                     color: "emerald",
                     tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
                     badgeColor: "text-emerald-400",
+                    image: "assets/jovens-praia-dialogo.jpeg",
+                    imageBadge: "Holistic Health & Dialogue",
+                    imageCaption: "Self-care, active listening, and socioemotional reconnection as a group on the beach.",
                     question: '"Who am I and what is my capacity to transform reality?"',
                     productTitle: "My Change Map",
                     productDesc: "Synthesis of self-awareness, core values, holistic health, and life purpose.",
@@ -1590,6 +1705,9 @@
                     color: "blue",
                     tagClass: "bg-blue-950 text-blue-400 border-blue-800",
                     badgeColor: "text-blue-400",
+                    image: "assets/jovens-ponte-hercilio-luz.jpeg",
+                    imageBadge: "Belonging & Territory",
+                    imageCaption: "Youth at the Hercílio Luz Bridge connecting local identity and cultural roots in Florianópolis.",
                     question: '"Where do I belong and how can I participate in its transformation?"',
                     productTitle: "Map of Challenges, Assets & Opportunities",
                     productDesc: "Comprehensive participatory diagnostic of community assets and local realities.",
@@ -1612,6 +1730,9 @@
                     color: "amber",
                     tagClass: "bg-amber-950 text-amber-400 border-amber-800",
                     badgeColor: "text-amber-400",
+                    image: "assets/jovens-mirante-territorio.jpeg",
+                    imageBadge: "Vision & Local Diagnosis",
+                    imageCaption: "Systemic lookout perspective mapping community challenges and local assets.",
                     question: '"What if things could be completely different?"',
                     productTitle: "Chosen Challenge + Change Project Concept",
                     productDesc: "Clear framing of the community challenge and initial project blueprint.",
@@ -1632,6 +1753,9 @@
                     color: "purple",
                     tagClass: "bg-purple-950 text-purple-400 border-purple-800",
                     badgeColor: "text-brand-purpleGlow",
+                    image: "assets/jovens-veleiro-jornada.jpeg",
+                    imageBadge: "Teamwork & Crossing",
+                    imageCaption: "Nautical and sports expedition building collaborative leadership and shared resilience.",
                     question: '"How do we turn an idea into real-world reality?"',
                     productTitle: "Active Project in Execution with Measured Results",
                     productDesc: "Field-tested prototype, active mentor network, and preliminary impact evidence.",
@@ -1659,6 +1783,9 @@
                     color: "teal",
                     tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
                     badgeColor: "text-teal-400",
+                    image: "assets/jovens-ponte-hercilio-luz.jpeg",
+                    imageBadge: "Legacy & Sustainable City",
+                    imageCaption: "Young changemakers delivering real regenerative impact projects for Florianópolis.",
                     question: '"What have we learned and what lasting legacy do we leave?"',
                     productTitle: "Journey Legacy & Sustainability Roadmap",
                     productDesc: "Project continuity strategy, Alumni network integration, and next cycles.",
@@ -1829,23 +1956,37 @@
 
             box.innerHTML = `
                 <div class="stage-panel">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 mb-8 border-b border-gray-800 gap-4">
-                        <div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center pb-8 mb-8 border-b border-gray-800">
+                        <div class="lg:col-span-7">
                             <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${s.tagClass} mb-3">
                                 <i class="fas fa-seedling"></i>
                                 <span>${currentLang === 'pt' ? 'Etapa' : 'Stage'} 0${s.num} • ${s.weeksCount}</span>
                             </div>
-                            <h3 class="text-3xl font-black text-white">${s.num}. ${s.title}</h3>
-                            <p class="text-lg text-${s.color}-300 font-medium italic mt-2">
+                            <h3 class="text-2xl sm:text-3xl font-black text-white">${s.num}. ${s.title}</h3>
+                            <p class="text-base sm:text-lg text-${s.color}-300 font-medium italic mt-2">
                                 ${s.question}
                             </p>
+                            <div class="mt-4 bg-gray-900/90 border border-${s.color}-800/40 rounded-2xl p-4">
+                                <span class="text-[11px] font-bold uppercase tracking-widest text-${s.color}-400 block mb-1">
+                                    <i class="fas fa-check-circle mr-1"></i> ${t.productOfStage}
+                                </span>
+                                <span class="text-base font-bold text-white block">${s.productTitle}</span>
+                                <p class="text-xs text-gray-400 mt-1">${s.productDesc}</p>
+                            </div>
                         </div>
-                        <div class="bg-gray-900/90 border border-${s.color}-800/40 rounded-2xl p-4 md:max-w-xs flex-shrink-0">
-                            <span class="text-[11px] font-bold uppercase tracking-widest text-${s.color}-400 block mb-1">
-                                <i class="fas fa-check-circle mr-1"></i> ${t.productOfStage}
-                            </span>
-                            <span class="text-base font-bold text-white block">${s.productTitle}</span>
-                            <p class="text-xs text-gray-400 mt-1">${s.productDesc}</p>
+
+                        <div class="lg:col-span-5">
+                            <div class="relative rounded-2xl overflow-hidden border border-${s.color}-600/40 shadow-xl group h-52 sm:h-60">
+                                <img src="${s.image}" alt="${s.imageCaption}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+                                <div class="absolute top-3 left-3 inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/75 text-${s.color}-300 backdrop-blur-md border border-${s.color}-500/30">
+                                    <i class="fas fa-camera text-[9px]"></i>
+                                    <span>${s.imageBadge}</span>
+                                </div>
+                                <div class="absolute bottom-3 left-3 right-3 text-left">
+                                    <p class="text-xs text-gray-200 font-medium leading-snug drop-shadow">${s.imageCaption}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
