@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -99,6 +99,7 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-brand-purple selection:text-white">
+
     <!-- Navbar -->
     <nav class="bg-brand-dark/95 backdrop-blur-md text-white sticky top-0 z-50 shadow-lg border-b border-gray-800 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -222,44 +223,86 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative bg-brand-dark text-white pt-28 pb-24 lg:pt-40 lg:pb-36 flex items-center min-h-[85vh] overflow-hidden">
+    <!-- Hero Section (Modelo 3: Vitrine Dupla Panorâmica Lado a Lado) -->
+    <section class="relative bg-brand-dark text-white pt-14 pb-20 lg:pt-20 lg:pb-28 flex items-center min-h-[85vh] overflow-hidden">
+        <!-- Fundo Translúcido Sutil com Jovens no Mirante (Visão do Futuro) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+            <img src="assets/jovens-mirante-territorio.jpeg" alt="" class="w-full h-full object-cover object-center opacity-15">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/95 to-brand-dark"></div>
+        </div>
+
         <!-- Subtle Glow Effects -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-purple/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-purple/15 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-10 right-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
             <!-- Badge -->
-            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-brand-purple/20 text-brand-purple border border-brand-purple/30 mb-8 backdrop-blur-sm">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-brand-purple/20 text-brand-purple border border-brand-purple/30 mb-6 backdrop-blur-sm">
                 <i class="fas fa-sparkles"></i>
                 <span data-i18n="hero.badge">Incubadora de Lideranças Regenerativas</span>
             </div>
 
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight mb-8 leading-[1.12]">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-5 leading-[1.12]">
                 <span data-i18n="hero.titleLine1">Transformação Humana que Gera</span> <br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-white" data-i18n="hero.titleLine2">
                     Impacto Coletivo.
                 </span>
             </h1>
 
-            <p class="text-lg sm:text-2xl md:text-2xl max-w-3xl mx-auto text-gray-300 mb-12 font-light leading-relaxed">
+            <p class="text-base sm:text-xl max-w-3xl mx-auto text-gray-300 mb-8 font-light leading-relaxed">
                 <span data-i18n="hero.description">Uma metodologia viva de 44 semanas que desenvolve jovens da consciência individual à transformação real do território.</span>
             </p>
 
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:space-x-4">
-                <a href="#contato" class="w-full sm:w-auto inline-flex items-center justify-center btn-lilac-gradient text-white font-extrabold py-4 px-9 rounded-full text-base transition-all transform hover:scale-105">
+            <!-- Botões de Ação -->
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mb-12">
+                <a href="#contato" class="w-full sm:w-auto inline-flex items-center justify-center btn-lilac-gradient text-white font-extrabold py-3.5 px-8 rounded-full text-sm sm:text-base transition-all transform hover:scale-105 whitespace-nowrap">
                     <i class="fas fa-handshake mr-2.5"></i> <span data-i18n="hero.ctaPrimary">Apoie a Próxima Turma</span>
                 </a>
-                <a href="#jornada" class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-4 px-8 rounded-full text-base transition-all transform hover:scale-105">
+                <a href="#jornada" class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-3.5 px-7 rounded-full text-sm sm:text-base transition-all transform hover:scale-105 whitespace-nowrap">
                     <i class="fas fa-compass mr-2.5 text-purple-300"></i> <span data-i18n="hero.ctaSecondary">Conhecer a Jornada</span>
                 </a>
-                <a id="heroPdfLink" href="Iron_For_Change_Apresentacao_Institucional.pdf" download="Iron_For_Change_Apresentacao_Institucional.pdf" class="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border border-gray-700 hover:border-brand-purple text-gray-300 hover:text-white font-semibold py-4 px-6 rounded-full text-base transition-colors">
+                <a id="heroPdfLink" href="Iron_For_Change_Apresentacao_Institucional.pdf" download="Iron_For_Change_Apresentacao_Institucional.pdf" class="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border border-gray-700 hover:border-brand-purple text-gray-300 hover:text-white font-semibold py-3.5 px-6 rounded-full text-sm sm:text-base transition-colors whitespace-nowrap">
                     <i class="fas fa-file-pdf mr-2 text-brand-purple"></i> <span data-i18n="hero.ctaPdf">Apresentação (PDF)</span>
                 </a>
             </div>
 
+            <!-- Vitrine Fotográfica Dupla Panorâmica (50% / 50%) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto text-left">
+                <!-- Foto 1: Ponte Hercílio Luz / Florianópolis -->
+                <div class="relative rounded-3xl overflow-hidden border border-brand-purple/40 shadow-lilac-glow group h-64 sm:h-80">
+                    <img src="assets/jovens-ponte-hercilio-luz.jpeg" alt="Jovens do Iron For Change na Ponte Hercílio Luz em Florianópolis" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-black/75 text-purple-300 backdrop-blur-md border border-brand-purple/40">
+                        <i class="fas fa-map-pin"></i>
+                        <span data-i18n="hero.photo1Badge">Território & Pertencimento</span>
+                    </div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-1" data-i18n="hero.photo1Title">Território e Pertencimento:</h3>
+                        <p class="text-xs sm:text-sm text-gray-200 font-normal leading-relaxed drop-shadow" data-i18n="hero.photo1Caption">
+                            conectando identidade, raízes culturais e comunidade regenerativa
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Foto 2: Praia & Diálogo -->
+                <div class="relative rounded-3xl overflow-hidden border border-brand-purple/40 shadow-lilac-glow group h-64 sm:h-80">
+                    <img src="assets/jovens-praia-dialogo.jpeg" alt="Jovens do Iron For Change em diálogo na praia" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-black/75 text-emerald-400 backdrop-blur-md border border-emerald-500/30">
+                        <i class="fas fa-heart-pulse"></i>
+                        <span data-i18n="hero.photo2Badge">Saúde Integral & Diálogo</span>
+                    </div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-1" data-i18n="hero.photo2Title">Escuta Ativa e Conexão:</h3>
+                        <p class="text-xs sm:text-sm text-gray-200 font-normal leading-relaxed drop-shadow" data-i18n="hero.photo2Caption">
+                            Vivências, desenvolvimento socioemocional e ações no território
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Quick Metrics Highlights -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-20 pt-10 border-t border-gray-800 text-left">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto mt-10 pt-8 border-t border-gray-800 text-left">
                 <div class="p-4 rounded-xl bg-white/5 border border-white/5">
                     <div class="text-3xl font-extrabold text-brand-purple mb-1">44</div>
                     <div class="text-xs font-semibold text-white uppercase tracking-wider" data-i18n="metrics.m1Title">Semanas de Jornada</div>
@@ -285,8 +328,13 @@
     </section>
 
     <!-- Quem Somos & O Desafio -->
-    <section id="quem-somos" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="quem-somos" class="py-24 bg-white relative overflow-hidden">
+        <!-- Fundo Translúcido Sutil com Jovens na Ponte Hercílio Luz (Pertencimento) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+            <img src="assets/jovens-ponte-hercilio-luz.jpeg" alt="" class="w-full h-full object-cover object-center opacity-[0.04]">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                     <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-100 text-brand-purple mb-4">
@@ -303,6 +351,35 @@
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-i18n="about.p2">
                         O Iron For Change atua como uma incubadora viva. Conectamos esporte, saúde mental, autoconhecimento e cidadania para que os jovens criem soluções sustentáveis e regenerativas para os desafios do seu próprio território.
                     </p>
+
+                    <!-- Vitrine Dupla de Fotos: Mirante & Veleiro -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <!-- Foto 3: Mirante / Visão do Território -->
+                        <div class="relative rounded-2xl overflow-hidden border border-gray-200 shadow-md group h-48 sm:h-56">
+                            <img src="assets/jovens-mirante-territorio.jpeg" alt="Jovens do Iron For Change no mirante com visão do território" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                            <div class="absolute top-3 left-3 inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wider bg-black/75 text-amber-400 backdrop-blur-md border border-white/20">
+                                <i class="fas fa-eye text-xs"></i>
+                                <span data-i18n="about.photo1Badge">Visão Comunitária</span>
+                            </div>
+                            <div class="absolute bottom-3.5 left-3.5 right-3.5 text-left">
+                                <h4 class="text-base sm:text-lg font-extrabold text-white drop-shadow" data-i18n="about.photo1Title">Construir o Futuro do Território</h4>
+                            </div>
+                        </div>
+
+                        <!-- Foto 4: Veleiro / Travessia no Mar -->
+                        <div class="relative rounded-2xl overflow-hidden border border-gray-200 shadow-md group h-48 sm:h-56">
+                            <img src="assets/jovens-veleiro-jornada.jpeg" alt="Jovens do Iron For Change em vivência no veleiro" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                            <div class="absolute top-3 left-3 inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wider bg-black/75 text-purple-300 backdrop-blur-md border border-white/20">
+                                <i class="fas fa-sailboat text-xs"></i>
+                                <span data-i18n="about.photo2Badge">A Jornada em Equipe</span>
+                            </div>
+                            <div class="absolute bottom-3.5 left-3.5 right-3.5 text-left">
+                                <h4 class="text-base sm:text-lg font-extrabold text-white drop-shadow" data-i18n="about.photo2Title">Travessia, Esporte & Resiliência</h4>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
                         <a href="#contato" class="inline-flex items-center justify-center btn-lilac-gradient text-white font-bold py-3.5 px-8 rounded-full text-sm transition-all transform hover:scale-105">
@@ -429,6 +506,12 @@
 
     <!-- Jornada do Change - 44 Semanas (Full Curriculum & Interactive Stage Navigator) -->
     <section id="jornada" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Fundo Translúcido Sutil com Jovens no Mirante (Visão de Futuro) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+            <img src="assets/jovens-mirante-territorio.jpeg" alt="" class="w-full h-full object-cover object-center opacity-10 blur-[1px]">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/95 to-brand-dark"></div>
+        </div>
+
         <!-- Background subtle elements -->
         <div class="absolute -right-20 top-40 w-96 h-96 bg-brand-purple/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute -left-20 bottom-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -764,11 +847,11 @@
                             <div>
                                 <label for="category" class="block text-sm font-medium text-gray-300 mb-2" data-i18n="form.interestLabel">Forma de Interesse</label>
                                 <select name="category" id="category" class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all">
+                                    <option value="jovens" selected data-i18n="form.cat5">Inscrição / Indicação de Jovens</option>
                                     <option value="investimento" data-i18n="form.cat1">Investimento Financeiro</option>
                                     <option value="bolsas" data-i18n="form.cat2">Apoio a Bolsas / Alimentação</option>
                                     <option value="mentoria" data-i18n="form.cat3">Mentoria e Apoio Técnico</option>
                                     <option value="parceria" data-i18n="form.cat4">Parceria Institucional / Edital</option>
-                                    <option value="jovens" data-i18n="form.cat5">Inscrição / Indicação de Jovens</option>
                                     <option value="outro" data-i18n="form.cat6">Outro tipo de contribuição</option>
                                 </select>
                             </div>
@@ -779,8 +862,8 @@
                             <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 bg-brand-gray border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-brand-purple focus:border-transparent outline-none transition-all placeholder-gray-500" placeholder="Como gostaria de somar forças com o Iron For Change?" data-i18n-placeholder="form.msgPlaceholder"></textarea>
                         </div>
                         
-                        <button type="submit" id="submitBtn" class="w-full btn-lilac-gradient text-white font-extrabold py-4 px-6 rounded-xl transition-all text-base transform hover:scale-[1.01] flex items-center justify-center cursor-pointer">
-                            <span id="btnText" class="flex items-center"><i class="fas fa-paper-plane mr-2"></i> <span data-i18n="form.submitBtn">Enviar Mensagem</span></span>
+                        <button type="submit" id="submitBtn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-4 px-6 rounded-xl transition-all text-base transform hover:scale-[1.01] flex items-center justify-center cursor-pointer shadow-lg shadow-emerald-950/40 hover:shadow-emerald-600/30">
+                            <span id="btnText" class="flex items-center"><i class="fab fa-whatsapp text-xl mr-2"></i> <span data-i18n="form.submitBtn">Conversar pelo WhatsApp</span></span>
                         </button>
                         
                         <div id="formStatus" class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold transition-all"></div>
@@ -789,22 +872,91 @@
                     <!-- In-Place Success Card -->
                     <div id="formSuccessCard" class="hidden text-center py-10 px-4">
                         <div class="w-20 h-20 rounded-full bg-emerald-500/20 border-2 border-emerald-500/50 text-emerald-400 flex items-center justify-center mx-auto mb-5 text-3xl shadow-xl">
-                            <i class="fas fa-check"></i>
+                            <i class="fab fa-whatsapp text-4xl"></i>
                         </div>
-                        <h4 class="text-2xl sm:text-3xl font-black text-white mb-3" data-i18n="form.successTitle">Mensagem enviada com sucesso!</h4>
+                        <h4 class="text-2xl sm:text-3xl font-black text-white mb-3" data-i18n="form.successTitle">Mensagem pronta no WhatsApp!</h4>
                         <p class="text-gray-300 text-base max-w-lg mx-auto mb-8 font-light leading-relaxed" data-i18n="form.successDesc">
-                            Agradecemos o seu interesse no <span class="text-brand-purple font-semibold">Iron For Change</span>. Nossa equipe já recebeu sua mensagem e retornará o mais breve possível.
+                            Uma conversa foi iniciada com o número <span class="text-emerald-400 font-semibold">+55 11 98287-5533</span> com todos os seus dados preenchidos. Caso a janela não tenha aberto automaticamente, clique no botão abaixo:
                         </p>
-                        <button type="button" onclick="resetContactFormUI()" class="inline-flex items-center text-sm font-semibold text-brand-purple hover:text-white px-6 py-3 rounded-full border border-brand-purple/40 hover:bg-brand-purple/20 transition-all cursor-pointer">
-                            <i class="fas fa-redo-alt mr-2 text-xs"></i> <span data-i18n="form.resetBtn">Enviar outra mensagem</span>
-                        </button>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                            <a id="whatsappDirectLink" href="https://wa.me/5511982875533" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-white bg-emerald-600 hover:bg-emerald-500 px-7 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-emerald-500/30 cursor-pointer">
+                                <i class="fab fa-whatsapp text-xl mr-2"></i> <span data-i18n="form.openWhatsappBtn">Abrir WhatsApp</span>
+                            </a>
+                            <button type="button" onclick="resetContactFormUI()" class="w-full sm:w-auto inline-flex items-center justify-center text-sm font-semibold text-gray-300 hover:text-white px-6 py-3.5 rounded-xl border border-gray-700 hover:border-gray-500 hover:bg-gray-800 transition-all cursor-pointer">
+                                <i class="fas fa-redo-alt mr-2 text-xs"></i> <span data-i18n="form.resetBtn">Enviar outra mensagem</span>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="mt-8 pt-6 border-t border-gray-800 text-center text-sm text-gray-400">
-                        <span data-i18n="form.emailDirectText">Prefere contato direto por e-mail? Escreva para:</span> 
+                        <span data-i18n="form.directContactText">Prefere contato direto? Fale no WhatsApp:</span> 
+                        <a href="https://wa.me/5511982875533" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-semibold ml-1 mr-2 inline-flex items-center"><i class="fab fa-whatsapp mr-1"></i>+55 11 98287-5533</a>
+                        <span class="text-gray-600 hidden sm:inline">|</span>
+                        <span class="block sm:inline sm:ml-2 mt-1 sm:mt-0" data-i18n="form.orEmailText">ou por e-mail:</span>
                         <a href="mailto:contato@ironforchange.com.br" class="text-brand-purple hover:underline font-semibold ml-1">contato@ironforchange.com.br</a>
                     </div>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apoiadores & Parceiros Institucionais -->
+    <section id="apoiadores" class="py-20 bg-brand-light border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-purple-100 text-brand-purple mb-4">
+                <i class="fas fa-handshake-angle"></i>
+                <span data-i18n="supporters.badge">Rede de Apoio</span>
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-bold text-brand-dark mb-3" data-i18n="supporters.title">Parceiros & Apoiadores Institucionais</h2>
+            <p class="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto mb-12 font-light leading-relaxed" data-i18n="supporters.subtitle">
+                Organizações, laboratórios acadêmicos e iniciativas que somam forças com o Iron For Change para impulsionar o protagonismo jovem, a saúde integral e a regeneração ambiental.
+            </p>
+
+            <div class="flex flex-wrap justify-center items-center gap-3.5 sm:gap-4 lg:gap-4 max-w-7xl mx-auto">
+                <!-- 1. UFSC -->
+                <a href="https://ufsc.br/" target="_blank" rel="noopener noreferrer" class="w-[calc(50%-0.5rem)] sm:w-36 md:w-40 lg:flex-1 h-28 bg-white rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-brand-purple/60 hover:-translate-y-1 transition-all group" title="UFSC - Universidade Federal de Santa Catarina">
+                    <img src="assets/logos/brasao-ufsc.svg" alt="UFSC - Universidade Federal de Santa Catarina" class="max-h-[78px] max-w-[115px] w-auto h-auto object-contain transition-transform group-hover:scale-105">
+                </a>
+
+                <!-- 2. iREG UFSC -->
+                <a href="https://www.instagram.com/ireg.ufsc/" target="_blank" rel="noopener noreferrer" class="w-[calc(50%-0.5rem)] sm:w-36 md:w-40 lg:flex-1 h-28 bg-white rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-brand-purple/60 hover:-translate-y-1 transition-all group" title="Laboratório de Imunorregulação - iREG UFSC (@ireg.ufsc)">
+                    <img src="assets/logos/logo-ireg-ufsc.png" alt="Laboratório de Imunorregulação - iREG UFSC" class="max-h-14 sm:max-h-16 max-w-[125px] w-auto h-auto object-contain transition-transform group-hover:scale-105">
+                </a>
+
+                <!-- 3. Dra. Maisa Hortal -->
+                <a href="https://www.instagram.com/dramaisahortal/" target="_blank" rel="noopener noreferrer" class="w-[calc(50%-0.5rem)] sm:w-36 md:w-40 lg:flex-1 h-28 bg-white rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-brand-purple/60 hover:-translate-y-1 transition-all group" title="Dra. Maisa Hortal - Saúde Integral (@dramaisahortal)">
+                    <img src="assets/logos/logo-maisa-hortal.png" alt="Dra. Maisa Hortal - Saúde Integral" class="max-h-[78px] max-w-[115px] w-auto h-auto object-contain transition-transform group-hover:scale-105">
+                </a>
+
+                <!-- 4. AGEA -->
+                <a href="https://www.instagram.com/agea_br/" target="_blank" rel="noopener noreferrer" class="w-[calc(50%-0.5rem)] sm:w-36 md:w-40 lg:flex-1 h-28 bg-white rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-brand-purple/60 hover:-translate-y-1 transition-all group" title="AGEA - Agência de Gestão e Educação Ambiental (@agea_br)">
+                    <img src="assets/logos/logo-agea.png" alt="AGEA - Agência de Gestão e Educação Ambiental" class="max-h-14 sm:max-h-16 max-w-[120px] w-auto h-auto object-contain transition-transform group-hover:scale-105">
+                </a>
+
+                <!-- 5. CIANO -->
+                <a href="https://www.ciano.org.br/" target="_blank" rel="noopener noreferrer" class="w-[calc(50%-0.5rem)] sm:w-36 md:w-40 lg:flex-1 h-28 bg-white rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-brand-purple/60 hover:-translate-y-1 transition-all group" title="CIANO - Centro de Iniciativas Ambientais, Navais e Oceanográficas (ciano.org.br)">
+                    <img src="assets/logos/logo-ciano.png" alt="CIANO - Centro de Iniciativas Ambientais, Navais e Oceanográficas" class="max-h-[80px] max-w-[115px] w-auto h-auto object-contain transition-transform group-hover:scale-105">
+                </a>
+
+                <!-- 6. Cientistas do Mar -->
+                <a href="https://levantelab.com.br/" target="_blank" rel="noopener noreferrer" class="w-[calc(50%-0.5rem)] sm:w-36 md:w-40 lg:flex-1 h-28 bg-white rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-brand-purple/60 hover:-translate-y-1 transition-all group" title="Cientistas do Mar">
+                    <img src="assets/logos/logo-cientistas-do-mar.png" alt="Cientistas do Mar" class="max-h-12 sm:max-h-14 max-w-[125px] w-auto h-auto object-contain transition-transform group-hover:scale-105">
+                </a>
+
+                <!-- 7. Braçadas Sustentáveis -->
+                <a href="https://www.instagram.com/bracadas.sustentaveis/" target="_blank" rel="noopener noreferrer" class="w-[calc(50%-0.5rem)] sm:w-36 md:w-40 lg:flex-1 h-28 bg-white rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-brand-purple/60 hover:-translate-y-1 transition-all group" title="Braçadas Sustentáveis pelo Futuro da Água (@bracadas.sustentaveis)">
+                    <img src="assets/logos/logo-bracadas-sustentaveis.png" alt="Braçadas Sustentáveis pelo Futuro da Água" class="max-h-[74px] max-w-[125px] w-auto h-auto object-contain transition-transform group-hover:scale-105">
+                </a>
+
+                <!-- 8. Founder Haus -->
+                <a href="https://founderhaus.club/" target="_blank" rel="noopener noreferrer" class="w-[calc(50%-0.5rem)] sm:w-36 md:w-40 lg:flex-1 h-28 bg-white rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-brand-purple/60 hover:-translate-y-1 transition-all group" title="Founder Haus - The Home of Healthy Entrepreneurship (founderhaus.club)">
+                    <img src="assets/logos/logo-founder-haus.png" alt="Founder Haus - The Home of Healthy Entrepreneurship" class="max-h-14 sm:max-h-16 max-w-[120px] w-auto h-auto object-contain transition-transform group-hover:scale-105">
+                </a>
+
+                <!-- 9. Sem Ferrão -->
+                <a href="https://semferrao.com/" target="_blank" rel="noopener noreferrer" class="w-[calc(50%-0.5rem)] sm:w-36 md:w-40 lg:flex-1 h-28 bg-white rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-brand-purple/60 hover:-translate-y-1 transition-all group" title="Sem Ferrão - Meliponicultura & Biodiversidade (semferrao.com)">
+                    <img src="assets/logos/logo-sem-ferrao.png" alt="Sem Ferrão - Meliponicultura & Biodiversidade" class="max-h-[76px] max-w-[115px] w-auto h-auto object-contain transition-transform group-hover:scale-105">
+                </a>
             </div>
         </div>
     </section>
@@ -822,13 +974,16 @@
             </div>
 
             <div class="flex justify-center space-x-6 mb-10">
-                <a href="https://instagram.com/ironforchange" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                <a href="https://wa.me/5511982875533" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-emerald-600 hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110" title="WhatsApp (+55 11 98287-5533)">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+                <a href="https://instagram.com/ironforchange" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110" title="Instagram">
                     <i class="fab fa-instagram text-xl"></i>
                 </a>
-                <a href="https://www.youtube.com/watch?v=4yFXuGCbT4g&list=PLj7WQLeQRUh6KcbbQEx1mCS7CIEFPOhLK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                <a href="https://www.youtube.com/watch?v=4yFXuGCbT4g&list=PLj7WQLeQRUh6KcbbQEx1mCS7CIEFPOhLK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110" title="YouTube">
                     <i class="fab fa-youtube text-xl"></i>
                 </a>
-                <a href="mailto:contato@ironforchange.com.br" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110">
+                <a href="mailto:contato@ironforchange.com.br" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-brand-purple hover:text-white text-gray-400 flex items-center justify-center transition-all transform hover:scale-110" title="E-mail">
                     <i class="fas fa-envelope text-xl"></i>
                 </a>
             </div>
@@ -849,7 +1004,7 @@
     <a href="#contato" aria-label="Entrar em Contato" class="fixed bottom-6 right-6 z-40 btn-lilac-gradient text-white font-bold px-5 py-3.5 rounded-full shadow-2xl flex items-center space-x-2.5 transition-all transform hover:scale-105 active:scale-95 group">
         <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping inline-block"></span>
         <span class="text-sm font-bold tracking-wide" data-i18n="floatingBtn.text">Falar Conosco</span>
-        <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+        <i class="fab fa-whatsapp text-lg group-hover:scale-110 transition-transform"></i>
     </a>
 
     <!-- Interactive Multilingual Engine & Scripts -->
@@ -881,7 +1036,23 @@
                     description: "Uma metodologia viva de 44 semanas que desenvolve jovens da consciência individual à transformação real do território.",
                     ctaPrimary: "Apoie a Próxima Turma",
                     ctaSecondary: "Conhecer a Jornada",
-                    ctaPdf: "Apresentação (PDF)"
+                    ctaPdf: "Apresentação (PDF)",
+                    photo1Badge: "Território & Pertencimento",
+                    photo1Title: "Território e Pertencimento:",
+                    photo1Caption: "conectando identidade, raízes culturais e comunidade regenerativa",
+                    photo2Badge: "Saúde Integral & Diálogo",
+                    photo2Title: "Escuta Ativa e Conexão:",
+                    photo2Caption: "Vivências, desenvolvimento socioemocional e ações no território",
+                    photo3Badge: "Visão Comunitária",
+                    photo3Title: "Olhar para o Futuro do Território",
+                    photo3Caption: "Jovens protagonistas diagnosticando e transformando seu próprio território",
+                    photo4Badge: "A Jornada em Equipe",
+                    photo4Title: "Travessia, Esporte & Resiliência",
+                    photo4Caption: "Vivências práticas, esportivas e náuticas ao longo de 44 semanas",
+                    tab1: "Território (Ponte)",
+                    tab2: "Saúde & Diálogo",
+                    tab3: "Visão do Futuro",
+                    tab4: "Travessia (Mar)"
                 },
                 metrics: {
                     m1Title: "Semanas de Jornada",
@@ -900,6 +1071,10 @@
                     title2: "As oportunidades precisam chegar.",
                     p1: "Adolescentes enfrentam desafios cada vez mais complexos que comprometem seu desenvolvimento e o futuro das comunidades: sofrimento psíquico, bullying, falta de perspectiva e baixa participação cidadã.",
                     p2: "O Iron For Change atua como uma incubadora viva. Conectamos esporte, saúde mental, autoconhecimento e cidadania para que os jovens criem soluções sustentáveis e regenerativas para os desafios do seu próprio território.",
+                    photo1Badge: "Visão Comunitária",
+                    photo1Title: "Construir o Futuro do Território",
+                    photo2Badge: "A Jornada em Equipe",
+                    photo2Title: "Travessia, Esporte & Resiliência",
                     ctaJoin: "Quero Fazer Parte",
                     ctaPdf: "Apresentação (PDF)"
                 },
@@ -1025,12 +1200,19 @@
                     cat6: "Outro tipo de contribuição",
                     msgLabel: "Mensagem",
                     msgPlaceholder: "Como gostaria de somar forças com o Iron For Change?",
-                    submitBtn: "Enviar Mensagem",
-                    sendingText: "Enviando mensagem...",
-                    successTitle: "Mensagem enviada com sucesso!",
-                    successDesc: "Agradecemos o seu interesse no Iron For Change. Nossa equipe já recebeu sua mensagem e retornará o mais breve possível.",
+                    submitBtn: "Conversar pelo WhatsApp",
+                    sendingText: "Abrindo WhatsApp...",
+                    successTitle: "Mensagem pronta no WhatsApp!",
+                    successDesc: "Uma conversa foi iniciada com o número <span class=\"text-emerald-400 font-semibold\">+55 11 98287-5533</span> com todos os seus dados preenchidos. Caso a janela não tenha aberto automaticamente, clique no botão abaixo:",
+                    openWhatsappBtn: "Abrir WhatsApp",
                     resetBtn: "Enviar outra mensagem",
-                    emailDirectText: "Prefere contato direto por e-mail? Escreva para:"
+                    directContactText: "Prefere contato direto? Fale no WhatsApp:",
+                    orEmailText: "ou por e-mail:"
+                },
+                supporters: {
+                    badge: "Rede de Apoio",
+                    title: "Parceiros & Apoiadores Institucionais",
+                    subtitle: "Organizações, laboratórios acadêmicos e iniciativas que somam forças com o Iron For Change para impulsionar o protagonismo jovem, a saúde integral e a regeneração ambiental."
                 },
                 footer: {
                     slogan: "Jovens que se conhecem, pertencem, imaginam, constroem e regeneram realidades.",
@@ -1068,7 +1250,23 @@
                     description: "A living 44-week methodology developing youth from individual self-awareness to tangible territorial transformation.",
                     ctaPrimary: "Support the Next Cohort",
                     ctaSecondary: "Explore the Journey",
-                    ctaPdf: "Presentation (PDF)"
+                    ctaPdf: "Presentation (PDF)",
+                    photo1Badge: "Territory & Belonging",
+                    photo1Title: "Territory and Belonging:",
+                    photo1Caption: "connecting identity, cultural roots, and regenerative community",
+                    photo2Badge: "Holistic Health & Dialogue",
+                    photo2Title: "Active Listening and Connection:",
+                    photo2Caption: "Experiences, socioemotional development, and territorial action",
+                    photo3Badge: "Community Vision",
+                    photo3Title: "Looking Toward the Community's Future",
+                    photo3Caption: "Young changemakers diagnosing and transforming their own territory",
+                    photo4Badge: "The Team Journey",
+                    photo4Title: "Crossing, Sports & Resilience",
+                    photo4Caption: "Hands-on nautical, sports, and resilience experiences across 44 weeks",
+                    tab1: "Territory (Bridge)",
+                    tab2: "Health & Dialogue",
+                    tab3: "Future Vision",
+                    tab4: "Crossing (Sea)"
                 },
                 metrics: {
                     m1Title: "Journey Weeks",
@@ -1087,6 +1285,10 @@
                     title2: "Opportunities must arrive.",
                     p1: "Adolescents face increasingly complex challenges that undermine their well-being and community futures: psychological distress, bullying, fragile social bonds, and low civic engagement.",
                     p2: "Iron For Change operates as a living incubator. We bridge sport, mental health, self-discovery, and active citizenship so youth can create sustainable, regenerative solutions for their own territories.",
+                    photo1Badge: "Community Vision",
+                    photo1Title: "Building the Territory's Future",
+                    photo2Badge: "The Team Journey",
+                    photo2Title: "Crossing, Sports & Resilience",
                     ctaJoin: "Join the Mission",
                     ctaPdf: "Presentation (PDF)"
                 },
@@ -1212,12 +1414,19 @@
                     cat6: "Other Form of Contribution",
                     msgLabel: "Message",
                     msgPlaceholder: "How would you like to join forces with Iron For Change?",
-                    submitBtn: "Send Message",
-                    sendingText: "Sending message...",
-                    successTitle: "Message successfully sent!",
-                    successDesc: "Thank you for connecting with Iron For Change. Our team has received your message and will get back to you shortly.",
+                    submitBtn: "Chat via WhatsApp",
+                    sendingText: "Opening WhatsApp...",
+                    successTitle: "Message ready on WhatsApp!",
+                    successDesc: "A new conversation was initiated with <span class=\"text-emerald-400 font-semibold\">+55 11 98287-5533</span> with your details pre-filled. If the window did not open automatically, click the button below:",
+                    openWhatsappBtn: "Open WhatsApp",
                     resetBtn: "Send another message",
-                    emailDirectText: "Prefer direct email contact? Write to:"
+                    directContactText: "Prefer direct contact? Message on WhatsApp:",
+                    orEmailText: "or by email:"
+                },
+                supporters: {
+                    badge: "Support Network",
+                    title: "Institutional Partners & Supporters",
+                    subtitle: "Organizations, research labs, and civic initiatives joining forces with Iron For Change to foster youth leadership, holistic health, and environmental regeneration."
                 },
                 footer: {
                     slogan: "Youth who know themselves, belong, imagine, build, and regenerate communities.",
@@ -1243,6 +1452,9 @@
                     color: "emerald",
                     tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
                     badgeColor: "text-emerald-400",
+                    image: "assets/jovens-praia-dialogo.jpeg",
+                    imageBadge: "Saúde Integral & Diálogo",
+                    imageCaption: "Autocuidado, escuta ativa e reconexão socioemocional em grupo na praia.",
                     question: '"Quem sou eu e qual é a minha capacidade de transformar a realidade?"',
                     productTitle: "Mapa do Meu Change",
                     productDesc: "Síntese de autoconhecimento, valores, saúde integral e projeto de vida.",
@@ -1267,6 +1479,9 @@
                     color: "blue",
                     tagClass: "bg-blue-950 text-blue-400 border-blue-800",
                     badgeColor: "text-blue-400",
+                    image: "assets/jovens-ponte-hercilio-luz.jpeg",
+                    imageBadge: "Pertencimento & Território",
+                    imageCaption: "Jovens na Ponte Hercílio Luz conectando raízes culturais e comunidade em Florianópolis.",
                     question: '"A que lugar pertenço e como posso participar da transformação dele?"',
                     productTitle: "Mapa de Desafios, Ativos e Oportunidades",
                     productDesc: "Diagnóstico participativo detalhado do território e suas potencialidades.",
@@ -1289,6 +1504,9 @@
                     color: "amber",
                     tagClass: "bg-amber-950 text-amber-400 border-amber-800",
                     badgeColor: "text-amber-400",
+                    image: "assets/jovens-mirante-territorio.jpeg",
+                    imageBadge: "Visão & Diagnóstico Local",
+                    imageCaption: "Olhar sistêmico no mirante mapeando desafios e oportunidades comunitárias.",
                     question: '"E se as coisas pudessem ser diferentes?"',
                     productTitle: "Desafio Escolhido + Ideia do Change Project",
                     productDesc: "Definição do problema real a solucionar e escopo preliminar da inovação.",
@@ -1309,6 +1527,9 @@
                     color: "purple",
                     tagClass: "bg-purple-950 text-purple-400 border-purple-800",
                     badgeColor: "text-brand-purpleGlow",
+                    image: "assets/jovens-veleiro-jornada.jpeg",
+                    imageBadge: "Trabalho em Equipe & Travessia",
+                    imageCaption: "Vivência náutica e esportiva desenvolvendo liderança e resiliência coletiva.",
                     question: '"Como transformamos uma ideia em realidade?"',
                     productTitle: "Projeto em Execução com Resultados",
                     productDesc: "Protótipo testado no território, rede de mentores e evidências de impacto.",
@@ -1336,6 +1557,9 @@
                     color: "teal",
                     tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
                     badgeColor: "text-teal-400",
+                    image: "assets/jovens-ponte-hercilio-luz.jpeg",
+                    imageBadge: "Legado & Cidade Sustentável",
+                    imageCaption: "Jovens protagonistas entregando projetos de impacto real para Florianópolis.",
                     question: '"O que aprendemos e que transformação deixamos?"',
                     productTitle: "Legado da Jornada e Plano de Continuidade",
                     productDesc: "Sustentabilidade dos projetos, formação da rede Alumni e novos ciclos.",
@@ -1359,6 +1583,9 @@
                     color: "emerald",
                     tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
                     badgeColor: "text-emerald-400",
+                    image: "assets/jovens-praia-dialogo.jpeg",
+                    imageBadge: "Holistic Health & Dialogue",
+                    imageCaption: "Self-care, active listening, and socioemotional reconnection as a group on the beach.",
                     question: '"Who am I and what is my capacity to transform reality?"',
                     productTitle: "My Change Map",
                     productDesc: "Synthesis of self-awareness, core values, holistic health, and life purpose.",
@@ -1383,6 +1610,9 @@
                     color: "blue",
                     tagClass: "bg-blue-950 text-blue-400 border-blue-800",
                     badgeColor: "text-blue-400",
+                    image: "assets/jovens-ponte-hercilio-luz.jpeg",
+                    imageBadge: "Belonging & Territory",
+                    imageCaption: "Youth at the Hercílio Luz Bridge connecting local identity and cultural roots in Florianópolis.",
                     question: '"Where do I belong and how can I participate in its transformation?"',
                     productTitle: "Map of Challenges, Assets & Opportunities",
                     productDesc: "Comprehensive participatory diagnostic of community assets and local realities.",
@@ -1405,6 +1635,9 @@
                     color: "amber",
                     tagClass: "bg-amber-950 text-amber-400 border-amber-800",
                     badgeColor: "text-amber-400",
+                    image: "assets/jovens-mirante-territorio.jpeg",
+                    imageBadge: "Vision & Local Diagnosis",
+                    imageCaption: "Systemic lookout perspective mapping community challenges and local assets.",
                     question: '"What if things could be completely different?"',
                     productTitle: "Chosen Challenge + Change Project Concept",
                     productDesc: "Clear framing of the community challenge and initial project blueprint.",
@@ -1425,6 +1658,9 @@
                     color: "purple",
                     tagClass: "bg-purple-950 text-purple-400 border-purple-800",
                     badgeColor: "text-brand-purpleGlow",
+                    image: "assets/jovens-veleiro-jornada.jpeg",
+                    imageBadge: "Teamwork & Crossing",
+                    imageCaption: "Nautical and sports expedition building collaborative leadership and shared resilience.",
                     question: '"How do we turn an idea into real-world reality?"',
                     productTitle: "Active Project in Execution with Measured Results",
                     productDesc: "Field-tested prototype, active mentor network, and preliminary impact evidence.",
@@ -1452,6 +1688,9 @@
                     color: "teal",
                     tagClass: "bg-emerald-950 text-emerald-400 border-emerald-800",
                     badgeColor: "text-teal-400",
+                    image: "assets/jovens-ponte-hercilio-luz.jpeg",
+                    imageBadge: "Legacy & Sustainable City",
+                    imageCaption: "Young changemakers delivering real regenerative impact projects for Florianópolis.",
                     question: '"What have we learned and what lasting legacy do we leave?"',
                     productTitle: "Journey Legacy & Sustainability Roadmap",
                     productDesc: "Project continuity strategy, Alumni network integration, and next cycles.",
@@ -1622,23 +1861,34 @@
 
             box.innerHTML = `
                 <div class="stage-panel">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 mb-8 border-b border-gray-800 gap-4">
-                        <div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center pb-8 mb-8 border-b border-gray-800">
+                        <div class="lg:col-span-7">
                             <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${s.tagClass} mb-3">
                                 <i class="fas fa-seedling"></i>
                                 <span>${currentLang === 'pt' ? 'Etapa' : 'Stage'} 0${s.num} • ${s.weeksCount}</span>
                             </div>
-                            <h3 class="text-3xl font-black text-white">${s.num}. ${s.title}</h3>
-                            <p class="text-lg text-${s.color}-300 font-medium italic mt-2">
+                            <h3 class="text-2xl sm:text-3xl font-black text-white">${s.num}. ${s.title}</h3>
+                            <p class="text-base sm:text-lg text-${s.color}-300 font-medium italic mt-2">
                                 ${s.question}
                             </p>
+                            <div class="mt-4 bg-gray-900/90 border border-${s.color}-800/40 rounded-2xl p-4">
+                                <span class="text-[11px] font-bold uppercase tracking-widest text-${s.color}-400 block mb-1">
+                                    <i class="fas fa-check-circle mr-1"></i> ${t.productOfStage}
+                                </span>
+                                <span class="text-base font-bold text-white block">${s.productTitle}</span>
+                                <p class="text-xs text-gray-400 mt-1">${s.productDesc}</p>
+                            </div>
                         </div>
-                        <div class="bg-gray-900/90 border border-${s.color}-800/40 rounded-2xl p-4 md:max-w-xs flex-shrink-0">
-                            <span class="text-[11px] font-bold uppercase tracking-widest text-${s.color}-400 block mb-1">
-                                <i class="fas fa-check-circle mr-1"></i> ${t.productOfStage}
-                            </span>
-                            <span class="text-base font-bold text-white block">${s.productTitle}</span>
-                            <p class="text-xs text-gray-400 mt-1">${s.productDesc}</p>
+
+                        <div class="lg:col-span-5">
+                            <div class="relative rounded-2xl overflow-hidden border border-${s.color}-600/40 shadow-xl group h-52 sm:h-60">
+                                <img src="${s.image}" alt="${s.imageCaption}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+                                <div class="absolute top-3 left-3 inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/75 text-${s.color}-300 backdrop-blur-md border border-${s.color}-500/30">
+                                    <i class="fas fa-camera text-[9px]"></i>
+                                    <span>${s.imageBadge}</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -1696,75 +1946,72 @@
             });
         }
 
-        // Contact Form AJAX Handler (In-place Web3Forms)
+        // Contact Form WhatsApp Direct Handler
         function handleContactSubmit(e) {
             if (e && e.preventDefault) e.preventDefault();
             const contactForm = document.getElementById('contactForm');
-            const submitBtn = document.getElementById('submitBtn');
-            const btnText = document.getElementById('btnText');
-            const formStatus = document.getElementById('formStatus');
             const formFieldsContainer = document.getElementById('formFieldsContainer');
             const formSuccessCard = document.getElementById('formSuccessCard');
+            const whatsappDirectLink = document.getElementById('whatsappDirectLink');
 
             if (!contactForm) return false;
 
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return false;
             }
-            if (btnText) {
-                btnText.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i> ${translations[currentLang].form.sendingText}`;
+
+            const name = (document.getElementById('name')?.value || '').trim();
+            const email = (document.getElementById('email')?.value || '').trim();
+            const organization = (document.getElementById('organization')?.value || '').trim();
+            const categorySelect = document.getElementById('category');
+            const categoryText = categorySelect && categorySelect.options[categorySelect.selectedIndex] ? categorySelect.options[categorySelect.selectedIndex].text : '';
+            const message = (document.getElementById('message')?.value || '').trim();
+
+            const isEn = currentLang === 'en';
+            const orgDisplay = organization || (isEn ? 'Not specified' : 'Não informada');
+
+            // Format WhatsApp Message
+            let text = '';
+            if (isEn) {
+                text = `*Contact via Website - Iron For Change*\n\n` +
+                       `👤 *Name:* ${name}\n` +
+                       `📧 *Email:* ${email}\n` +
+                       `🏢 *Organization:* ${orgDisplay}\n` +
+                       `🎯 *Interest:* ${categoryText}\n\n` +
+                       `💬 *Message:*\n"${message}"`;
+            } else {
+                text = `*Contato via Site - Iron For Change*\n\n` +
+                       `👤 *Nome:* ${name}\n` +
+                       `📧 *E-mail:* ${email}\n` +
+                       `🏢 *Organização:* ${orgDisplay}\n` +
+                       `🎯 *Interesse:* ${categoryText}\n\n` +
+                       `💬 *Mensagem:*\n"${message}"`;
             }
-            if (formStatus) formStatus.className = 'hidden';
 
-            const formData = new FormData(contactForm);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
+            const phone = '5511982875533';
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                const resJson = await response.json();
-                if (response.status === 200 || resJson.success) {
-                    if (formFieldsContainer) formFieldsContainer.classList.add('hidden');
-                    if (formSuccessCard) formSuccessCard.classList.remove('hidden');
-                    contactForm.reset();
-                } else {
-                    if (formStatus) {
-                        formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-950/80 text-red-300 border border-red-700/60 block';
-                        formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> ' + (resJson.message || 'Error sending message. Please try again.');
-                    }
-                }
-            })
-            .catch(() => {
-                if (formStatus) {
-                    formStatus.className = 'mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-950/80 text-red-300 border border-red-700/60 block';
-                    formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> Falha de conexão. Por favor, envie e-mail para contato@ironforchange.com.br.';
-                }
-            })
-            .finally(() => {
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-                }
-                if (btnText) {
-                    btnText.innerHTML = `<i class="fas fa-paper-plane mr-2"></i> ${translations[currentLang].form.submitBtn}`;
-                }
-            });
+            if (whatsappDirectLink) {
+                whatsappDirectLink.href = whatsappUrl;
+            }
+
+            // Open WhatsApp directly in new window/tab
+            window.open(whatsappUrl, '_blank');
+
+            // Show confirmation UI
+            if (formFieldsContainer) formFieldsContainer.classList.add('hidden');
+            if (formSuccessCard) formSuccessCard.classList.remove('hidden');
 
             return false;
         }
 
         function resetContactFormUI() {
+            const contactForm = document.getElementById('contactForm');
             const formFieldsContainer = document.getElementById('formFieldsContainer');
             const formSuccessCard = document.getElementById('formSuccessCard');
             const formStatus = document.getElementById('formStatus');
+            if (contactForm) contactForm.reset();
             if (formFieldsContainer) formFieldsContainer.classList.remove('hidden');
             if (formSuccessCard) formSuccessCard.classList.add('hidden');
             if (formStatus) formStatus.className = 'hidden';
